@@ -167,7 +167,7 @@ The following example shows an authentication request:
 
 .. end_tag
 
-Knife API Requests
+Knife API Requests 2
 -----------------------------------------------------
 .. tag plugin_knife_summary
 
