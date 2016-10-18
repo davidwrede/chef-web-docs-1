@@ -23,7 +23,7 @@ The Chef server API has the following requirements:
 
 .. end_tag
 
-Authentication Headers
+Authentication Headers 
 =====================================================
 .. tag api_chef_server_headers
 
