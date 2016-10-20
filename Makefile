@@ -53,6 +53,8 @@ master:
 	cp -r misc/sitemap.xml build/
 	cp -r misc/google69a8711569b2fcce.html build/
 	$(BUILD_COMMAND_AND_ARGS) chef_master/source $(BUILDDIR)
+	cd chef_master/source
+	../../dtags check
 
 decks:
 	mkdir -p $(BUILDDIR)/decks/
