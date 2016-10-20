@@ -1,26 +1,28 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_diff_options
 
 This subcommand has the following options:
 
 ``-c CONFIG_FILE``, ``--config CONFIG_FILE``
-   |chef_exe config|
+   The path to the knife configuration file.
 
 ``-D``, ``--debug``
-   |chef_exe debug| Default value: ``false``.
+   Enable stack traces and other debug output. Default value: ``false``.
 
 ``-g GIT_REF``, ``--git GIT_REF``
-   |chef_exe git_ref| 
+   Compare the specified git reference against the current revision of a Policyfile.lock.json file or against another git reference. 
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``--head``
-   |chef_exe git_head|
+   A shortcut for ``chef diff --git HEAD``. When a git-specific flag is not provided, the on-disk Policyfile.lock.json file is compared to one on the Chef server or (if a Policyfile.lock.json file is not present on-disk) two Policyfile.lock.json files in the specified policy group on the Chef server are compared.
 
 ``--[no-]pager``
-   |no_pager| Default value: ``--pager``.
+   Use ``--pager`` to enable paged output for a Policyfile.lock.json file. Default value: ``--pager``.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

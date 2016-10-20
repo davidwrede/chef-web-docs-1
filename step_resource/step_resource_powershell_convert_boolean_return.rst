@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_powershell_convert_boolean_return
 
 .. To return ``0`` for true, ``1`` for false:
 
@@ -27,3 +27,6 @@ whereas the following will raise an exception:
      convert_boolean_return true
      code '$false'
    end
+
+.. end_tag
+

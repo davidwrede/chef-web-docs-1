@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag chef_repo_git_master_sync
 
 Use the following steps to synchronize the master branch. 
 
@@ -16,3 +16,6 @@ Use the following steps to synchronize the master branch.
       $ git rebase chef/master master
 
    .. note:: Use ``rebase`` instead of ``merge`` to ensure that a linear history is maintained that does not include unnecessary merge commits. ``rebase`` will also rewind, apply, and then reapply commits to the ``master`` branch.
+
+.. end_tag
+

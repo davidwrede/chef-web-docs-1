@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_systemd_unit_attributes
 
 This resource has the following properties:
    
@@ -39,3 +39,6 @@ This resource has the following properties:
 
    Specifies whether to trigger a daemon reload when creating or deleting a unit. Default is true.
    
+
+.. end_tag
+

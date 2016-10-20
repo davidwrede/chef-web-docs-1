@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_kitchen_create_ubuntu_default
 
-To create the default |ubuntu| instance, run the following:
+To create the default Ubuntu instance, run the following:
 
 .. code-block:: bash
 
    $ kitchen create default-ubuntu-1404
 
-|ubuntu| is downloaded the first time this command is run, after which |vagrant| is started. (This may take a few minutes.)
+Ubuntu is downloaded the first time this command is run, after which Vagrant is started. (This may take a few minutes.)
 
 The output of the command is similar to:
 
@@ -44,3 +43,6 @@ The output of the command is similar to:
           Vagrant instance <default-ubuntu-1404> created.
           Finished creating <default-ubuntu-1404> (4m1.59s).
    -----> Kitchen is finished. (10m58.24s)
+
+.. end_tag
+

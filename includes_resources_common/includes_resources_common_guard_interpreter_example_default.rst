@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resources_common_guard_interpreter_example_default
 
-For example, the following code block will ensure the command is evaluated using the default intepreter as identified by the |chef client|:
+For example, the following code block will ensure the command is evaluated using the default intepreter as identified by the chef-client:
 
 .. code-block:: ruby
 
@@ -10,3 +9,6 @@ For example, the following code block will ensure the command is evaluated using
      guard_interpreter :default
      # code
    end
+
+.. end_tag
+

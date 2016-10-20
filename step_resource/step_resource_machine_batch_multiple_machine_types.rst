@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_machine_batch_multiple_machine_types
 
-The |resource machine_batch| resource can be used to converge multiple machine types, in-parallel, even if each machine type has different drivers. For example:
+The **machine_batch** resource can be used to converge multiple machine types, in-parallel, even if each machine type has different drivers. For example:
 
 .. code-block:: ruby
 
@@ -16,3 +15,6 @@ The |resource machine_batch| resource can be used to converge multiple machine t
        end
      end
    end
+
+.. end_tag
+

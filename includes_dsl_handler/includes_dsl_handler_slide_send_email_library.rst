@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_slide_send_email_library
 
-Use a library to define the code that sends email when a |chef client| run fails. Name the file ``helper.rb`` and add it to a cookbook's ``/libraries`` directory:
+Use a library to define the code that sends email when a chef-client run fails. Name the file ``helper.rb`` and add it to a cookbook's ``/libraries`` directory:
 
 .. code-block:: ruby
 
@@ -24,3 +23,6 @@ Use a library to define the code that sends email when a |chef client| run fails
        end
      end
    end
+
+.. end_tag
+

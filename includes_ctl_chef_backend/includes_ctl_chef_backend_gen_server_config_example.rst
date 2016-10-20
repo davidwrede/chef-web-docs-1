@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_gen_server_config_example
 
 The following example shows the results of running the ``chef-backend-ctl gen-server-config`` subcommand. The settings and output will vary, depending on the configuration. These settings should be modified carefully:
 
@@ -24,4 +23,7 @@ The following example shows the results of running the ``chef-backend-ctl gen-se
    opscode_erchef['nginx_bookshelf_caching'] = :on
    opscode_erchef['s3_url_expiry_window_size'] = '50%'
 
-.. note:: The ``opscode_solr4``, ``postgresql``, and ``rabbitmq`` services are disabled in this configuration file for the frontend machines when running the |chef server| with a backend HA cluster.
+.. note:: The ``opscode_solr4``, ``postgresql``, and ``rabbitmq`` services are disabled in this configuration file for the frontend machines when running the Chef server with a backend HA cluster.
+
+.. end_tag
+

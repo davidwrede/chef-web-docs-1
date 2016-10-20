@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_yum_package_install_specific_version
 
 .. To install a specific version (even if it is older than the version currently installed):
 
@@ -9,3 +9,6 @@
      version '2011b-1.el5'
      allow_downgrade true
    end
+
+.. end_tag
+

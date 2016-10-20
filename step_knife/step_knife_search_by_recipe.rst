@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag knife_search_by_recipe
 
 To search for recipes that are used by a node, use the ``recipes`` attribute to search for the recipe names, enter something like:
 
@@ -13,3 +13,6 @@ or:
 
    $ knife search node '*:*' -a recipes | grep 'recipe_name'
    
+
+.. end_tag
+

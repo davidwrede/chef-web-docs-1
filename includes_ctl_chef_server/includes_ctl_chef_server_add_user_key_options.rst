@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ctl_chef_server_add_user_key_options
 
 This subcommand has the following options:
 
@@ -14,3 +14,6 @@ This subcommand has the following options:
 
 ``USER_NAME``
    The user name for the user for which a key is added.
+
+.. end_tag
+

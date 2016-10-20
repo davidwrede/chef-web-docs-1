@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_method_with_run_context
 
 Use the ``with_run_context`` method to define a block that has a pointer to a location in the ``run_context`` hierarchy. Resources in recipes always run at the root of the ``run_context`` hierarchy, whereas custom resources and notification blocks always build a child ``run_context`` which contains their sub-resources.
 
@@ -32,3 +31,6 @@ For example:
        notifies :run, "my_thing[accumulated state], :delayed
      end
    end
+
+.. end_tag
+

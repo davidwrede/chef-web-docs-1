@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_yum_package_install_specific_version_release
 
 .. To install a specific version-release:
 
@@ -8,3 +8,6 @@
    yum_package 'netpbm' do
      version '10.35.58-8.el5'
    end
+
+.. end_tag
+

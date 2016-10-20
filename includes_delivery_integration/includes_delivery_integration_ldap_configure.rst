@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_integration_ldap_configure
 
-To configure LDAP for |automate|:
+To configure LDAP for Chef Automate:
 
-#. Open ``/etc/delivery/delivery.rb`` and enter the LDAP attributes you want |automate| to use. If you do not specify an LDAP port, the default port of ``3269`` is used.
+#. Open ``/etc/delivery/delivery.rb`` and enter the LDAP attributes you want Chef Automate to use. If you do not specify an LDAP port, the default port of ``3269`` is used.
 
    .. code-block:: ruby
 
@@ -25,4 +24,7 @@ To configure LDAP for |automate|:
 
       $ sudo delivery-ctl reconfigure
 
-Once |automate| is set up, you will have a usable **LDAP** option in the |automate| **Users** page that allows you to find users through your LDAP database.
+Once Chef Automate is set up, you will have a usable **LDAP** option in the Chef Automate **Users** page that allows you to find users through your LDAP database.
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_notifies_enable_after_restart_or_reload
 
 .. To enable a service after restarting or reloading it:
 
@@ -9,3 +9,6 @@
      supports :restart => true, :reload => true
      action :enable
    end
+
+.. end_tag
+

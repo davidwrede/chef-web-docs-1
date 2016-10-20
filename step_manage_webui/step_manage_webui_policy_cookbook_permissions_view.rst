@@ -1,12 +1,14 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_cookbook_permissions_view
 
 To view permissions for a cookbook object:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Cookbooks**.
 #. Select a cookbook.
 #. Click the **Permissions** tab.
 #. Set the appropriate permissions: **Delete**, **Grant**, **Read**, and/or **Update**.
+
+.. end_tag
+

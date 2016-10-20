@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_execute_subscribes_prevent_restart_and_reconfigure
 
 Use the ``:nothing`` action (common to all resources) to prevent an application from restarting, and then use the ``subscribes`` notification to ask the broken configuration to be reconfigured immediately:
 
@@ -11,3 +10,6 @@ Use the ``:nothing`` action (common to all resources) to prevent an application 
      action :nothing
      subscribes :run, 'template[/etc/nagios3/configures-nagios.conf]', :immediately
    end
+
+.. end_tag
+

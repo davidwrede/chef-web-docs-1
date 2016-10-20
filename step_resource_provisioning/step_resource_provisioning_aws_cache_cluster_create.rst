@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_provisioning_aws_cache_cluster_create
 
 .. To define a VPC, subnets, and security group for a cache cluster:
 
@@ -36,3 +36,6 @@
      security_groups ['test-sg']
      subnet_group_name 'test-ec'
    end
+
+.. end_tag
+

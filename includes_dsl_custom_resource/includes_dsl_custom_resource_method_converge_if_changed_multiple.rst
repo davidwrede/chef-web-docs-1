@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_converge_if_changed_multiple
 
 The ``converge_if_changed`` method may be used multiple times. The following example shows how to use the ``converge_if_changed`` method to compare the multiple desired property values against the current property values (as loaded by the ``load_current_value`` method).
 
@@ -32,4 +31,7 @@ where
 * A ``converge_if_changed`` block tests only ``content``
 * A ``converge_if_changed`` block tests only ``mode`` 
 
-The |chef client| will only update the property values that require updates and will not make changes when the property values are already in the desired state
+The chef-client will only update the property values that require updates and will not make changes when the property values are already in the desired state
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag definition_example_as_definition
 
 The following definition processes unique hostnames and ports, passed on as parameters:
  		 
@@ -16,3 +16,6 @@ The following definition processes unique hostnames and ports, passed on as para
        content 'some content'
      end
    end
+
+.. end_tag
+

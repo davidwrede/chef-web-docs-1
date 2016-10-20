@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_control_group_duplicate_names
 
-If two ``control_group`` blocks have the same name, the |chef client| will raise an exception. For example, the following ``control_group`` blocks exist in different cookbooks:
+If two ``control_group`` blocks have the same name, the chef-client will raise an exception. For example, the following ``control_group`` blocks exist in different cookbooks:
 
 .. code-block:: ruby
 
@@ -20,7 +19,7 @@ If two ``control_group`` blocks have the same name, the |chef client| will raise
      end
    end
 
-Because the two ``control_group`` block names are identical, the |chef client| will return an exception similar to:
+Because the two ``control_group`` block names are identical, the chef-client will return an exception similar to:
 
 .. code-block:: ruby
 
@@ -61,3 +60,6 @@ Because the two ``control_group`` block names are identical, the |chef client| w
    Running handlers:
    [2015-01-15T09:36:14-08:00] ERROR: Running exception handlers
    Running handlers complete
+
+.. end_tag
+

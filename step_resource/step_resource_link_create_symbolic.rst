@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_link_create_symbolic
 
 The following example will create a symbolic link from ``/tmp/file`` to ``/etc/file``:
 
@@ -8,3 +8,6 @@ The following example will create a symbolic link from ``/tmp/file`` to ``/etc/f
    link '/tmp/file' do
      to '/etc/file'
    end
+
+.. end_tag
+

@@ -1,8 +1,10 @@
-.. The contents of this file are included in multiple topics.
+
+.. tag chef_shell_debug_existing_recipe
+
 .. This file describes a command or a subcommand for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef shell| can be used to debug existing recipes. The recipe first needs to be added to a run-list for the node, so that it is cached when starting |chef shell| and then used for debugging. |chef shell| will report which recipes are being cached when it is started:
+chef-shell can be used to debug existing recipes. The recipe first needs to be added to a run-list for the node, so that it is cached when starting chef-shell and then used for debugging. chef-shell will report which recipes are being cached when it is started:
 
 .. code-block:: bash
 
@@ -39,3 +41,6 @@ To load all of the recipes from a run-list, use code similar to the following:
    end
 
 After the recipes that are to be debugged have been loaded, use the ``run_chef`` command to run them.
+
+.. end_tag
+

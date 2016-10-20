@@ -1,9 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. warning:: This option is sometimes necessary when the |chef server| is configured for high availability using |drbd|.
+.. tag install_server_ha_drbd_gre_tunnels
 
-Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the back-end server that will be used for bootstrapping:
+.. warning:: This option is sometimes necessary when the Chef server is configured for high availability using DRBD.
+
+Occasionally, a GRE tunnel will be required to handle the VRRP traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the back-end server that will be used for bootstrapping:
 
 .. code-block:: bash
 
@@ -25,4 +25,7 @@ Set the following in ``/etc/opscode/chef-server.rb``:
      :ipaddress => "192.168.141.108",
      :device => "eth0"
 
-And set the |keepalived| unicast addresses to the GRE tunnel addresses.
+And set the Keepalived unicast addresses to the GRE tunnel addresses.
+
+.. end_tag
+

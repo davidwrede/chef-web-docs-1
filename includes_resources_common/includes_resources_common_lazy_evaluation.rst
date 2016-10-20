@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resources_common_lazy_evaluation
 
-In some cases, the value for a property cannot be known until the execution phase of a |chef client| run. In this situation, using lazy evaluation of property values can be helpful. Instead of a property being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
+In some cases, the value for a property cannot be known until the execution phase of a chef-client run. In this situation, using lazy evaluation of property values can be helpful. Instead of a property being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
 
 .. code-block:: ruby
 
    attribute_name lazy { code_block }
 
-where ``lazy`` is used to tell the |chef client| to evaluate the contents of the code block later on in the resource evaluation process (instead of immediately) and ``{ code_block }`` is arbitrary |ruby| code that provides the value.
+where ``lazy`` is used to tell the chef-client to evaluate the contents of the code block later on in the resource evaluation process (instead of immediately) and ``{ code_block }`` is arbitrary Ruby code that provides the value.
 
 For example, a resource that is **not** doing lazy evaluation:
 
@@ -42,3 +41,6 @@ The following example shows how to use lazy evaluation with template variables:
        }
      )
    end
+
+.. end_tag
+

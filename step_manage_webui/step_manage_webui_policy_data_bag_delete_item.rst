@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_data_bag_delete_item
 
 To delete a data bag item:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Data Bags**.
 #. Select a data bag.
@@ -13,3 +12,6 @@ To delete a data bag item:
 #. Click **Delete**.
 
    .. image:: ../../images/step_manage_webui_policy_data_bag_delete_item.png
+
+.. end_tag
+

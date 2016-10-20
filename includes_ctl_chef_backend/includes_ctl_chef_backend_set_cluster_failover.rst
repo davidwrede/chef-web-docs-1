@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_set_cluster_failover
 
 Use the ``set-cluster-failover`` subcommand to enable or disable failover across the backend HA cluster.
+
+.. end_tag
+

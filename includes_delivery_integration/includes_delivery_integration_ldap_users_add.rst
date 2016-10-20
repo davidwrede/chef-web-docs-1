@@ -1,20 +1,20 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. note:: In order to add or edit users, you must have root shell access and the **Admin** role assigned in |delivery|.
+.. tag delivery_integration_ldap_users_add
 
-To add or edit a user to |delivery|:
+.. note:: In order to add or edit users, you must have root shell access and the **Admin** role assigned in Chef Automate.
 
-#. Log into the |delivery| web UI as an administrator.
+To add or edit a user to Chef Automate:
+
+#. Log into the Chef Automate web UI as an administrator.
 #. Select **Users** from the drop-down menu on the upper right.
 
    The **Users** list page opens. You can use the search filter in the upper right corner to make sure that the user is not already added.
 #. Click the plus sign (**+**) next to **Add a New User**.  
 #. In the Add New a User text area, select one of two types for the new user. The selection box is grey for the active selection.
 
-   * **Internal** means you are manually adding the user to the |delivery| database. 
+   * **Internal** means you are manually adding the user to the Chef Automate database. 
 
-   * **LDAP** means the user is in an LDAP system that has been integrated to this |delivery|. 
+   * **LDAP** means the user is in an LDAP system that has been integrated to this Chef Automate. 
 
    If you select **Internal**, options for **Name and Email**, first name, last name, email address, and **Security Information**, a login name and password, appear.
    
@@ -28,3 +28,6 @@ To add or edit a user to |delivery|:
    The **User** list page opens and a status message appears.
 
 To check that the user was added properly when using LDAP, click **Edit** and verify that the user details are present.
+
+.. end_tag
+

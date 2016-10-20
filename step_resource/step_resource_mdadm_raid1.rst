@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To create and assemble a |raid| 1 array from two disks with a 64k chunk size:
+.. tag resource_mdadm_raid1
+
+.. To create and assemble a RAID 1 array from two disks with a 64k chunk size:
 
 .. code-block:: ruby
 
@@ -10,3 +10,6 @@
      level 1
      action [ :create, :assemble ]
    end
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-|windows powershell_dsc_short| data can be specified directly in a recipe:
+.. tag resource_dsc_script_code
+
+DSC data can be specified directly in a recipe:
 
 .. code-block:: ruby
 
@@ -14,3 +14,6 @@
      }
      EOH
    end
+
+.. end_tag
+

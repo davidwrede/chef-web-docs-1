@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag node_attribute_change_remove_level
 
 A specific attribute precedence level for default, normal, and override attributes may be removed by using one of the following syntax patterns.
 
@@ -16,3 +16,6 @@ For override attributes:
 * ``node.rm_override('foo', 'bar')``
 
 These patterns return the computed value of the key being deleted for the specified precedence level.
+
+.. end_tag
+

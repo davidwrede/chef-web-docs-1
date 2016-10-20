@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_template_notifies_reload_service
 
 .. To reload a service:
 
@@ -10,3 +10,6 @@
      source 'somefile.erb'
      notifies :reload, 'service[apache]', :immediately
    end
+
+.. end_tag
+

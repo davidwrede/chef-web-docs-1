@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_provides_override
 
-|chef| will warn you if the |dsl recipe| is provided by another custom resource or built-in resource. For example:
+Chef will warn you if the Recipe DSL is provided by another custom resource or built-in resource. For example:
 
 .. code-block:: ruby
 
@@ -25,3 +24,6 @@ This will emit a warning that ``Y`` is overriding ``X``. To disable this warning
    class Y < Chef::Resource
      provides :file, override: true
    end
+
+.. end_tag
+

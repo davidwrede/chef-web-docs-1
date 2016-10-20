@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows installing a filter module on |apache|. The package name is different for different platforms, and for the |redhat enterprise linux| family, a symbolic link is required:
+.. tag resource_link_multiple_links_redhat
+
+The following example shows installing a filter module on Apache. The package name is different for different platforms, and for the Red Hat Enterprise Linux family, a symbolic link is required:
 
 .. code-block:: ruby
 
@@ -30,3 +30,6 @@ The following example shows installing a filter module on |apache|. The package 
    ...
 
 For the entire recipe, see https://github.com/onehealth-cookbooks/apache2/blob/68bdfba4680e70b3e90f77e40223dd535bf22c17/recipes/mod_apreq2.rb.
+
+.. end_tag
+

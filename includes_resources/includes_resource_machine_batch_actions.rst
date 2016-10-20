@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_machine_batch_actions
 
 This resource has the following actions:
 
@@ -16,7 +16,12 @@ This resource has the following actions:
    
 
 ``:nothing``
-   .. include:: ../../includes_resources_common/includes_resources_common_actions_nothing.rst
+   .. tag resources_common_actions_nothing
+   
+   Define this resource block to do nothing until notified by another resource to take action. When this resource is notified, this resource block is either run immediately or it is queued up to be run at the end of the chef-client run.
+   
+   .. end_tag
+   
 
 ``:ready``
    
@@ -26,3 +31,6 @@ This resource has the following actions:
 
 ``:stop``
    
+
+.. end_tag
+

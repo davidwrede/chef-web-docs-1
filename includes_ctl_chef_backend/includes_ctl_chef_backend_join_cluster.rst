@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_join_cluster
 
 Use the ``join-cluster`` subcommand to configure a node to be a member of the backend HA cluster as a peer of the node at the specified ``PEER_NODE_IP`` IP address. This command will query the existing cluster to identify any necessary configuration information. If the ``--publish-address`` and ``--vip-interface`` options are not specified, and are specified in ``chef-backend.rb``, the command will prompt with a list of items from which to choose.
 
@@ -16,3 +15,6 @@ This command will return an error message and a non-zero exit code when:
 * ``--publish-address`` and/or ``--vip-interface`` are specified, but a non-empty ``chef-backend.rb`` file already exists. (This command will not overwrite a ``chef-backend.rb`` file.)
 
 If successful, this command will generate a ``chef-backend.rb`` file at ``/etc/chef-backend/chef-backend.rb`` with the values for the ``publish_address``, ``vip_interface``, and ``vip`` added automatically.
+
+.. end_tag
+

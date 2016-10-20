@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag plugin_knife_windows_winrm_force_chef_run
 
-To force a |chef client| run:
+To force a chef-client run:
 
 .. code-block:: bash
 
@@ -15,3 +14,6 @@ To force a |chef client| run:
    ec2-50-xx-xx-124.amazonaws.com [date] INFO: Report handlers complete
 
 Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Fri, 04 Mar 2011 22:00:53 +0000]``.
+
+.. end_tag
+

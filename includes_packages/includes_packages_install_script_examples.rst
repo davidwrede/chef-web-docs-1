@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag packages_install_script_examples
 
-The following examples show how to use the |omnitruck| install script. 
+The following examples show how to use the Omnitruck install script. 
 
-To install |chef client| version 12.0.2:
+To install chef-client version 12.0.2:
 
 .. code-block:: bash
 
@@ -16,8 +15,11 @@ and/or:
 
    $ curl -L https://omnitruck.chef.io/install.sh | sudo bash -s -- -v 12.0.2
 
-To install the latest version of the |chef dk| on |windows| from the ``current`` channel:
+To install the latest version of the Chef development kit on Microsoft Windows from the ``current`` channel:
 
 .. code-block:: none
 
    . { iwr -useb https://omnitruck.chef.io/install.ps1 } | iex; install -channel current -project chefdk
+
+.. end_tag
+

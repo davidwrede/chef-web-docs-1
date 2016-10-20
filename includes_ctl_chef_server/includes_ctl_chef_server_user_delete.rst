@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_user_delete
 
 The ``user-delete`` subcommand is used to delete a user. 
+
+.. end_tag
+

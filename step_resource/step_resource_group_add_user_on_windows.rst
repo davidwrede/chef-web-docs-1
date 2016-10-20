@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_group_add_user_on_windows
 
 .. To add a group on the Windows platform:
 
@@ -10,3 +10,6 @@
      append true
      action :modify
    end
+
+.. end_tag
+

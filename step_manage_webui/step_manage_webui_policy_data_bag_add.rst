@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_data_bag_add
 
 To add a data bag:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Data Bags**.
 #. Click **Create**.
@@ -13,3 +12,6 @@ To add a data bag:
    .. image:: ../../images/step_manage_webui_policy_data_bag_add.png
 
 #. Click **Create Data Bag**.
+
+.. end_tag
+

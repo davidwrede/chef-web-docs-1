@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_registry_key_delete_value
 
 .. To delete a registry key:
 
@@ -30,3 +30,6 @@ or a single-quoted string:
    end
 
 .. note:: If ``:data`` is not specified, you get an error: ``Missing data key in RegistryKey values hash``
+
+.. end_tag
+

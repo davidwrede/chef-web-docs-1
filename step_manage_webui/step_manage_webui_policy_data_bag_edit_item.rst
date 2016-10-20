@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_data_bag_edit_item
 
 To edit a data bag item:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Data Bags**.
 #. Select a data bag.
@@ -16,3 +15,6 @@ To edit a data bag item:
 
 #. Make your changes.
 #. Click **Save Item**.
+
+.. end_tag
+

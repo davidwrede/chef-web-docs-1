@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_user_key_create
 
 Use the ``key create`` argument to create a public key.
+
+.. end_tag
+

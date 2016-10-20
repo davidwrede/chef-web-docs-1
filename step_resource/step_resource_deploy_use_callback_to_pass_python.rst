@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To pass a block of |python| code before a migration is run:
+.. tag resource_deploy_use_callback_to_pass_python
+
+To pass a block of Python code before a migration is run:
 
 .. code-block:: ruby
 
@@ -33,3 +33,6 @@ To pass a block of |python| code before a migration is run:
        end
      end
    end
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_windows_source_url
 
 .. To install a package using a URL for the source:
 
@@ -8,3 +8,6 @@
    windows_package '7zip' do
      source 'http://www.7-zip.org/a/7z938-x64.msi'
    end
+
+.. end_tag
+

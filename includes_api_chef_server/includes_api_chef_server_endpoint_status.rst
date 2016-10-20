@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag api_chef_server_endpoint_status
 
 The ``/_status`` endpoint can be used to check the status of communications between the front and back end servers. This endpoint is located at ``/_status`` on the front end servers. 
 
@@ -51,3 +51,6 @@ The response will return something like the following:
                 ...
               }
           }
+
+.. end_tag
+

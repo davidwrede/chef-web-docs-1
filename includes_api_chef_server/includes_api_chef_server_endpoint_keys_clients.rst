@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_chef_server_endpoint_keys_clients
 
 The ``/client/CLIENT/keys`` endpoint has the following methods: ``GET`` and ``POST``.
+
+.. end_tag
+

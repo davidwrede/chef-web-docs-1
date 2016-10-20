@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_add_client_key_syntax
 
 This subcommand has the following syntax:
 
@@ -9,3 +8,6 @@ This subcommand has the following syntax:
    $ chef-server-ctl add-client-key ORG_NAME CLIENT_NAME [--public-key-path PATH] [--expiration-date DATE] [--key-name NAME]
 
 .. warning:: All options for this subcommand must follow all arguments.
+
+.. end_tag
+

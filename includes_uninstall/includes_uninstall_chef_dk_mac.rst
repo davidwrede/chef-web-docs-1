@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
-Use the following commands to remove the |chef dk| on |mac os x|.
+.. tag uninstall_chef_dk_mac
+
+Use the following commands to remove the Chef development kit on Mac OS X.
 
 To remove installed files:
 
@@ -17,14 +17,17 @@ To remove the system installation entry:
 
 To remove symlinks:
 
-* For |chef client| version 12.x, under ``/usr/local/bin``:
+* For chef-client version 12.x, under ``/usr/local/bin``:
 
   .. code-block:: bash
 
      $ sudo find /usr/local/bin -lname '/opt/chefdk/*' -delete
 
-* For |chef client| version 11.x, under ``/usr/bin``:
+* For chef-client version 11.x, under ``/usr/bin``:
 
   .. code-block:: bash
 
      $ sudo find /usr/bin -lname '/opt/chefdk/*' -delete
+
+.. end_tag
+

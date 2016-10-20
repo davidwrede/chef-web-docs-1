@@ -1,9 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_yum_package_handle_cookbook_file_and_yum_package
 
 .. To handle cookbook_file and yum_package when both called in the same recipe
 
-When a |resource cookbook_file| resource and a |resource yum_package| resource are both called from within the same recipe, use the ``flush_cache`` attribute to dump the in-memory |yum| cache, and then use the repository immediately to ensure that the correct package is installed:
+When a **cookbook_file** resource and a **yum_package** resource are both called from within the same recipe, use the ``flush_cache`` attribute to dump the in-memory Yum cache, and then use the repository immediately to ensure that the correct package is installed:
 
 .. code-block:: ruby
 
@@ -16,3 +16,6 @@ When a |resource cookbook_file| resource and a |resource yum_package| resource a
      action :install
      flush_cache [ :before ]
    end
+
+.. end_tag
+

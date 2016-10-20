@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag search_pattern_wildcard_any_node
 
 To search for any node that contains the specified key, enter the following:
 
@@ -9,3 +9,6 @@ To search for any node that contains the specified key, enter the following:
    
 where ``foo`` is the name of the node.
    
+
+.. end_tag
+

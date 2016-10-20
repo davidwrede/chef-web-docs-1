@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_package_paludis_syntax
 
-A |resource package_paludis| resource block manages a package on a node, typically by installing it. The simplest use of the |resource package_paludis| resource is:
+A **paludis_package** resource block manages a package on a node, typically by installing it. The simplest use of the **paludis_package** resource is:
 
 .. code-block:: ruby
 
@@ -10,7 +9,7 @@ A |resource package_paludis| resource block manages a package on a node, typical
 
 which will install the named package using all of the default options and the default action (``:install``).
 
-The full syntax for all of the properties that are available to the |resource package_paludis| resource is:
+The full syntax for all of the properties that are available to the **paludis_package** resource is:
 
 .. code-block:: ruby
 
@@ -28,7 +27,10 @@ The full syntax for all of the properties that are available to the |resource pa
 
 where 
 
-* ``paludis_package`` tells the |chef client| to manage a package
+* ``paludis_package`` tells the chef-client to manage a package
 * ``'name'`` is the name of the package
-* ``:action`` identifies which steps the |chef client| will take to bring the node into the desired state
-* ``options``, ``package_name``, ``provider``, ``source``, ``recursive``, ``timeout``, and ``version`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``:action`` identifies which steps the chef-client will take to bring the node into the desired state
+* ``options``, ``package_name``, ``provider``, ``source``, ``recursive``, ``timeout``, and ``version`` are properties of this resource, with the Ruby type shown. See "Properties" section below for more information about all of the properties that may be used with this resource.
+
+.. end_tag
+

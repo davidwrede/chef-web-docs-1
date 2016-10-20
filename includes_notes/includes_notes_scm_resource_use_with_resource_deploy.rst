@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag notes_scm_resource_use_with_resource_deploy
 
-This resource is often used in conjunction with the |resource deploy| resource.
+This resource is often used in conjunction with the **deploy** resource.
+
+.. end_tag
+

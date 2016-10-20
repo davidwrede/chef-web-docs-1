@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_install_features_download
 
 The ``install`` subcommand downloads packages from https://packages.chef.io/ by default. For systems that are not behind a firewall (and have connectivity to https://packages.chef.io/), these packages can be installed as described below.
 
@@ -10,10 +9,10 @@ The ``install`` subcommand downloads packages from https://packages.chef.io/ by 
 
    * - Feature
      - Command
-   * - |chef manage_title|
-     - Use |chef manage| to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
+   * - Chef Manage
+     - Use Chef management console to manage data bags, attributes, run-lists, roles, environments, and cookbooks from a web user interface.
 
-       On the |chef server|, run:
+       On the Chef server, run:
 
        .. code-block:: bash
 
@@ -31,12 +30,17 @@ The ``install`` subcommand downloads packages from https://packages.chef.io/ by 
 
           $ chef-manage-ctl reconfigure
 
-       .. note:: .. include:: ../../includes_chef_license/includes_chef_license_reconfigure_manage.rst
+       .. note:: .. tag chef_license_reconfigure_manage
+                 
+                 Starting with the Chef management console 2.3.0, the `Chef MLSA <https://docs.chef.io/chef_license.html>`__ must be accepted when reconfiguring the product. If the Chef MLSA has not already been accepted, the reconfigure process will prompt for a ``yes`` to accept it. Or run ``chef-manage-ctl reconfigure --accept-license`` to automatically accept the license.
+                 
+                 .. end_tag
+                 
 
-   * - |push jobs_title|
-     - Use |push jobs| to run jobs---an action or a command to be executed---against nodes independently of a |chef client| run.
+   * - Chef Push Jobs
+     - Use Chef push jobs to run jobs---an action or a command to be executed---against nodes independently of a chef-client run.
 
-       On the |chef server|, run:
+       On the Chef server, run:
 
        .. code-block:: bash
 
@@ -55,9 +59,9 @@ The ``install`` subcommand downloads packages from https://packages.chef.io/ by 
           $ opscode-push-jobs-server-ctl reconfigure
 
    * - Reporting
-     - Use |reporting| to keep track of what happens during every |chef client| runs across all of the infrastructure being managed by |chef|. Run |reporting| with |chef manage| to view reports from a web user interface.
+     - Use Reporting to keep track of what happens during every chef-client runs across all of the infrastructure being managed by Chef. Run Reporting with Chef management console to view reports from a web user interface.
 
-       On the |chef server|, run:
+       On the Chef server, run:
 
        .. code-block:: bash
 
@@ -74,4 +78,7 @@ The ``install`` subcommand downloads packages from https://packages.chef.io/ by 
        .. code-block:: bash
 
           $ opscode-reporting-ctl reconfigure
+
+
+.. end_tag
 

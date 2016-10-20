@@ -1,6 +1,8 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_push_jobs_job_start
+
+Use the ``job start`` argument to start a Chef push jobs job.
 
 
-Use the ``job start`` argument to start a |push jobs| job.
+.. end_tag
 

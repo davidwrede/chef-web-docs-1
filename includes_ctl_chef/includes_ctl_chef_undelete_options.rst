@@ -1,26 +1,28 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_undelete_options
 
 This subcommand has the following options:
 
 ``-c CONFIG_FILE``, ``--config CONFIG_FILE``
-   |chef_exe config|
+   The path to the knife configuration file.
 
 ``-D``, ``--debug``
-   |chef_exe debug|
+   Enable stack traces and other debug output.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-i ID``, ``--id ID``
-   |chef_exe id|
+   Undo the delete operation specified by ``ID``.
 
 ``-l``, ``--last``
-   |chef_exe last|
+   Undo the most recent delete operation.
 
 ``--list``
-   Default. |chef_exe list|
+   Default. Return a list of available operations.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

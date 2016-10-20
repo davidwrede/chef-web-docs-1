@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_ohai
 
-The |dsl ohai| is a |ruby| DSL that is used to define an |ohai| plugin and to ensure that |ohai| collects the right data at the start of every |chef client| run. The |dsl ohai| is a small DSL with a single method that is specific to |ohai| plugins. Because the |dsl ohai| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining an |ohai| plugin.
+The Ohai DSL is a Ruby DSL that is used to define an Ohai plugin and to ensure that Ohai collects the right data at the start of every chef-client run. The Ohai DSL is a small DSL with a single method that is specific to Ohai plugins. Because the Ohai DSL is a Ruby DSL, anything that can be done using Ruby can also be done when defining an Ohai plugin.
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ctl_chef_server_list_client_keys_options
 
 This subcommand has the following options:
 
@@ -11,4 +11,7 @@ This subcommand has the following options:
 
 ``--verbose``
    Use to show the full public key strings in command output.
+
+
+.. end_tag
 

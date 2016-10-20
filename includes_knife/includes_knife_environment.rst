@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_environment_summary
 
-The ``knife environment`` subcommand is used to manage environments within a single organization on the |chef server|.
+The ``knife environment`` subcommand is used to manage environments within a single organization on the Chef server.
+
+.. end_tag
+

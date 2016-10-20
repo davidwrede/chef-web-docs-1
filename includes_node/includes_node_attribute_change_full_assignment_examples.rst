@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag node_attribute_change_full_assignment_examples
 
 The following examples show how to remove all attribute precedence levels.
 
@@ -115,4 +115,7 @@ the difference is:
    node.attributes.combined_override['foo'] #=> {'bar' => {'baz' => 99}}
    node['foo']['bar'] #=> {'baz' => 99}
 
+
+
+.. end_tag
 

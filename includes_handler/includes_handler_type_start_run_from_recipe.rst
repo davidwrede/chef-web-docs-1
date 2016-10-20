@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_type_start_run_from_recipe
 
-The |cookbook chef_client| cookbook can be configured to automatically install and configure gems that are required by a start handler. For example:
+The **chef-client** cookbook can be configured to automatically install and configure gems that are required by a start handler. For example:
 
 .. code-block:: ruby
 
@@ -19,3 +18,6 @@ The |cookbook chef_client| cookbook can be configured to automatically install a
    ]
    
    include_recipe 'chef-client::config'
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_provisioning_aws_launch_config_auto_scale_destroy
 
 .. To destroy an auto scaling group:
 
@@ -18,3 +18,6 @@ The following example destroys an auto scaling group and the associated launch c
        action :destroy
      end
    end
+
+.. end_tag
+

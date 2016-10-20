@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag plugin_knife_windows_winrm_requirements_nltm
 
-When |knife| is executed from a |windows| system, it is no longer necessary to make additional configuration of the |windows remote management| listener on the target node to enable successful authentication from the workstation. It is sufficient to have a |windows remote management| listener on the remote node configured to use the default configuration for ``winrm quickconfig``. This is because ``knife windows`` supports the |windows| negotiate protocol, including |ntlm| authentication, which matches the authentication requirements for the default configuration of the |windows remote management| listener.
+When knife is executed from a Microsoft Windows system, it is no longer necessary to make additional configuration of the WinRM listener on the target node to enable successful authentication from the workstation. It is sufficient to have a WinRM listener on the remote node configured to use the default configuration for ``winrm quickconfig``. This is because ``knife windows`` supports the Microsoft Windows negotiate protocol, including NTLM authentication, which matches the authentication requirements for the default configuration of the WinRM listener.
 
-.. note:: To use |microsoft negotiate| or |ntlm| to authenticate as the user specified by the ``--winrm-user`` option, include the user's |windows| domain, using the format ``domain\user``, where the backslash (``\``) separates the domain from the user.
+.. note:: To use Negotiate or NTLM to authenticate as the user specified by the ``--winrm-user`` option, include the user's Microsoft Windows domain, using the format ``domain\user``, where the backslash (``\``) separates the domain from the user.
 
 For example:
 
@@ -17,3 +16,6 @@ and:
 .. code-block:: bash
 
    $ knife bootstrap windows winrm db1.cloudapp.net -r 'server::db' -x '.\localadmin' -P 'password'
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-An ``if`` statement can be used to specify part of a recipe to be used when certain conditions are met. ``else`` and ``elseif`` statements can be used to handle situations where either the initial condition is not met or when there are other possible conditions that can be met. Since this behavior is 100% |ruby|, do this in a recipe the same way here as anywhere else.
+.. tag ruby_style_basics_statement_if
+
+An ``if`` statement can be used to specify part of a recipe to be used when certain conditions are met. ``else`` and ``elseif`` statements can be used to handle situations where either the initial condition is not met or when there are other possible conditions that can be met. Since this behavior is 100% Ruby, do this in a recipe the same way here as anywhere else.
 
 For example, using an ``if`` statement with the ``platform`` node attribute:
 
@@ -23,4 +23,7 @@ For example, using an ``if`` statement with the ``platform`` node attribute:
 .. future example: step_resource_scm_use_different_branches
 .. future example: step_resource_service_stop_do_stuff_start
 
+
+
+.. end_tag
 

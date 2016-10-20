@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_bootstrap_node_fips
 
 .. To bootstrap a node:
 
@@ -15,3 +14,6 @@ which shows something similar to:
    OpenSSL FIPS 140 mode enabled
    ...
    12.34.56.789 Chef Client finished, 12/12 resources updated in 78.942455583 seconds
+
+.. end_tag
+

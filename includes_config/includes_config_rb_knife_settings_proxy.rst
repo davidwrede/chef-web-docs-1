@@ -1,36 +1,38 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_rb_knife_settings_proxy
 
-In certain situations the proxy used by the |chef server| requires authentication. In this situation, three settings must be added to the configuration file. Which settings to add depends on the protocol used to access the |chef server|: HTTP or HTTPS.  
+In certain situations the proxy used by the Chef server requires authentication. In this situation, three settings must be added to the configuration file. Which settings to add depends on the protocol used to access the Chef server: HTTP or HTTPS.  
 
-If the |chef server| is configured to use HTTP, add the following settings:
+If the Chef server is configured to use HTTP, add the following settings:
 
 ``http_proxy``
-   |http_proxy| Default value: ``nil``. For example:
+   The proxy server for HTTP connections. Default value: ``nil``. For example:
 
    .. code-block:: ruby
 
       http_proxy 'http://proxy.vmware.com:3128'
 
 ``http_proxy_user``
-   |http_proxy_user| Default value: ``nil``.
+   The user name for the proxy server when the proxy server is using an HTTP connection. Default value: ``nil``.
 
 ``http_proxy_pass``
-   |http_proxy_pass| Default value: ``nil``.
+   The password for the proxy server when the proxy server is using an HTTP connection. Default value: ``nil``.
 
-If the |chef server| is configured to use HTTPS (such as the hosted |chef server|), add the following settings:
+If the Chef server is configured to use HTTPS (such as the hosted Chef server), add the following settings:
 
 ``https_proxy``
-   |https_proxy| (The hosted |chef server| uses an HTTPS connection.) Default value: ``nil``.
+   The proxy server for HTTPS connections. (The hosted Chef server uses an HTTPS connection.) Default value: ``nil``.
 
 ``https_proxy_user``
-   |https_proxy_user| Default value: ``nil``.
+   The user name for the proxy server when the proxy server is using an HTTPS connection. Default value: ``nil``.
 
 ``https_proxy_pass``
-   |https_proxy_pass| Default value: ``nil``.
+   The password for the proxy server when the proxy server is using an HTTPS connection. Default value: ``nil``.
 
 Use the following setting to specify URLs that do not need a proxy:
 
 ``no_proxy``
-   |no_proxy| Default value: ``nil``.
+   A comma-separated list of URLs that do not need a proxy. Default value: ``nil``.
+
+.. end_tag
+

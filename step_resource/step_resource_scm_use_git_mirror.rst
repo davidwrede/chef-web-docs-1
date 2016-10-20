@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To use the |git| mirror:
+.. tag resource_scm_use_git_mirror
+
+.. To use the git mirror:
 
 .. code-block:: ruby
 
@@ -10,3 +10,6 @@
      revision 'master'
      action :sync
    end
+
+.. end_tag
+

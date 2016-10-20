@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-|knife| can encrypt and decrypt data bag items when the ``knife data bag`` subcommand is run with the ``create``, ``edit``, ``from file``, or ``show`` arguments and the following options:
+.. tag data_bag_encryption_knife_options
+
+knife can encrypt and decrypt data bag items when the ``knife data bag`` subcommand is run with the ``create``, ``edit``, ``from file``, or ``show`` arguments and the following options:
 
 .. list-table::
    :widths: 200 300
@@ -10,6 +10,9 @@
    * - Option
      - Description
    * - ``--secret SECRET``
-     - |secret| |secret_config|
+     - The encryption key that is used for values contained within a data bag item. If ``secret`` is not specified, the chef-client looks for a secret at the path specified by the ``encrypted_data_bag_secret`` setting in the client.rb file.
    * - ``--secret-file FILE``
-     - |secret_file|
+     - The path to the file that contains the encryption key.
+
+.. end_tag
+

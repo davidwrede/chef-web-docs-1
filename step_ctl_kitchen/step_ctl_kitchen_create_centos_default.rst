@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_kitchen_create_centos_default
 
-To create the default |centos| instance, run the following:
+To create the default CentOS instance, run the following:
 
 .. code-block:: bash
 
    $ kitchen create default-centos-71
 
-|centos| is downloaded the first time this command is run, after which |vagrant| is started. (This may take a few minutes.)
+CentOS is downloaded the first time this command is run, after which Vagrant is started. (This may take a few minutes.)
 
 The output of the command is similar to:
 
@@ -44,3 +43,6 @@ The output of the command is similar to:
           Vagrant instance <default-centos-71> created.
           Finished creating <default-centos-71> (4m0.59s).
    -----> Kitchen is finished. (11m29.76s)
+
+.. end_tag
+

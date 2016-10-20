@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ohai_custom_plugin_logs
 
-Use the ``Ohai::Log`` class in an |ohai| plugin to define log entries that are created by |ohai|. The syntax for a log message is as follows:
+Use the ``Ohai::Log`` class in an Ohai plugin to define log entries that are created by Ohai. The syntax for a log message is as follows:
 
 .. code-block:: ruby
 
@@ -41,3 +40,6 @@ For example:
        end
      end 
    end
+
+.. end_tag
+

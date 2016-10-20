@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_osx_profile_install_file
 
 The ``profiles`` command will be used to install the specified configuration profile. It can be in sub-directory within a cookbook.
 
@@ -8,3 +8,6 @@ The ``profiles`` command will be used to install the specified configuration pro
    osx_profile 'Install screensaver profile' do
      profile 'screensaver/com.company.screensaver.mobileconfig'
    end
+
+.. end_tag
+

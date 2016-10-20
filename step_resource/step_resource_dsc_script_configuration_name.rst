@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to specify custom configuration data using the ``configuration_name`` property. For example, the following |windows powershell| script defines the ``vi`` configuration:
+.. tag resource_dsc_script_configuration_name
+
+The following example shows how to specify custom configuration data using the ``configuration_name`` property. For example, the following Windows PowerShell script defines the ``vi`` configuration:
 
 .. code-block:: powershell
 
@@ -31,4 +31,7 @@ Use the following recipe to specify that configuration:
      configuration_name 'vi'
      command 'C:\dsc_scripts\editors.ps1'
    end
+
+
+.. end_tag
 

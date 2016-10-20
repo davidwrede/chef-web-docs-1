@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_chef_server_headers_x_ops_sign
 
 Set this header to the following value: ``version=1.0``.
+
+.. end_tag
+

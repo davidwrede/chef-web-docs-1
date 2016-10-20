@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_dependencies
 
 The ``dependencies`` setting specifies run-time dependencies on which the current project depends. These dependency associations affect how projects are promoted through the Union, Rehearsal, and Delivered stages. Dependencies may be defined in the following ways:
 
@@ -10,3 +9,6 @@ The ``dependencies`` setting specifies run-time dependencies on which the curren
 * ``"org_name/project_name:pipeline_name"``
 
 If only a project name is provided, the master pipeline for that project is the dependency.
+
+.. end_tag
+

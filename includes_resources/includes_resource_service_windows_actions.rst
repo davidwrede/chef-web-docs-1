@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_windows_actions
 
 This resource has the following actions:
 
@@ -7,10 +7,10 @@ This resource has the following actions:
    Configure a service based on the value of the ``startup_type`` property.
 
 ``:disable``
-   Disable a service. |windows service_type_disabled|
+   Disable a service. This action is equivalent to a ``Disabled`` startup type on the Microsoft Windows platform.
 
 ``:enable``
-   Enable a service at boot. |windows service_type_automatic|
+   Enable a service at boot. This action is equivalent to an ``Automatic`` startup type on the Microsoft Windows platform.
 
 ``:nothing``
    Default. Do nothing with a service.
@@ -26,3 +26,6 @@ This resource has the following actions:
 
 ``:stop``
    Stop a service.
+
+.. end_tag
+

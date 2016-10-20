@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_reporting_endpoint_reports_org_runs
 
 The ``/reports/org/runs`` endpoint has the following methods: ``GET``.
+
+.. end_tag
+

@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_cookbook_file_download
 
 To download a file that is located in a cookbook:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Cookbooks**.
 #. Select the file type: **Attributes**, **Definitions**, **Files**, **Recipes**, **Templates**, or **Root Files**.
@@ -14,3 +13,6 @@ To download a file that is located in a cookbook:
    .. image:: ../../images/step_manage_webui_policy_cookbook_download.png
 
 #. Specify the location to which the file should be saved.
+
+.. end_tag
+

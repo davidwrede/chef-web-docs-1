@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To create a file in |windows|, be sure to add an escape character---``\``---before the backslashes in the paths:
+.. tag resource_file_create_in_windows
+
+To create a file in Microsoft Windows, be sure to add an escape character---``\``---before the backslashes in the paths:
 
 .. code-block:: ruby
 
@@ -10,3 +10,6 @@ To create a file in |windows|, be sure to add an escape character---``\``---befo
      rights :full_control, 'DOMAIN\\User'
      action :create
    end
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_install_with_specific_provider
 
 .. To install a package using a specific provider:
 
@@ -10,3 +10,6 @@
      source '/tmp/tar-1.16.1-1.rpm'
      provider Chef::Provider::Package::Rpm
    end
+
+.. end_tag
+

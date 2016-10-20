@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use the |resource package_smartos| resource to manage packages for the |smartos| platform.
+.. tag resource_package_smartos
+
+Use the **smartos_package** resource to manage packages for the SmartOS platform.
+
+.. end_tag
+

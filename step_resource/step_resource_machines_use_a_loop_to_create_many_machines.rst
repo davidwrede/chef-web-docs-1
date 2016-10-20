@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_machines_use_a_loop_to_create_many_machines
 
 .. To create multiple machines using a loop:
 
@@ -11,3 +10,6 @@
        recipe 'hadoop'
      end
    end
+
+.. end_tag
+

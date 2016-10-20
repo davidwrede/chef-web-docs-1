@@ -1,11 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag packages_install_script_run_unix_linux
 
-On |unix| and |linux| systems the |omnitruck| install script is invoked with:
+On UNIX and Linux systems the Omnitruck install script is invoked with:
 
 .. code-block:: bash
 
    curl -L https://omnitruck.chef.io/install.sh | sudo bash
 
 and then enter the local password when prompted.
+
+.. end_tag
+

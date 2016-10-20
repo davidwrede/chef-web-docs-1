@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_ssl_fetch_verify_certificate
 
-The |ssl| certificate that is downloaded to the |path trusted_certs| directory should be verified to ensure that it is, in fact, the same certificate as the one located on the |chef server|. This can be done by comparing the |sha256| checksums.
+The SSL certificate that is downloaded to the ``/.chef/trusted_certs`` directory should be verified to ensure that it is, in fact, the same certificate as the one located on the Chef server. This can be done by comparing the SHA-256 checksums.
 
-#. View the checksum on the |chef server|:
+#. View the checksum on the Chef server:
 
    .. code-block:: bash
 
@@ -29,3 +28,6 @@ The |ssl| certificate that is downloaded to the |path trusted_certs| directory s
       <ABC123checksum>  .chef/trusted_certs/chef-server.example.com.crt
 
 #. Verify that the checksum values are identical.
+
+.. end_tag
+

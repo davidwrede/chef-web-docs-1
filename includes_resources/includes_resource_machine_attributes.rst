@@ -1,12 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_machine_attributes
 
 This resource has the following properties:
    
 ``admin``
    **Ruby Types:** TrueClass, FalseClass
 
-   Use to specify whether the |chef client| is an API client.
+   Use to specify whether the chef-client is an API client.
    
 ``allow_overwrite_keys``
    **Ruby Types:** TrueClass, FalseClass
@@ -45,7 +45,7 @@ This resource has the following properties:
    Each modified attribute should be specified individually. This attribute should not be used in the same recipe as ``attributes``.
    
 ``attributes``
-   Use to specify a |ruby hash| that contains all of the normal attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``.
+   Use to specify a Hash that contains all of the normal attributes to be applied to a machine. This attribute should not be used in the same recipe as ``attribute``.
    
 ``chef_config``
    **Ruby Type:** String
@@ -53,15 +53,15 @@ This resource has the following properties:
    Use to specify a string that contains extra configuration settings for a machine.
    
 ``chef_environment``
-   |name environment|
+   The name of the environment.
    
 ``chef_server``
    **Ruby Type:** Hash
 
-   |chef_server_url|
+   The URL for the Chef server.
    
 ``complete``
-   Use to specify if all of the normal attributes specified by this resource represent a complete specification of normal attributes for a machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a |resource machine| resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:
+   Use to specify if all of the normal attributes specified by this resource represent a complete specification of normal attributes for a machine. When ``true``, any attributes not specified will be reset to their default values. For example, if a **machine** resource is empty and sets ``complete`` to ``true``, all existing attributes will be reset:
 
    .. code-block:: ruby
 
@@ -107,17 +107,17 @@ This resource has the following properties:
 ``from_image``
    **Ruby Type:** String
 
-   Use to specify an image created by the |resource machine_image| resource.
+   Use to specify an image created by the **machine_image** resource.
    
 ``ignore_failure``
    **Ruby Types:** TrueClass, FalseClass
 
-   |ignore_failure| Default value: ``false``.
+   Continue running a recipe if a resource fails for any reason. Default value: ``false``.
    
 ``machine_options``
    **Ruby Type:** Hash
 
-   A |ruby hash| that is specifies driver options.
+   A Hash that is specifies driver options.
    
 ``name``
    **Ruby Type:** String
@@ -127,16 +127,44 @@ This resource has the following properties:
 ``notifies``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies.rst
+   .. tag resources_common_notification_notifies
+   
+   A resource may notify another resource to take action when its state changes. Specify a ``'resource[name]'``, the ``:action`` that resource should take, and then the ``:timer`` for that action. A resource may notifiy more than one resource; use a ``notifies`` statement for each resource to be notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies_syntax.rst
+   .. tag resources_common_notification_notifies_syntax
+   
+   The syntax for ``notifies`` is:
+   
+   .. code-block:: ruby
+   
+      notifies :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
    
 ``ohai_hints``
    **Ruby Type:** Hash
 
-   |hint| For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``.
+   An Ohai hint to be set on the target node. For example: ``'ec2' => { 'a' => 'b' } creates file ec2.json with json contents { 'a': 'b' }``.
    
 ``private_key_options``
    **Ruby Type:** Hash
@@ -154,7 +182,7 @@ This resource has the following properties:
    The path to a public key.
    
 ``raw_json``
-   The machine as |json| data. For example:
+   The machine as JSON data. For example:
        
    .. code-block:: javascript
    
@@ -192,12 +220,12 @@ This resource has the following properties:
 ``retries``
    **Ruby Type:** Integer
 
-   |retries| Default value: ``0``.
+   The number of times to catch exceptions and retry the resource. Default value: ``0``.
    
 ``retry_delay``
    **Ruby Type:** Integer
 
-   |retry_delay| Default value: ``2``.
+   The retry delay (in seconds). Default value: ``2``.
    
 ``role``
    Use to add a role to the run-list for the machine. Use this property multiple times to add multiple roles to a run-list. Use this property along with ``recipe`` to define a run-list. The order in which the ``recipe`` and ``role`` properties are specified will determine the order in which they are added to the run-list. This property should not be used in the same recipe as ``run_list``. For example:
@@ -231,11 +259,39 @@ This resource has the following properties:
 ``subscribes``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes.rst
+   .. tag resources_common_notification_subscribes
+   
+   A resource may listen to another resource, and then take action if the state of the resource being listened to changes. Specify a ``'resource[name]'``, the ``:action`` to be taken, and then the ``:timer`` for that action.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes_syntax.rst
+   .. tag resources_common_notification_subscribes_syntax
+   
+   The syntax for ``subscribes`` is:
+   
+   .. code-block:: ruby
+   
+      subscribes :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
    
 ``tag``
    Use to add a tag.
@@ -246,4 +302,7 @@ This resource has the following properties:
 ``validator``
    **Ruby Types:** TrueClass, FalseClass
 
-   Use to specify if the |chef client| is a |chef validator|.
+   Use to specify if the chef-client is a chef-validator.
+
+.. end_tag
+

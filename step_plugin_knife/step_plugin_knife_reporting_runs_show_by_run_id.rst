@@ -1,13 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To return details about a specific |chef client| run, run the following command:
+.. tag plugin_knife_reporting_runs_show_by_run_id
+
+To return details about a specific chef-client run, run the following command:
 
 .. code-block:: bash
 
    $ knife runs show c40csdcf2-5007-433c-95570-8e0c7e55f496
 
-For a |chef client| run that succeeded, the command will return something similar to:
+For a chef-client run that succeeded, the command will return something similar to:
 
 .. code-block:: bash
 
@@ -41,7 +41,7 @@ For a |chef client| run that succeeded, the command will return something simila
        type:             file
        uri:              URI
 
-For a |chef client| run that failed (or had some type of error), the command will return something similar to:
+For a chef-client run that failed (or had some type of error), the command will return something similar to:
 
 .. code-block:: bash
 
@@ -75,3 +75,6 @@ For a |chef client| run that failed (or had some type of error), the command wil
              total_res_count:   0
              updated_res_count: 0
      run_resources:
+
+.. end_tag
+

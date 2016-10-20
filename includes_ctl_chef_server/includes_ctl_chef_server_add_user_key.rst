@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_add_user_key
 
 Use the ``add-user-key`` subcommand to add a user key. 
+
+.. end_tag
+

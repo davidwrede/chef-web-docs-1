@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |service erchef| service is an |erlang|-based service that is used to handle |api chef server| requests to the following areas within the |chef server|:
+.. tag server_services_erchef
+
+The **opscode-erchef** service is an Erlang-based service that is used to handle Chef server API requests to the following areas within the Chef server:
 
 * Cookbooks
 * Data bags
@@ -10,3 +10,6 @@ The |service erchef| service is an |erlang|-based service that is used to handle
 * Roles
 * Sandboxes
 * Search
+
+.. end_tag
+

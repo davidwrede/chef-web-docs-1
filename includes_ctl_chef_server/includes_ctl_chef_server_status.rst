@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_status
 
-The ``status`` subcommand is used to show the status of all services available to the |chef server|. The results will vary based on the configuration of a given server. This subcommand has the following syntax:
+The ``status`` subcommand is used to show the status of all services available to the Chef server. The results will vary based on the configuration of a given server. This subcommand has the following syntax:
 
 .. code-block:: bash
 
@@ -35,7 +34,7 @@ For example:
 
    $ down: opscode-erchef: (pid 35546) 10s
 
-By default, |runit| will restart services automatically when the services fail. Therefore, |runit| may report the status of a service as ``run:`` even when there is an issue with that service. When investigating why a particular service is not running as it should be, look for the services with the shortest uptimes. For example, the list below indicates that the |service erchef| should be investigated further:
+By default, runit will restart services automatically when the services fail. Therefore, runit may report the status of a service as ``run:`` even when there is an issue with that service. When investigating why a particular service is not running as it should be, look for the services with the shortest uptimes. For example, the list below indicates that the **opscode-erchef** should be investigated further:
 
 .. code-block:: bash
 
@@ -44,3 +43,6 @@ By default, |runit| will restart services automatically when the services fail. 
    run: opscode-erchef: (pid 5383) 5s; run: log: (pid 4382) 13669s
    run: opscode-expander: (pid 4078) 13694s; run: log: (pid 4077) 13694s
    run: opscode-expander-reindexer: (pid 4130) 13692s; run: log: (pid 4114) 13692s
+
+.. end_tag
+

@@ -1,104 +1,163 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_batch_attributes
 
 This resource has the following properties:
 
 ``architecture``
    **Ruby Type:** Symbol
 
-   |architecture windows_process| |architecture windows_process_i386| Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
+   The architecture of the process under which a script is executed. If a value is not provided, the chef-client defaults to the correct value for the architecture, as determined by Ohai. An exception is raised when anything other than ``:i386`` is specified for a 32-bit process. Possible values: ``:i386`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes).
 
 ``code``
    **Ruby Type:** String
 
-   |code quoted_string|
+   A quoted (" ") string of code to be executed.
 
 ``command``
    **Ruby Types:** String, Array
 
-   |name command|
+   The name of the command to be executed.
 
 ``creates``
    **Ruby Type:** String
 
-   |creates file_exists|
+   Prevent a command from creating a file when that file already exists.
 
 ``cwd``
    **Ruby Type:** String
 
-   |cwd run_command|
+   The current working directory from which a command is run.
 
 ``flags``
    **Ruby Type:** String
 
-   |flags|
+   One or more command line flags that are passed to the interpreter when a command is invoked.
 
 ``group``
    **Ruby Types:** String, Integer
 
-   |group command|
+   The group name or group ID that must be changed before running a command.
 
 ``guard_interpreter``
    **Ruby Type:** Symbol
 
-   Default value: ``:batch``. When this property is set to ``:batch``, the 64-bit version of the |windows cmd exe| shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` properties. Set this value to ``:default`` to use the 32-bit version of the |windows cmd exe| shell.
+   Default value: ``:batch``. When this property is set to ``:batch``, the 64-bit version of the cmd.exe shell will be used to evaluate strings values for the ``not_if`` and ``only_if`` properties. Set this value to ``:default`` to use the 32-bit version of the cmd.exe shell.
 
 ``ignore_failure``
    **Ruby Types:** TrueClass, FalseClass
 
-   |ignore_failure| Default value: ``false``.
+   Continue running a recipe if a resource fails for any reason. Default value: ``false``.
 
 ``interpreter``
    **Ruby Type:** String
 
-   |interpreter| Changing the default value of this property is not supported.
+   The script interpreter to use during code execution. Changing the default value of this property is not supported.
 
 ``notifies``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies.rst
+   .. tag resources_common_notification_notifies
+   
+   A resource may notify another resource to take action when its state changes. Specify a ``'resource[name]'``, the ``:action`` that resource should take, and then the ``:timer`` for that action. A resource may notifiy more than one resource; use a ``notifies`` statement for each resource to be notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies_syntax.rst
+   .. tag resources_common_notification_notifies_syntax
+   
+   The syntax for ``notifies`` is:
+   
+   .. code-block:: ruby
+   
+      notifies :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
 
 ``provider``
    **Ruby Type:** Chef Class
 
-   Optional. |provider resource_parameter|
+   Optional. Explicitly specifies a provider.
 
 ``retries``
    **Ruby Type:** Integer
 
-   |retries| Default value: ``0``.
+   The number of times to catch exceptions and retry the resource. Default value: ``0``.
 
 ``retry_delay``
    **Ruby Type:** Integer
 
-   |retry_delay| Default value: ``2``.
+   The retry delay (in seconds). Default value: ``2``.
 
 ``returns``
    **Ruby Types:** Integer, Array
 
-   |return_value cmd| Default value: ``0``.
+   The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match. Default value: ``0``.
 
 ``subscribes``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes.rst
+   .. tag resources_common_notification_subscribes
+   
+   A resource may listen to another resource, and then take action if the state of the resource being listened to changes. Specify a ``'resource[name]'``, the ``:action`` to be taken, and then the ``:timer`` for that action.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes_syntax.rst
+   .. tag resources_common_notification_subscribes_syntax
+   
+   The syntax for ``subscribes`` is:
+   
+   .. code-block:: ruby
+   
+      subscribes :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
 
 ``timeout``
    **Ruby Types:** Integer, Float
 
-   |timeout command| Default value: ``3600``.
+   The amount of time (in seconds) a command is to wait before timing out. Default value: ``3600``.
 
 ``user``
    **Ruby Types:** String, Integer
 
-   |user name_or_id|
+   A user name or identifier that must be changed before running a command.
 
-.. note:: .. include:: ../../includes_notes/includes_notes_batch_resource_link_to_cmdexe_technet.rst
+.. note:: See http://technet.microsoft.com/en-us/library/bb490880.aspx for more information about the cmd.exe interpreter.
+
+.. end_tag
+

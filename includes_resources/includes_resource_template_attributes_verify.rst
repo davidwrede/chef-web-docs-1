@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-A block is arbitrary |ruby| defined within the resource block by using the ``verify`` property. When a block is ``true``, the |chef client| will continue to update the file as appropriate.
+.. tag resource_template_attributes_verify
+
+A block is arbitrary Ruby defined within the resource block by using the ``verify`` property. When a block is ``true``, the chef-client will continue to update the file as appropriate.
 
 For example, this should return ``true``:
 
@@ -19,7 +19,7 @@ This should return ``true``:
      verify 'nginx -t -c %{path}'
    end
 
-.. warning:: For releases of the |chef client| prior to 12.5 (|chef client| 12.4 and earlier) the correct syntax is:
+.. warning:: For releases of the chef-client prior to 12.5 (chef-client 12.4 and earlier) the correct syntax is:
 
    .. code-block:: ruby
 
@@ -27,7 +27,7 @@ This should return ``true``:
         verify 'nginx -t -c %{file}'
       end
 
-   See |github| issues https://github.com/chef/chef/issues/3232 and https://github.com/chef/chef/pull/3693 for more information about these differences.
+   See GitHub issues https://github.com/chef/chef/issues/3232 and https://github.com/chef/chef/pull/3693 for more information about these differences.
 
 This should return ``true``:
 
@@ -55,4 +55,7 @@ Whereas, this should return ``false``:
      verify '/usr/bin/false'
    end
 
-If a string or a block return ``false``, the |chef client| run will stop and an error is returned.
+If a string or a block return ``false``, the chef-client run will stop and an error is returned.
+
+.. end_tag
+

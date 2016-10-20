@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_method_control_matcher_package
 
 Matchers are available for packages and may be used to define audits that test if a package or a package version is installed. The following matchers are available:
 
@@ -25,3 +25,6 @@ Matchers are available for packages and may be used to define audits that test i
           it 'should be installed' do
             expect(package('httpd')).to be_installed.with_version('0.1.2')
           end
+
+.. end_tag
+

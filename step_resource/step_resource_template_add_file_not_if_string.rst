@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_add_file_not_if_string
 
 The following example shows how to use the ``not_if`` condition to create a file based on a template and using a string to specify the condition:
 
@@ -11,3 +10,6 @@ The following example shows how to use the ``not_if`` condition to create a file
      source 'somefile.erb'
      not_if 'test -f /etc/passwd'
    end
+
+.. end_tag
+

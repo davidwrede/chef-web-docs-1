@@ -1,11 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_org_list_options
 
 This subcommand has the following options:
 
 ``-a``, ``--all-orgs``
-   |show_organizations|
+   Show all organizations.
 
 ``-w``, ``--with-uri``
-   |with_uri|
+   Show the corresponding URIs.
+
+.. end_tag
+

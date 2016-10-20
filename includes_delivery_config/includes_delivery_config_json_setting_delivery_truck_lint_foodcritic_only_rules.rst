@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_delivery_truck_lint_foodcritic_only_rules
 
 If the ``config.json`` file specifies:
 
@@ -15,4 +14,7 @@ If the ``config.json`` file specifies:
      }
    }
 
-then only the ``FC002`` |foodcritic| rules is run.
+then only the ``FC002`` Foodcritic rules is run.
+
+.. end_tag
+

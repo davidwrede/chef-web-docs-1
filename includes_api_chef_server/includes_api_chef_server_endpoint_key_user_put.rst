@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag api_chef_server_endpoint_key_user_put
 
 The ``PUT`` method is used to update one or more properties for a specific key for a specific user.
 
@@ -42,12 +42,15 @@ The response contains the updated inforamtion for the key, and is similar to:
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``201``
-     - |response code 201 created|
+     - Created. The object was created.
    * - ``401``
-     - |response code 401 unauthorized|
+     - Unauthorized. The user or client who made the request could not be authenticated. Verify the user/client name, and that the correct key was used to sign the request.
    * - ``403``
-     - |response code 403 forbidden|
+     - Forbidden. The user who made the request is not authorized to perform the action.
    * - ``404``
-     - |response code 404 not found|
+     - Not found. The requested object does not exist.
+
+.. end_tag
+

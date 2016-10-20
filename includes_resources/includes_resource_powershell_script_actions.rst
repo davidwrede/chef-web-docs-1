@@ -1,10 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_powershell_script_actions
 
 This resource has the following actions:
 
 ``:nothing``
-   Inherited from |resource execute| resource. Prevent a command from running. This action is used to specify that a command is run only when another resource notifies it.
+   Inherited from **execute** resource. Prevent a command from running. This action is used to specify that a command is run only when another resource notifies it.
 
 ``:run``
    Default. Run the script.
+
+.. end_tag
+

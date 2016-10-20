@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_role_add
 
 To add a role:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Roles**.
 #. Click **Create**.
@@ -18,13 +17,16 @@ To add a role:
    .. image:: ../../images/step_manage_webui_policy_role_add_run_list.png
 
    Click **Next**.
-#. Optional. Add default attributes as |json| data:
+#. Optional. Add default attributes as JSON data:
 
    .. image:: ../../images/step_manage_webui_policy_role_add_default_attribute.png
 
    Click **Next**.
-#. Optional. Add override attributes as |json| data:
+#. Optional. Add override attributes as JSON data:
 
    .. image:: ../../images/step_manage_webui_policy_role_add_override_attribute.png
 
 #. Click **Create Role**.
+
+.. end_tag
+

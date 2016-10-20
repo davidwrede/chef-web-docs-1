@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_directory_delete
 
 .. To delete a directory:
 
@@ -9,3 +9,6 @@
      recursive true
      action :delete
    end
+
+.. end_tag
+

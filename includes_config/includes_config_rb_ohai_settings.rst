@@ -1,12 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_rb_ohai_settings
 
 ``Ohai.directory``
-   |path plugin_ohai|
+   The directory in which Ohai plugins are located.
 
 ``Ohai.disabled_plugins``
-   |disable plugin_ohai| The list of plugins included in |ohai| can be found in the ``ohai/lib/ohai/plugins`` directory. For example, disabling a single plugin:
+   An array of Ohai plugins to be disabled on a node. The list of plugins included in Ohai can be found in the ``ohai/lib/ohai/plugins`` directory. For example, disabling a single plugin:
 
    .. code-block:: ruby
 
@@ -24,7 +23,7 @@
         :MyPlugin
       ]
 
-   and to disable multiple plugins, including |ohai| 6 plugins:
+   and to disable multiple plugins, including Ohai 6 plugins:
 
    .. code-block:: ruby
 
@@ -34,7 +33,7 @@
         'my_ohai_6_plugin'
       ]
 
-   When a plugin is disabled, the |chef client| log file will contain entries similar to:
+   When a plugin is disabled, the chef-client log file will contain entries similar to:
 
    .. code-block:: ruby
 
@@ -42,16 +41,16 @@
 
 
 ``Ohai.hints_path``
-   |path hint_ohai|
+   The path to the file that contains hints for Ohai.
 
 ``Ohai.log_level``
-   |log_level|
+   The level of logging to be stored in a log file.
 
 ``Ohai.log_location``
-   |log_location|
+   The location of the log file.
 
 ``Ohai.plugin_path``
-   An array of paths at which |ohai| plugins are located. Default value: ``[<CHEF_GEM_PATH>/ohai-9.9.9/lib/ohai/plugins]``. When custom |ohai| plugins are added, the paths must be added to the array. For example, a single plugin:
+   An array of paths at which Ohai plugins are located. Default value: ``[<CHEF_GEM_PATH>/ohai-9.9.9/lib/ohai/plugins]``. When custom Ohai plugins are added, the paths must be added to the array. For example, a single plugin:
 
    .. code-block:: ruby
 
@@ -67,6 +66,9 @@
         ]
 
 ``Ohai.version``
-   |version ohai|
+   The version of Ohai.
 
-.. note:: The |ohai| executable ignores settings in the |client rb| file when |ohai| is run independently of the |chef client|.
+.. note:: The Ohai executable ignores settings in the client.rb file when Ohai is run independently of the chef-client.
+
+.. end_tag
+

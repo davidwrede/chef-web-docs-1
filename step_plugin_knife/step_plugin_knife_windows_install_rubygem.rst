@@ -1,14 +1,17 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To install the ``knife windows`` plugin using |rubygems|, run the following command:
+.. tag plugin_knife_windows_install_rubygem
+
+To install the ``knife windows`` plugin using RubyGems, run the following command:
 
 .. code-block:: bash
 
    $ /opt/chef/embedded/bin/gem install knife-windows
 
-where ``/opt/chef/embedded/bin/`` is the path to the location where the |chef client| expects |knife| plugins to be located. If the |chef client| was installed using |rubygems|, omit the path in the previous example.
+where ``/opt/chef/embedded/bin/`` is the path to the location where the chef-client expects knife plugins to be located. If the chef-client was installed using RubyGems, omit the path in the previous example.
 
 
 
+
+
+.. end_tag
 

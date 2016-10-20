@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_ssl_check_verify_server_config
 
-If the |ssl| certificate can be verified, the response to
+If the SSL certificate can be verified, the response to
 
 .. code-block:: bash
 
@@ -14,3 +13,6 @@ is similar to:
 
    Connecting to host chef-server.example.com:443
    Successfully verified certificates from 'chef-server.example.com' 
+
+.. end_tag
+

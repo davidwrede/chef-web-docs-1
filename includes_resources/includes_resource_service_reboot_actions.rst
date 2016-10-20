@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_reboot_actions
 
 This resource has the following actions:
 
@@ -7,10 +7,18 @@ This resource has the following actions:
    Cancel a reboot request.
 
 ``:nothing``
-   .. include:: ../../includes_resources_common/includes_resources_common_actions_nothing.rst
+   .. tag resources_common_actions_nothing
+   
+   Define this resource block to do nothing until notified by another resource to take action. When this resource is notified, this resource block is either run immediately or it is queued up to be run at the end of the chef-client run.
+   
+   .. end_tag
+   
 
 ``:reboot_now``
-   Reboot a node so that the |chef client| may continue the installation process.
+   Reboot a node so that the chef-client may continue the installation process.
 
 ``:request_reboot``
-   Reboot a node at the end of a |chef client| run.
+   Reboot a node at the end of a chef-client run.
+
+.. end_tag
+

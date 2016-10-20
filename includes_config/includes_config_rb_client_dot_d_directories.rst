@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_rb_client_dot_d_directories
 
-The |chef client| supports reading multiple configuration files by putting them inside a ``.d`` configuration directory. For example: ``/etc/chef/client.d``. All files that end in ``.rb`` in the ``.d`` directory are loaded; other non-``.rb`` files are ignored.
+The chef-client supports reading multiple configuration files by putting them inside a ``.d`` configuration directory. For example: ``/etc/chef/client.d``. All files that end in ``.rb`` in the ``.d`` directory are loaded; other non-``.rb`` files are ignored.
 
 ``.d`` directories may exist in any location where the ``client.rb``, ``config.rb``, or ``solo.rb`` files are present, such as:
 
@@ -13,7 +12,7 @@ The |chef client| supports reading multiple configuration files by putting them 
 
 (There is no support for a ``knife.d`` directory; use ``config.d`` instead.)
 
-For example, when using |knife|, the following configuration files would be loaded:
+For example, when using knife, the following configuration files would be loaded:
 
 * ``~/.chef/config.rb``
 * ``~/.chef/config.d/company_settings.rb``
@@ -23,3 +22,6 @@ For example, when using |knife|, the following configuration files would be load
 The ``old_settings.rb.bak`` file is ignored because it's not a configuration file. The ``config.rb``, ``company_settings.rb``, and ``ec2_configuration`` files are merged together as if they are a single configuration file.
 
 .. note:: If multiple configuration files exists in a ``.d`` directory, ensure that the same setting has the same value in all files.
+
+.. end_tag
+

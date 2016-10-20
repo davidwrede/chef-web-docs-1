@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag chef_repo_git_branch_delete
 
 After work has been merged by the branch maintainer, the topic branch is no longer necessary and should be removed.
 
@@ -16,7 +15,7 @@ After work has been merged by the branch maintainer, the topic branch is no long
       
       $ git pull --rebase
 
-#. Remove the local branch using ``-d`` to ensure that it has been merged by upstream. This option will not delete a branch that is not an ancestor of the current ``HEAD``. From the |git| man page:
+#. Remove the local branch using ``-d`` to ensure that it has been merged by upstream. This option will not delete a branch that is not an ancestor of the current ``HEAD``. From the git man page:
 
    .. code-block:: bash
       
@@ -36,3 +35,6 @@ After work has been merged by the branch maintainer, the topic branch is no long
    .. code-block:: bash
       
       $ git push origin :CHEF-XX
+
+.. end_tag
+

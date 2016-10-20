@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To change the working directory to a |windows| environment variable:
+.. tag resource_powershell_cwd_microsoft_env
+
+.. To change the working directory to a Microsoft Windows environment variable:
 
 .. code-block:: ruby
 
@@ -13,3 +13,6 @@
      $stream.close()
      EOH
    end
+
+.. end_tag
+

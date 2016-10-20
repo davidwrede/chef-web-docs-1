@@ -1,13 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-This subcommand requires |windows remote management| to be installed, and then configured correctly, including ensuring the correct ports are open. For more information, see: http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in |windows remote management| to allow outside connections and the entire network path from |knife| (and the workstation):
+.. tag plugin_knife_windows_winrm_requirements
+
+This subcommand requires WinRM to be installed, and then configured correctly, including ensuring the correct ports are open. For more information, see: http://msdn.microsoft.com/en-us/library/aa384372(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in WinRM to allow outside connections and the entire network path from knife (and the workstation):
 
 .. code-block:: bash
 
    $ winrm quickconfig -q
 
-The following |windows remote management| configuration settings should be updated:
+The following WinRM configuration settings should be updated:
 
 .. list-table::
    :widths: 200 300
@@ -16,13 +16,13 @@ The following |windows remote management| configuration settings should be updat
    * - Setting
      - Description
    * - ``MaxMemoryPerShellMB``
-     - |winrm_max_memory_per_shell_mb|
+     - The chef-client and Ohai typically require more memory than the default setting allows. Increase this value to ``300MB``. Only required on Windows Server 2008 R2 Standard and older. The default in Windows Server 2012 was increased to ``1024MB``.
    * - ``MaxTimeoutms``
-     - |winrm_max_timeouts|
+     - A bootstrap command can take longer than allowed by the default setting. Increase this value to ``1800000`` (30 minutes).
    * - ``AllowUnencrypted``
-     - |winrm_allow_unencrypted|
+     - Set this value to ``true`` for development and testing purposes.
    * - ``Basic``
-     - |winrm_basic|
+     - Set this value to ``true`` for development and testing purposes. The ``knife windows`` subcommand supports Kerberos and Basic authentication schemes.
 
 To update these settings, run the following commands:
 
@@ -48,8 +48,11 @@ and then:
 
    $ winrm set winrm/config/service/auth '@{Basic="true"}'
 
-Ensure that the |windows firewall| is configured to allow |windows remote management| connections between the workstation and the |chef server|. For example:
+Ensure that the Windows Firewall is configured to allow WinRM connections between the workstation and the Chef server. For example:
 
 .. code-block:: bash
 
    $ netsh advfirewall firewall set rule name="Windows Remote Management (HTTP-In)" profile=public protocol=tcp localport=5985 remoteip=localsubnet new remoteip=any
+
+.. end_tag
+

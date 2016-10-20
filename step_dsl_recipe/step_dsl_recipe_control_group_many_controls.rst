@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_control_group_many_controls
 
-The following ``control_group`` ensures that |mysql| is installed, that |postgresql| is not installed, and that the services and configuration files associated with |mysql| are configured correctly:
+The following ``control_group`` ensures that MySQL is installed, that PostgreSQL is not installed, and that the services and configuration files associated with MySQL are configured correctly:
 
 .. code-block:: ruby
 
@@ -54,7 +53,7 @@ The following ``control_group`` ensures that |mysql| is installed, that |postgre
    
    end
 
-The ``control_group`` block is processed when the |chef client| is run in |chef client_audit|. If the |chef client| run was successful, the |chef client| will return output similar to:
+The ``control_group`` block is processed when the chef-client is run in audit-mode. If the chef-client run was successful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -73,7 +72,7 @@ The ``control_group`` block is processed when the |chef client| is run in |chef 
        should exist with correct permissions
        should contain required configuration
 
-If an audit was unsuccessful, the |chef client| will return output similar to:
+If an audit was unsuccessful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -148,3 +147,6 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
    rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:55 # Audit Mode mysql config file should exist with correct permissions
    rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:59 # Audit Mode mysql config file should contain required configuration
    Auditing complete
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how permissions can be set for the ``/certificates`` directory on any node that is running |nginx|. In this example, permissions are being set for the ``owner`` and ``group`` properties as ``root``, and then read/write permissions are granted to the root.
+.. tag resource_directory_set_permissions_for_specific_node
+
+The following example shows how permissions can be set for the ``/certificates`` directory on any node that is running Nginx. In this example, permissions are being set for the ``owner`` and ``group`` properties as ``root``, and then read/write permissions are granted to the root.
 
 .. code-block:: ruby
 
@@ -11,3 +11,6 @@ The following example shows how permissions can be set for the ``/certificates``
      mode '0755'
      recursive true
    end
+
+.. end_tag
+

@@ -1,17 +1,19 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_delete_policy_options
 
 This subcommand has the following options:
 
 ``-c CONFIG_FILE``, ``--config CONFIG_FILE``
-   |chef_exe config|
+   The path to the knife configuration file.
 
 ``-D``, ``--debug``
-   |chef_exe debug| Default value: ``false``.
+   Enable stack traces and other debug output. Default value: ``false``.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

@@ -1,8 +1,10 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_psql_options
 
 This subcommand has the following options:
 
 ``--write``
-   Use to enable write access to the |postgresql| database.
+   Use to enable write access to the PostgreSQL database.
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_start_service
 
 .. To start a service when it is not running:
 
@@ -8,3 +8,6 @@
    service 'example_service' do
      action :start
    end
+
+.. end_tag
+

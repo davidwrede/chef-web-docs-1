@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-When the contents of a data bag item are encrypted, they will not be readable until they are decrypted. Encryption can be verified with a |knife| command similar to:
+.. tag data_bag_encryption_verify
+
+When the contents of a data bag item are encrypted, they will not be readable until they are decrypted. Encryption can be verified with a knife command similar to:
 
 .. code-block:: bash
 
@@ -22,3 +22,6 @@ where "passwords" is the name of the data bag and "mysql" is the name of the dat
    encrypted_data: 10BVoNb/plkvkrzVdybPgFFII5GThZ3Op9LNkwVeKpA=
    iv:             uIqKHZ9skJlN2gpJoml6rQ==
    version:        1
+
+.. end_tag
+

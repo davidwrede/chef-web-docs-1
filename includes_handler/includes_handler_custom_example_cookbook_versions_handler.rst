@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_custom_example_cookbook_versions_handler
 
-The following custom handler defines how cookbooks and cookbook versions that are used during the |chef client| run will be compiled into a report using the ``Chef::Log`` class in the |chef client|:
+The following custom handler defines how cookbooks and cookbook versions that are used during the chef-client run will be compiled into a report using the ``Chef::Log`` class in the chef-client:
 
 .. code-block:: ruby
 
@@ -17,3 +16,6 @@ The following custom handler defines how cookbooks and cookbook versions that ar
        end
      end
    end
+
+.. end_tag
+

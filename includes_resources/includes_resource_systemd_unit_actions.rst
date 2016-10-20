@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_systemd_unit_actions
 
 This resource has the following actions:
 
@@ -44,3 +44,6 @@ This resource has the following actions:
 
 ``:reload_or_try_restart``
    For units that are services, this action reloads the configuration of the service without restarting, if possible; otherwise, it will try to restart the service so the new configuration is applied.
+
+.. end_tag
+

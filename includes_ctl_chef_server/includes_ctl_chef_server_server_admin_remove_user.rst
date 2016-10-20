@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_server_admin_remove_user
 
 The ``remove-server-admin-permissions`` subcommand is used to remove a user from the ``server-admins`` group. Run the command once per user removed.
 
@@ -25,3 +24,6 @@ returns:
    User bob was removed from server-admins. This user can no longer
    list, read, and create users for this Chef Server except for where
    they have default permissions (such as within an org).
+
+.. end_tag
+

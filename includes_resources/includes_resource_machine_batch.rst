@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use the |resource machine_batch| resource to explicitly declare a parallel process when building machines.  
+.. tag resource_machine_batch_summary
+
+Use the **machine_batch** resource to explicitly declare a parallel process when building machines.  
+
+.. end_tag
+

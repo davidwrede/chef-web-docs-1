@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag api_chef_server_endpoint_universe_get
 
 The ``GET`` method is used to retrieve the universe data.
 
@@ -55,4 +55,7 @@ The response will return an embedded hash, with the name of each cookbook as a t
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok| One (or more) cookbooks and associated cookbook version information was returned.
+     - OK. The request was successful. One (or more) cookbooks and associated cookbook version information was returned.
+
+.. end_tag
+

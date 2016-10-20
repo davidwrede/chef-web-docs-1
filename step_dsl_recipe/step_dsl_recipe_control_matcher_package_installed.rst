@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_package_installed
 
 For example, a package is installed:
 
@@ -13,7 +13,7 @@ For example, a package is installed:
      end
    end
 
-The ``control_group`` block is processed when the |chef client| run is run in |chef client_audit|. If the audit was successful, the |chef client| will return output similar to:
+The ``control_group`` block is processed when the chef-client run is run in audit-mode. If the audit was successful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -21,7 +21,7 @@ The ``control_group`` block is processed when the |chef client| run is run in |c
      mysql package
        should be installed
 
-If an audit was unsuccessful, the |chef client| will return output similar to:
+If an audit was unsuccessful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -44,3 +44,6 @@ If an audit was unsuccessful, the |chef client| will return output similar to:
    Failed examples:
    
    rspec /var/chef/cache/cookbooks/grantmc/recipes/default.rb:21 # Audit Mode mysql package should be installed
+
+.. end_tag
+

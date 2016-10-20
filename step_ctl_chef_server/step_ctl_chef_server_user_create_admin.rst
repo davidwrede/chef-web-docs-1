@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_user_create_admin
 
 Run the following command to create an administrator:
 
@@ -15,3 +14,6 @@ For example:
 .. code-block:: bash
 
    $ chef-server-ctl user-create stevedanno Steve Danno steved@chef.io 'abc123' --filename /path/to/stevedanno.pem
+
+.. end_tag
+

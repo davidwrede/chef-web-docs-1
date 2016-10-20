@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_policy_roles_view
 
-To view all roles uploaded to the |chef server| organization:
+To view all roles uploaded to the Chef server organization:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Policy**.
 #. Click **Roles**.
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to install the |crond app| application using two resources and a variable:
+.. tag resource_service_use_variable
+
+The following example shows how to install the crond application using two resources and a variable:
 
 .. code-block:: ruby
 
@@ -32,5 +32,8 @@ The following example shows how to install the |crond app| application using two
 where 
 
 * ``cron_package`` is a variable that is used to identify which platforms apply to which install packages
-* the |resource package| resource uses the ``cron_package`` variable to determine how to install the |crond app| application on various nodes (with various platforms)
-* the |resource service| resource enables the |crond app| application on nodes that have |redhat|, |centos|, |redhat enterprise linux|, |fedora|, or |amazon aws|, and the |cron| service on nodes that run |debian|, |ubuntu|, or |suse|
+* the **package** resource uses the ``cron_package`` variable to determine how to install the crond application on various nodes (with various platforms)
+* the **service** resource enables the crond application on nodes that have Red Hat, CentOS, Red Hat Enterprise Linux, Fedora, or Amazon Web Services (AWS), and the cron service on nodes that run Debian, Ubuntu, or openSUSE
+
+.. end_tag
+

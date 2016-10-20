@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_package_not_installed
 
 A package that is not installed:
 
@@ -13,7 +13,7 @@ A package that is not installed:
      end
    end
 
-If the audit was successful, the |chef client| will return output similar to:
+If the audit was successful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -21,3 +21,6 @@ If the audit was successful, the |chef client| will return output similar to:
      postgres audit
        postgres package
          is not installed
+
+.. end_tag
+

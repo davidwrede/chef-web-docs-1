@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_script_bash_provider_and_interpreter
 
 .. To use the |resource bash| resource to run a script:
 
@@ -17,3 +17,6 @@
      make install
      EOH
    end
+
+.. end_tag
+

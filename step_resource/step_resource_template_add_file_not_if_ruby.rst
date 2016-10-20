@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_add_file_not_if_ruby
 
-The following example shows how to use the ``not_if`` condition to create a file based on a template and then |ruby| code to specify the condition:
+The following example shows how to use the ``not_if`` condition to create a file based on a template and then Ruby code to specify the condition:
 
 .. code-block:: ruby
 
@@ -13,3 +12,6 @@ The following example shows how to use the ``not_if`` condition to create a file
        File.exist?('/etc/passwd')
      end
    end
+
+.. end_tag
+

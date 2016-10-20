@@ -1,20 +1,19 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_common_windows_quotes_module
 
-The |chef client| version 12.4 release adds an optional feature to the |microsoft installer package| for |chef|. This feature enables the ability to pass quoted strings from the |windows powershell| command line without the need for triple single quotes (``''' '''``). This feature installs a |windows powershell| module (typically in ``C:\opscode\chef\modules``) that is also appended to the ``PSModulePath`` environment variable. This feature is not enabled by default. To activate this feature, run the following command from within |windows powershell|:
+The chef-client version 12.4 release adds an optional feature to the Microsoft Installer Package (MSI) for Chef. This feature enables the ability to pass quoted strings from the Windows PowerShell command line without the need for triple single quotes (``''' '''``). This feature installs a Windows PowerShell module (typically in ``C:\opscode\chef\modules``) that is also appended to the ``PSModulePath`` environment variable. This feature is not enabled by default. To activate this feature, run the following command from within Windows PowerShell:
 
 .. code-block:: bash
 
    $ Import-Module chef
 
-or add ``Import-Module chef`` to the profile for |windows powershell| located at:
+or add ``Import-Module chef`` to the profile for Windows PowerShell located at:
 
 .. code-block:: bash
 
    ~\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
    
-This module exports cmdlets that have the same name as the command-line tools---|chef client|, |knife|, |chef apply|---that are built into |chef|.
+This module exports cmdlets that have the same name as the command-line tools---chef-client, knife, chef-apply---that are built into Chef.
 
 For example:
 
@@ -40,7 +39,7 @@ is now:
 
    $ knife node run_list set test-node 'role[ssssssomething]'
 
-To remove this feature, run the following command from within |windows powershell|:
+To remove this feature, run the following command from within Windows PowerShell:
 
 .. code-block:: bash
 
@@ -48,4 +47,7 @@ To remove this feature, run the following command from within |windows powershel
 
 
 
+
+
+.. end_tag
 

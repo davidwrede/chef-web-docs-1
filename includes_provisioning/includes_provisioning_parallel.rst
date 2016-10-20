@@ -1,15 +1,14 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag provisioning_parallel
 
-In certain situations |chef provisioning| will run multiple |resource machine| processes in-parallel, as long as each of the individual |resource machine| resources have the same declared action. The |resource machine_batch| resource is used to run in-parallel processes. 
+In certain situations Chef provisioning will run multiple **machine** processes in-parallel, as long as each of the individual **machine** resources have the same declared action. The **machine_batch** resource is used to run in-parallel processes. 
 
-|chef provisioning| will processes resources in-parallel automatically, unless:
+Chef provisioning will processes resources in-parallel automatically, unless:
 
-* The recipe contains complex scripts, such as when a |resource file| resource sits in-between two |resource machine| resources in a single recipe. In this situation, the resources will be run sequentially
-* The actions specified for each individual |resource machine| resource are not identical; for example, if resource A is set to ``:converge`` and resource B is set to ``:destroy``, then they may not be processed in-parallel
+* The recipe contains complex scripts, such as when a **file** resource sits in-between two **machine** resources in a single recipe. In this situation, the resources will be run sequentially
+* The actions specified for each individual **machine** resource are not identical; for example, if resource A is set to ``:converge`` and resource B is set to ``:destroy``, then they may not be processed in-parallel
 
-To disable in-parallel processing, add the ``auto_machine_batch`` setting to the |client rb| file, and then set it to ``false``.
+To disable in-parallel processing, add the ``auto_machine_batch`` setting to the client.rb file, and then set it to ``false``.
 
 For example, a recipe that looks like:
 
@@ -66,4 +65,7 @@ will show output similar to:
    Running handlers complete
    Chef Client finished, 1/1 resources updated in 59.64014 seconds
 
-At the end, it shows ``1/1 resources updated``. The three |resource machine| resources are replaced with a single |resource machine_batch| resource, which then runs each of the individual |resource machine| processes in-parallel.
+At the end, it shows ``1/1 resources updated``. The three **machine** resources are replaced with a single **machine_batch** resource, which then runs each of the individual **machine** processes in-parallel.
+
+.. end_tag
+

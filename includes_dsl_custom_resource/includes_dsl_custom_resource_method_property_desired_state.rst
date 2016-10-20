@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_property_desired_state
 
 Add ``desired_state:`` to get or set the list of desired state properties for a resource, which describe the desired state of the node, such as permissions on an existing file. This value may be ``true`` or ``false``.
 
@@ -14,4 +13,7 @@ For example, the following properties define the ``owner``, ``group``, and ``mod
    property :owner, String, default: 'root', desired_state: false
    property :group, String, default: 'root', desired_state: false
    property :mode, String, default: '0755', desired_state: false
+
+
+.. end_tag
 

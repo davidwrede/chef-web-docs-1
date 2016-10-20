@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_search_by_platform_instance_type
 
-To search for the instance type (flavor) of all nodes running on the |amazon ec2| platform, enter:
+To search for the instance type (flavor) of all nodes running on the Amazon EC2 platform, enter:
 
 .. code-block:: bash
 
@@ -25,4 +24,7 @@ to return something like:
    
    ec2.instance_type:  m1.large
    id:                 ip-0A7CFFD5.ec2.internal
+
+
+.. end_tag
 

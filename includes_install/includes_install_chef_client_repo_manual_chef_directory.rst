@@ -1,15 +1,15 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
-The |chef repo hidden| directory is used to store three files:
+.. tag install_chef_client_repo_manual_chef_directory
 
-* |knife rb|
-* |organization pem|
-* |user pem|
+The .chef directory is used to store three files:
 
-Where ``ORGANIZATION`` and ``USER`` represent strings that are unique to each organization. These files must be present in the |chef repo hidden| directory in order for a workstation to be able to connect to a |chef server|.
+* knife.rb
+* ORGANIZATION-validator.pem
+* USER.pem
 
-To create the |chef repo hidden| directory:
+Where ``ORGANIZATION`` and ``USER`` represent strings that are unique to each organization. These files must be present in the .chef directory in order for a workstation to be able to connect to a Chef server.
+
+To create the .chef directory:
 
 #. In a command window, enter the following:
 
@@ -17,7 +17,7 @@ To create the |chef repo hidden| directory:
 
       mkdir -p ~/chef-repo/.chef
 
-#. After the |chef repo hidden| directory has been created, the following folder structure will be present on the local machine::
+#. After the .chef directory has been created, the following folder structure will be present on the local machine::
 
       chef-repo/
          .chef/        << the hidden directory
@@ -28,8 +28,11 @@ To create the |chef repo hidden| directory:
          environments/
          roles/
 
-#. Add ``.chef`` to the ``.gitignore`` file to prevent uploading the contents of the ``.chef`` folder to |github|. For example:
+#. Add ``.chef`` to the ``.gitignore`` file to prevent uploading the contents of the ``.chef`` folder to GitHub. For example:
 
    .. code-block:: bash
 
       $ echo '.chef' >> ~/chef-repo/.gitignore
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_set_ip_address_with_variables_and_template
 
-The following example shows how the |resource template| resource can be used in a recipe to combine settings stored in an attributes file, variables within a recipe, and a template to set the IP addresses that are used by the |nginx| service. The attributes file contains the following:
+The following example shows how the **template** resource can be used in a recipe to combine settings stored in an attributes file, variables within a recipe, and a template to set the IP addresses that are used by the Nginx service. The attributes file contains the following:
 
 .. code-block:: ruby
 
@@ -11,7 +10,7 @@ The following example shows how the |resource template| resource can be used in 
 The recipe then does the following to:
 
 * Declare two variables at the beginning of the recipe, one for the remote IP address and the other for the authorized IP address
-* Use the |resource service| resource to restart and reload the |nginx| service
+* Use the **service** resource to restart and reload the Nginx service
 * Load a template named ``authorized_ip.erb`` from the ``/templates`` directory that is used to set the IP address values based on the variables specified in the recipe
 
 .. code-block:: ruby
@@ -47,3 +46,6 @@ where the ``variables`` property tells the template to use the variables set at 
      <%= "#{ip} yes;" %>
      <% end %>
    }
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The layout of the |resource deploy| resource matches a |ruby on rails| app by default, but this can be customized. To customize the layout, do something like the following:
+.. tag resource_deploy_custom_application_layout
+
+The layout of the **deploy** resource matches a Ruby on Rails app by default, but this can be customized. To customize the layout, do something like the following:
 
 .. code-block:: ruby
 
@@ -29,3 +29,6 @@ The layout of the |resource deploy| resource matches a |ruby on rails| app by de
                'deploy/before_restart.rb' => 'deploy/before_restart.rb',
                'deploy/after_restart.rb' => 'deploy/after_restart.rb'
    end
+
+.. end_tag
+

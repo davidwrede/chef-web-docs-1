@@ -1,11 +1,10 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag chef_repo_git_master_setup
 
-Use the following steps to set up a development repository for |chef|:
+Use the following steps to set up a development repository for Chef:
 
-#. Set up a |github| account.
-#. Fork the https://github.com/chef/chef repository to your |github| account.
+#. Set up a GitHub account.
+#. Fork the https://github.com/chef/chef repository to your GitHub account.
 #. Clone the https://github.com/chef/chef repository:
 
    .. code-block:: bash
@@ -55,3 +54,6 @@ Use the following steps to set up a development repository for |chef|:
    .. code-block:: bash
 
       $ git config branch.master.remote chef
+
+.. end_tag
+

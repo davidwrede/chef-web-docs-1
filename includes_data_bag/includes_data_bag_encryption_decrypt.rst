@@ -1,13 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-An encrypted data bag item is decrypted with a |knife| command similar to:
+.. tag data_bag_encryption_decrypt
+
+An encrypted data bag item is decrypted with a knife command similar to:
 
 .. code-block:: bash
 
    $ knife data bag show --secret-file /tmp/my_data_bag_key passwords mysql
 
-that will return |json| output similar to:
+that will return JSON output similar to:
 
 .. code-block:: javascript
 
@@ -16,3 +16,6 @@ that will return |json| output similar to:
      "pass": "thesecret123",
      "user": "fred"
    }
+
+.. end_tag
+

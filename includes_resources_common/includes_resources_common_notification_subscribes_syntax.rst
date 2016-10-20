@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resources_common_notification_subscribes_syntax
 
 The syntax for ``subscribes`` is:
 
 .. code-block:: ruby
 
    subscribes :action, 'resource[name]', :timer
+
+.. end_tag
+

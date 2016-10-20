@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_pass_values_to_template_from_recipe
 
-The following example shows how pass a value to a template using the ``variables`` property in the |resource template| resource. The template file is similar to:
+The following example shows how pass a value to a template using the ``variables`` property in the **template** resource. The template file is similar to:
 
 .. code-block:: ruby
 
@@ -27,4 +26,7 @@ The recipe then uses the ``variables`` attribute to find the values for ``splunk
      notifies :restart, 'service[splunk]'
    end
 
-This example can be found in the ``client.rb`` recipe and the ``outputs.conf.erb`` template files that are located in the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_  that is maintained by |company_name|.
+This example can be found in the ``client.rb`` recipe and the ``outputs.conf.erb`` template files that are located in the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_  that is maintained by Chef.
+
+.. end_tag
+

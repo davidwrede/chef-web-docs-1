@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To reload |ohai| configuration after a new user is created:
+.. tag resource_ohai_reload_after_create_user
+
+.. To reload Ohai configuration after a new user is created:
 
 .. code-block:: ruby
 
@@ -24,3 +24,6 @@
        puts node['etc']['passwd']['daemonuser']['gid']
      end
    end
+
+.. end_tag
+

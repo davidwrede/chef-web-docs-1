@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_dsc_script_syntax
 
-A |resource dsc_script| resource block embeds the code that defines a |windows powershell_dsc_short| configuration directly within a |chef| recipe:
+A **dsc_script** resource block embeds the code that defines a DSC configuration directly within a Chef recipe:
 
 .. code-block:: ruby
 
@@ -17,9 +16,9 @@ A |resource dsc_script| resource block embeds the code that defines a |windows p
      EOH
    end
 
-where the |resource remote_file| resource is first used to download the ``DSCResourceKit620082014.zip`` file.
+where the **remote_file** resource is first used to download the ``DSCResourceKit620082014.zip`` file.
 
-The full syntax for all of the properties that are available to the |resource dsc_script| resource is:
+The full syntax for all of the properties that are available to the **dsc_script** resource is:
 
 .. code-block:: ruby
 
@@ -43,5 +42,8 @@ where
 
 * ``dsc_script`` is the resource
 * ``name`` is the name of the resource block
-* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, ``flags``, ``imports``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``:action`` identifies the steps the chef-client will take to bring the node into the desired state
+* ``code``, ``command``, ``configuration_data``, ``configuration_data_script``, ``configuration_name``, ``cwd``, ``environment``, ``flags``, ``imports``, and ``timeout`` are properties of this resource, with the Ruby type shown. See "Properties" section below for more information about all of the properties that may be used with this resource.
+
+.. end_tag
+

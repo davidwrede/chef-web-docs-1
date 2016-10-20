@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag test_kitchen_driver_vagrant_config
 
-The ``kitchen-vagrant`` driver can predict the box name for |vagrant| and the download URL that have been published by |company_name|. For example:
+The ``kitchen-vagrant`` driver can predict the box name for Vagrant and the download URL that have been published by Chef. For example:
 
 .. code-block:: ruby
 
@@ -28,3 +27,6 @@ which will generate a configuration file similar to:
        box: opscode-ubuntu-12.10
        box_url: ...
    # ...
+
+.. end_tag
+

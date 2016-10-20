@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag lwrp_chef_handler_enable_cloudkickhandler
 
 The following example shows how to enable the ``CloudkickHandler`` handler, which adds it to the default handler path and passes the ``oauth`` key/secret to the handler's initializer:
 
@@ -10,3 +10,6 @@ The following example shows how to enable the ``CloudkickHandler`` handler, whic
      arguments [node['cloudkick']['oauth_key'], node['cloudkick']['oauth_secret']]
      action :enable
    end
+
+.. end_tag
+

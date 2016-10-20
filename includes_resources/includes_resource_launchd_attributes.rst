@@ -1,12 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_launchd_attributes
 
 This resource has the following properties:
 
 ``backup``
    **Ruby Types:** Integer, FalseClass
 
-   |backups_kept_launchd|
+   The number of backups to be kept in ``/var/chef/backup``. Set to ``false`` to prevent backups from being kept.
 
 ``cookbook``
    **Ruby Type:** String
@@ -16,17 +16,17 @@ This resource has the following properties:
 ``group``
    **Ruby Types:** String, Integer
 
-   When |launchd| is run as the root user, the group to run the job as. If the ``username`` property is specified and this property is not, this value is set to the default group for the user.
+   When launchd is run as the root user, the group to run the job as. If the ``username`` property is specified and this property is not, this value is set to the default group for the user.
 
 ``hash``
    **Ruby Type:** Hash
 
-   A |ruby hash| of key value pairs used to create the |launchd| property list.
+   A Hash of key value pairs used to create the launchd property list.
 
 ``ignore_failure``
    **Ruby Types:** TrueClass, FalseClass
 
-   |ignore_failure| Default value: ``false``.
+   Continue running a recipe if a resource fails for any reason. Default value: ``false``.
 
 ``label``
    **Ruby Type:** String
@@ -36,71 +36,127 @@ This resource has the following properties:
 ``mode``
    **Ruby Types:** Integer, String
 
-   |mode resource| |mode resource_directory|
+   A quoted 3-5 character string that defines the octal mode. For example: ``'755'``, ``'0755'``, or ``00755``. If ``mode`` is not specified and if the directory already exists, the existing mode on the directory is used. If ``mode`` is not specified, the directory does not exist, and the ``:create`` action is specified, the chef-client assumes a mask value of ``'0777'``, and then applies the umask for the system on which the directory is to be created to the ``mask`` value. For example, if the umask on a system is ``'022'``, the chef-client uses the default value of ``'0755'``.
        
    The behavior is different depending on the platform.
        
-   |unix|- and |linux|-based systems: |mode *nix|
+   UNIX- and Linux-based systems: A quoted 3-5 character string that defines the octal mode that is passed to chmod. For example: ``'755'``, ``'0755'``, or ``00755``. If the value is specified as a quoted string, it works exactly as if the ``chmod`` command was passed. If the value is specified as an integer, prepend a zero (``0``) to the value to ensure that it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use ``'0777'`` or ``'777'``; for the same rights, plus the sticky bit, use ``01777`` or ``'1777'``.
        
-   |windows|: |mode windows security|
+   Microsoft Windows: A quoted 3-5 character string that defines the octal mode that is translated into rights for Microsoft Windows security. For example: ``'755'``, ``'0755'``, or ``00755``. Values up to ``'0777'`` are allowed (no sticky bits) and mean the same in Microsoft Windows as they do in UNIX, where ``4`` equals ``GENERIC_READ``, ``2`` equals ``GENERIC_WRITE``, and ``1`` equals ``GENERIC_EXECUTE``. This property cannot be used to set ``:full_control``. This property has no effect if not specified, but when it and ``rights`` are both specified, the effects are cumulative.
 
 ``notifies``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies.rst
+   .. tag resources_common_notification_notifies
+   
+   A resource may notify another resource to take action when its state changes. Specify a ``'resource[name]'``, the ``:action`` that resource should take, and then the ``:timer`` for that action. A resource may notifiy more than one resource; use a ``notifies`` statement for each resource to be notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies_syntax.rst
+   .. tag resources_common_notification_notifies_syntax
+   
+   The syntax for ``notifies`` is:
+   
+   .. code-block:: ruby
+   
+      notifies :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
 
 ``owner``
    **Ruby Types:** Integer, String
 
-   |owner windows security|
+   A string or ID that identifies the group owner by user name, including fully qualified user names such as ``domain\user`` or ``user@domain``. If this value is not specified, existing owners remain unchanged and new owner assignments use the current user (when necessary).
    
 ``path``
    **Ruby Type:** String
 
-   |path directory| |path_fully_qualified| |resource_block_default| |see syntax|
+   The path to the directory. Using a fully qualified path is recommended, but is not always required. Default value: the ``name`` of the resource block See "Syntax" section above for more information.
 
 ``provider``
    **Ruby Type:** Chef::Provider::Launchd
 
-   Optional. |provider resource_parameter| |see providers|
+   Optional. Explicitly specifies a provider. See "Providers" section below for more information.
 
 ``retries``
    **Ruby Type:** Integer
 
-   |retries| Default value: ``0``.
+   The number of times to catch exceptions and retry the resource. Default value: ``0``.
 
 ``retry_delay``
    **Ruby Type:** Integer
 
-   |retry_delay| Default value: ``2``.
+   The retry delay (in seconds). Default value: ``2``.
 
 ``session_type``
    **Ruby Type:** String
 
-   The type of |launchd| plist to be created. Possible values: ``system`` (default) or ``user``.
+   The type of launchd plist to be created. Possible values: ``system`` (default) or ``user``.
 
 ``source``
    **Ruby Type:** String
 
-   The path to the |launchd| property list.
+   The path to the launchd property list.
 
 ``subscribes``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes.rst
+   .. tag resources_common_notification_subscribes
+   
+   A resource may listen to another resource, and then take action if the state of the resource being listened to changes. Specify a ``'resource[name]'``, the ``:action`` to be taken, and then the ``:timer`` for that action.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes_syntax.rst
+   .. tag resources_common_notification_subscribes_syntax
+   
+   The syntax for ``subscribes`` is:
+   
+   .. code-block:: ruby
+   
+      subscribes :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
 
 ``supports``
    **Ruby Type:** Array
 
-   |supports mount| Default value: ``{ :remount => false }``.
+   An array of options for supported mount features. Default value: ``{ :remount => false }``.
 
 ``type``
    **Ruby Type:** String
@@ -108,7 +164,7 @@ This resource has the following properties:
    The type of resource. Possible values: ``daemon`` (default), ``agent``.
 
 
-The following resource properties may be used to define keys in the XML property list for a daemon or agent. Please refer to the |apple| man page documentation for |launchd| for more information about these keys:
+The following resource properties may be used to define keys in the XML property list for a daemon or agent. Please refer to the Apple man page documentation for launchd for more information about these keys:
 
 ``abandon_process_group``
    **Ruby Types:** TrueClass, FalseClass
@@ -123,7 +179,7 @@ The following resource properties may be used to define keys in the XML property
 ``disabled``
    **Ruby Types:** TrueClass, FalseClass
 
-   Hints to ``launchctl`` to not submit this job to |launchd|. Default value: ``false``.
+   Hints to ``launchctl`` to not submit this job to launchd. Default value: ``false``.
 
 ``enable_globbing``
    **Ruby Types:** TrueClass, FalseClass
@@ -143,12 +199,12 @@ The following resource properties may be used to define keys in the XML property
 ``exit_timeout``
    **Ruby Type:** Integer
 
-   The amount of time (in seconds) |launchd| waits before sending a ``SIGKILL`` signal. Default value: ``20``.
+   The amount of time (in seconds) launchd waits before sending a ``SIGKILL`` signal. Default value: ``20``.
 
 ``hard_resource_limits``
    **Ruby Type:** Hash
 
-   A |ruby hash| of resource limits to be imposed on a job.
+   A Hash of resource limits to be imposed on a job.
 
 ``inetd_compatibility``
    **Ruby Type:** Hash
@@ -158,7 +214,7 @@ The following resource properties may be used to define keys in the XML property
 ``init_groups``
    **Ruby Types:** TrueClass, FalseClass
 
-   Specify if ``initgroups`` is called before running a job. Default value: ``true`` (starting with |mac os x| 10.5).
+   Specify if ``initgroups`` is called before running a job. Default value: ``true`` (starting with Mac OS X 10.5).
 
 ``keep_alive``
    **Ruby Types:** TrueClass, FalseClass, Hash
@@ -205,7 +261,7 @@ The following resource properties may be used to define keys in the XML property
 ``on_demand``
    **Ruby Types:** TrueClass, FalseClass
 
-   Keep a job alive. Only applies to |mac os x| version 10.4 (and earlier); use ``keep_alive`` instead for newer versions.
+   Keep a job alive. Only applies to Mac OS X version 10.4 (and earlier); use ``keep_alive`` instead for newer versions.
 
 ``process_type``
    **Ruby Type:** String
@@ -240,12 +296,12 @@ The following resource properties may be used to define keys in the XML property
 ``sockets``
    **Ruby Type:** Hash
 
-   A |ruby hash| of on-demand sockets that notify |launchd| when a job should be run.
+   A Hash of on-demand sockets that notify launchd when a job should be run.
 
 ``soft_resource_limits``
    **Ruby Type:** Array
 
-   A |ruby hash| of resource limits to be imposed on a job.
+   A Hash of resource limits to be imposed on a job.
 ``standard_error_path``
    **Ruby Type:** String
 
@@ -264,7 +320,7 @@ The following resource properties may be used to define keys in the XML property
 ``start_calendar_interval``
    **Ruby Type:** Hash
 
-   A |ruby hash| (similar to ``crontab``) that defines the calendar frequency at which a job is started. For example: ``{ minute => "0", hour => "20", day => "*", weekday => "1-5", month => "*" }`` will run a job at 8:00 PM every day, Monday through Friday, every month of the year.
+   A Hash (similar to ``crontab``) that defines the calendar frequency at which a job is started. For example: ``{ minute => "0", hour => "20", day => "*", weekday => "1-5", month => "*" }`` will run a job at 8:00 PM every day, Monday through Friday, every month of the year.
 
 ``start_interval``
    **Ruby Type:** Integer
@@ -284,7 +340,7 @@ The following resource properties may be used to define keys in the XML property
 ``time_out``
    **Ruby Type:** Integer
 
-   The amount of time (in seconds) a job may be idle before it times out. If no value is specified, the default timeout value for |launchd| will be used.
+   The amount of time (in seconds) a job may be idle before it times out. If no value is specified, the default timeout value for launchd will be used.
 
 ``umask``
    **Ruby Type:** Integer
@@ -294,12 +350,12 @@ The following resource properties may be used to define keys in the XML property
 ``username``
    **Ruby Type:** String
 
-   When |launchd| is run as the root user, the user to run the job as.
+   When launchd is run as the root user, the user to run the job as.
 
 ``wait_for_debugger``
    **Ruby Types:** TrueClass, FalseClass
 
-   Specify if |launchd| has a job wait for a debugger to attach before executing code.
+   Specify if launchd has a job wait for a debugger to attach before executing code.
 
 ``watch_paths``
    **Ruby Type:** Array
@@ -310,3 +366,6 @@ The following resource properties may be used to define keys in the XML property
    **Ruby Type:** String
 
    ``chdir`` to this directory, and then run the job.
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_status_logs
 
-A typical status line for a service that is running any of the |chef server| front-end services is similar to the following:
+A typical status line for a service that is running any of the Chef server front-end services is similar to the following:
 
 .. code-block:: bash
 
@@ -25,3 +24,6 @@ where
 
 * ``down`` indicates that the service is in a down state
 * ``3s, normally up;`` indicates that the service is normally in a run state and that the supervisor would attempt to restart this service after a reboot
+
+.. end_tag
+

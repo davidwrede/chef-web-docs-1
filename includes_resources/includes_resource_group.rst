@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use the |resource group| resource to manage a local group.
+.. tag resource_group_summary
+
+Use the **group** resource to manage a local group.
+
+.. end_tag
+

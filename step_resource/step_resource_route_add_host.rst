@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_route_add_host
 
 .. To add a host route:
 
@@ -9,3 +9,6 @@
      gateway '10.0.0.20'
      device 'eth1'
    end
+
+.. end_tag
+

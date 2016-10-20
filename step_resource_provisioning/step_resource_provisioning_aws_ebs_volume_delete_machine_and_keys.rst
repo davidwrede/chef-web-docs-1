@@ -1,9 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_provisioning_aws_ebs_volume_delete_machine_and_keys
 
 .. To destroy a named group of machines along with keys:
 
-The following example destroys an |amazon ebs| volume for the specified batch of machines, along with any associated public and/or private keys:
+The following example destroys an Amazon Elastic Block Store (EBS) volume for the specified batch of machines, along with any associated public and/or private keys:
 
 .. code-block:: ruby
 
@@ -21,3 +21,6 @@ The following example destroys an |amazon ebs| volume for the specified batch of
    aws_key_pair 'ref-key-pair-ebs' do
      action :destroy
    end
+
+.. end_tag
+

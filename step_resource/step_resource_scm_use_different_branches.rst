@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_scm_use_different_branches
 
 To use different branches, depending on the environment of the node:
 
@@ -19,8 +19,11 @@ To use different branches, depending on the environment of the node:
       group 'test'                                      
    end
 
-where the ``branch_name`` variable is set to ``staging`` or ``master``, depending on the environment of the node. Once this is determined, the ``branch_name`` variable is used to set the revision for the repository. If the ``git status`` command is used after running the example above, it will return the branch name as ``deploy``, as this is the default value. Run the |chef client| in debug mode to verify that the correct branches are being checked out:
+where the ``branch_name`` variable is set to ``staging`` or ``master``, depending on the environment of the node. Once this is determined, the ``branch_name`` variable is used to set the revision for the repository. If the ``git status`` command is used after running the example above, it will return the branch name as ``deploy``, as this is the default value. Run the chef-client in debug mode to verify that the correct branches are being checked out:
 
 .. code-block:: bash
 
    $ sudo chef-client -l debug
+
+.. end_tag
+

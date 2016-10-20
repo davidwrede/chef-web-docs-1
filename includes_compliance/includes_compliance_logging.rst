@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag compliance_logging
 
 The default directory where Chef Compliance is saving logs is: ``/var/log/chef-compliance/``. It contains a directory for each service, but you can follow all the logs with this command:
 
@@ -12,3 +12,6 @@ This command can also be run for an individual service by specifying the name of
 .. code-block:: bash
 
    sudo chef-compliance-ctl tail core
+
+.. end_tag
+

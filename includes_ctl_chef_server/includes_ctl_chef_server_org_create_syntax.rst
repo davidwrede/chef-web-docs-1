@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_org_create_syntax
 
 This subcommand has the following syntax:
 
@@ -10,5 +9,8 @@ This subcommand has the following syntax:
 
 where:
 
-* |name_rules org| For example: ``chef``.
-* |name_rules org_full| For example: ``"Chef Software, Inc."``.
+* The name must begin with a lower-case letter or digit, may only contain lower-case letters, digits, hyphens, and underscores, and must be between 1 and 255 characters. For example: ``chef``.
+* The full name must begin with a non-white space character and must be between 1 and 1023 characters. For example: ``"Chef Software, Inc."``.
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ctl_chef_server_add_client_key_options
 
 This subcommand has the following options:
 
@@ -17,3 +17,6 @@ This subcommand has the following options:
 
 ``-p PATH`` ``--public-key-path PATH``
    The location to a file containing valid PKCS#1 public key to be added. If not passed, then the server will generate a new one for you and return the private key to STDOUT.
+
+.. end_tag
+

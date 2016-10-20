@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag plugin_knife_reporting_runs_show_options
 
 This argument has the following options:
 
 ``RUN_ID``
-   |id chef_client_run|
+   The identifier for a chef-client run.
+
+
+.. end_tag
 

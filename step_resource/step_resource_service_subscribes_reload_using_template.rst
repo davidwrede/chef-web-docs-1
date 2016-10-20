@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To reload a service based on a template, use the |resource template| and |resource service| resources together in the same recipe, similar to the following:
+.. tag resource_service_subscribes_reload_using_template
+
+To reload a service based on a template, use the **template** and **service** resources together in the same recipe, similar to the following:
 
 .. code-block:: ruby
 
@@ -16,4 +16,7 @@ To reload a service based on a template, use the |resource template| and |resour
      subscribes :reload, 'template[/tmp/somefile]', :immediately
    end
 
-where the ``subscribes`` notification is used to reload the service using the template specified by the |resource template| resource.
+where the ``subscribes`` notification is used to reload the service using the template specified by the **template** resource.
+
+.. end_tag
+

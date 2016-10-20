@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-You can use ``chef shell-init`` with |windows powershell|.
+.. tag ruby_set_system_ruby_as_chefdk_ruby_windows
+
+You can use ``chef shell-init`` with Windows PowerShell.
 
 To try it in your current session:
 
@@ -14,3 +14,6 @@ To enable it permanently:
 .. code-block:: bash
 
    "chef shell-init powershell | Invoke-Expression" >> $PROFILE
+
+.. end_tag
+

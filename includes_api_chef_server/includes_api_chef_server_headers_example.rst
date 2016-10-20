@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_chef_server_headers_example
 
 The following example shows an authentication request:
 
@@ -23,3 +22,6 @@ The following example shows an authentication request:
      X-Ops-Server-API-Info: 1
      X-Chef-Version: 12.0.2
      User-Agent: Chef Knife/12.0.2 (ruby-2.1.1-p320; ohai-8.0.0; x86_64-darwin12.0.2; +http://chef.io)
+
+.. end_tag
+

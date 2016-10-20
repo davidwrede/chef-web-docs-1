@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how start a service named ``example_service`` and immediately notify the |nginx| service to restart.
+.. tag resource_service_restart_and_notify
+
+The following example shows how start a service named ``example_service`` and immediately notify the Nginx service to restart.
 
 .. code-block:: ruby
 
@@ -11,4 +11,7 @@ The following example shows how start a service named ``example_service`` and im
      notifies :restart, 'service[nginx]', :immediately
    end
 
-where by using the default ``provider`` for the |resource service|, the recipe is telling the |chef client| to determine the specific provider to be used during the |chef client| run based on the platform of the node on which the recipe will run.
+where by using the default ``provider`` for the **service**, the recipe is telling the chef-client to determine the specific provider to be used during the chef-client run based on the platform of the node on which the recipe will run.
+
+.. end_tag
+

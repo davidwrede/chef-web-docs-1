@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_install_with_options
 
 .. To install a package with options:
 
@@ -9,3 +9,6 @@
      action :install
      options '--force-yes'
    end
+
+.. end_tag
+

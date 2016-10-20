@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ruby_class_chef_log_fatal
 
 The following example shows a series of fatal ``Chef::Log`` entries:
 
@@ -41,4 +41,7 @@ The following example shows a series of fatal ``Chef::Log`` entries:
      raise
    end
 
-The full recipe is the ``upgrade.rb`` recipe of the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_ that is maintained by |company_name|.
+The full recipe is the ``upgrade.rb`` recipe of the `chef-splunk cookbook <https://github.com/chef-cookbooks/chef-splunk/>`_ that is maintained by Chef.
+
+.. end_tag
+

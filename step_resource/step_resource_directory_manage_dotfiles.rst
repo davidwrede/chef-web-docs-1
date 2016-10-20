@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows using the |resource directory| and |resource cookbook_file| resources to manage dotfiles. The dotfiles are defined by a |json| data structure similar to:
+.. tag resource_directory_manage_dotfiles
+
+The following example shows using the **directory** and **cookbook_file** resources to manage dotfiles. The dotfiles are defined by a JSON data structure similar to:
 
 .. code-block:: javascript
 
@@ -41,3 +41,6 @@ and then the following resources manage the dotfiles:
        backup 0
      end
    end
+
+.. end_tag
+

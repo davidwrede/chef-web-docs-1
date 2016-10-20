@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_execute_notifies_specific_order
 
 To notify multiple resources, and then have these resources run in a certain order, do something like the following:
 
@@ -26,3 +26,6 @@ To notify multiple resources, and then have these resources run in a certain ord
    end
 
 where the sequencing will be in the same order as the resources are listed in the recipe: ``execute 'foo'``, ``template 'baz'``, ``execute [restart_baz]``, ``package 'bar'``, and ``execute 'final'``.
+
+.. end_tag
+

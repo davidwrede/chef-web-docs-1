@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_install
 
-The ``install`` subcommand is used to install premium features of the |chef server|: |chef manage|, |chef analytics|, |chef client| run reporting, high availability configurations, |push jobs|, and |chef server| replication.
+The ``install`` subcommand is used to install premium features of the Chef server: Chef management console, Chef Analytics, chef-client run reporting, high availability configurations, Chef push jobs, and Chef server replication.
+
+.. end_tag
+

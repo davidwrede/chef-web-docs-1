@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ohai_hints_json
 
-If the hint file contains |json| content, it will be returned as a hash from the call to ``hint?``.
+If the hint file contains JSON content, it will be returned as a hash from the call to ``hint?``.
 
 .. code-block:: javascript
 
@@ -20,4 +19,7 @@ If the hint file contains |json| content, it will be returned as a hash from the
      'There is no snow here, and penguins like snow.'
    end
 
-The default directory in which hint files are located is ``/etc/chef/ohai/hints/``. Use the ``Ohai::Config[:hints_path]`` setting in the |client rb| file to customize this location.
+The default directory in which hint files are located is ``/etc/chef/ohai/hints/``. Use the ``Ohai::Config[:hints_path]`` setting in the client.rb file to customize this location.
+
+.. end_tag
+

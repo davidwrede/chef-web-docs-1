@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_powershell_write_to_interpolated_path
 
 .. To write out to an interpolated path:
 
@@ -12,3 +12,6 @@
      $stream.close()
      EOH
    end
+
+.. end_tag
+

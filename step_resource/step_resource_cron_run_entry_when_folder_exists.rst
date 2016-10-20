@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_cron_run_entry_when_folder_exists
 
 .. To run an entry if a folder exists:
 
@@ -13,3 +13,6 @@
        --thread-max'"
      only_if do File.exist?('/home/jboss') end
    end
+
+.. end_tag
+

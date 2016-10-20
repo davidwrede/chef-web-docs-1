@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag template_specificity_pattern
 
 The pattern for template specificity depends on two things: the lookup path and the source. The first pattern that matches is used:
 
@@ -29,3 +29,6 @@ The following example emulates the entire file specificity pattern by defining i
        default/test.erb
      }
    end
+
+.. end_tag
+

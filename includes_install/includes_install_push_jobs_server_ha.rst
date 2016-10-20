@@ -1,15 +1,15 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
-To set up the |push jobs| server for a high availability configuration:
+.. tag install_push_jobs_server_ha
 
-#. Install the package on all servers that are running the |chef server|. For example on |ubuntu|:
+To set up the Chef push jobs server for a high availability configuration:
+
+#. Install the package on all servers that are running the Chef server. For example on Ubuntu:
 
    .. code-block:: bash
 
       $ sudo dpkg -i opscode-push-jobs-server_2.1.0-1_amd64.deb
 
-#. Reconfigure the primary backend |push jobs| server:
+#. Reconfigure the primary backend Chef push jobs server:
 
    .. code-block:: bash
 
@@ -27,9 +27,9 @@ To set up the |push jobs| server for a high availability configuration:
       
       $ scp -r /etc/opscode-push-jobs-server <each servers IP>:/etc
 
-#. TCP protocol ports 10000 and 10003 must be open. These are the heartbeat and command ports respectively. They allow the |push jobs| server to communicate with the |push jobs| clients. In a configuration with both frontend and backend servers, these ports only need to be open on the backend servers. The |push jobs| server waits for connections from the |push jobs| client (and never makes a connection to a |push jobs| client).
+#. TCP protocol ports 10000 and 10003 must be open. These are the heartbeat and command ports respectively. They allow the Chef push jobs server to communicate with the Chef push jobs clients. In a configuration with both frontend and backend servers, these ports only need to be open on the backend servers. The Chef push jobs server waits for connections from the Chef push jobs client (and never makes a connection to a Chef push jobs client).
 
-#. Reconfigure the remaining |push jobs| servers:
+#. Reconfigure the remaining Chef push jobs servers:
 
    .. code-block:: bash
 
@@ -41,9 +41,9 @@ To set up the |push jobs| server for a high availability configuration:
 
       $ chef-server-ctl reconfigure
 
-   This ensures that the |keepalived| scripts are regenerated so they are aware of |push jobs|.
+   This ensures that the Keepalived scripts are regenerated so they are aware of Chef push jobs.
 
-#. Restart all servers on which |push jobs| will run:
+#. Restart all servers on which Chef push jobs will run:
 
    .. code-block:: bash
 
@@ -54,3 +54,6 @@ To set up the |push jobs| server for a high availability configuration:
    .. code-block:: bash
 
       $ opscode-push-jobs-server-ctl test
+
+.. end_tag
+

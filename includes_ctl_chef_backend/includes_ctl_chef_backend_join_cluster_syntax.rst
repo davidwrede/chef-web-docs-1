@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_join_cluster_syntax
 
 This subcommand has the following syntax:
 
@@ -9,3 +8,6 @@ This subcommand has the following syntax:
    $ chef-backend-ctl join-cluster PEER_NODE_IP (options)
 
 where ``PEER_NODE_IP`` is the IP address of a peer in the cluster to be joined.
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To write a recipe that uses an |ssh| wrapper:
+.. tag resource_deploy_recipe_uses_ssh_wrapper
+
+To write a recipe that uses an SSH wrapper:
 
 #. Create a file in the ``cookbooks/COOKBOOK_NAME/files/default`` directory that is named ``wrap-ssh4git.sh`` and which contains the following:
 
@@ -35,4 +35,7 @@ To write a recipe that uses an |ssh| wrapper:
         ssh_wrapper '/tmp/private_code/wrap-ssh4git.sh'
       end
 
-   This will deploy the |git| repository at ``git@github.com:acctname/private-repo.git`` in the ``/tmp/private_code`` directory.
+   This will deploy the git repository at ``git@github.com:acctname/private-repo.git`` in the ``/tmp/private_code`` directory.
+
+.. end_tag
+

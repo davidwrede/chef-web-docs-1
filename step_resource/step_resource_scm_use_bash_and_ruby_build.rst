@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how |bash| can be used to install a plug-in for |rbenv| named ``ruby-build``, which is located in |git| version source control. First, the application is synchronized, and then |bash| changes its working directory to the location in which ``ruby-build`` is located, and then runs a command.
+.. tag resource_scm_use_bash_and_ruby_build
+
+The following example shows how Bash can be used to install a plug-in for rbenv named ``ruby-build``, which is located in git version source control. First, the application is synchronized, and then Bash changes its working directory to the location in which ``ruby-build`` is located, and then runs a command.
 
 .. code-block:: ruby
 
@@ -22,3 +22,6 @@ The following example shows how |bash| can be used to install a plug-in for |rbe
   end
 
 To read more about ``ruby-build``, see here: https://github.com/sstephenson/ruby-build.
+
+.. end_tag
+

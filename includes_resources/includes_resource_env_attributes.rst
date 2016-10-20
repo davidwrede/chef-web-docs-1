@@ -1,57 +1,116 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_env_attributes
 
 This resource has the following properties:
    
 ``delim``
    **Ruby Type:** String
 
-   |delim resource directory|
+   The delimiter that is used to separate multiple values for a single key.
    
 ``ignore_failure``
    **Ruby Types:** TrueClass, FalseClass
 
-   |ignore_failure| Default value: ``false``.
+   Continue running a recipe if a resource fails for any reason. Default value: ``false``.
    
 ``key_name``
    **Ruby Type:** String
 
-   |name key_directory| |resource_block_default| |see syntax|
+   The name of the key that is to be created, deleted, or modified. Default value: the ``name`` of the resource block See "Syntax" section above for more information.
    
 ``notifies``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies.rst
+   .. tag resources_common_notification_notifies
+   
+   A resource may notify another resource to take action when its state changes. Specify a ``'resource[name]'``, the ``:action`` that resource should take, and then the ``:timer`` for that action. A resource may notifiy more than one resource; use a ``notifies`` statement for each resource to be notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_notifies_syntax.rst
+   .. tag resources_common_notification_notifies_syntax
+   
+   The syntax for ``notifies`` is:
+   
+   .. code-block:: ruby
+   
+      notifies :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
    
 ``provider``
    **Ruby Type:** Chef Class
 
-   Optional. |provider resource_parameter|
+   Optional. Explicitly specifies a provider.
    
 ``retries``
    **Ruby Type:** Integer
 
-   |retries| Default value: ``0``.
+   The number of times to catch exceptions and retry the resource. Default value: ``0``.
    
 ``retry_delay``
    **Ruby Type:** Integer
 
-   |retry_delay| Default value: ``2``.
+   The retry delay (in seconds). Default value: ``2``.
    
 ``subscribes``
    **Ruby Type:** Symbol, 'Chef::Resource[String]'
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes.rst
+   .. tag resources_common_notification_subscribes
+   
+   A resource may listen to another resource, and then take action if the state of the resource being listened to changes. Specify a ``'resource[name]'``, the ``:action`` to be taken, and then the ``:timer`` for that action.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_timers.rst
+   .. tag resources_common_notification_timers
+   
+   A timer specifies the point during the chef-client run at which a notification is run. The following timers are available:
+   
+   ``:before``
+      Specifies that the action on a notified resource should be run before processing the resource block in which the notification is located. 
+   
+   ``:delayed``
+      Default. Specifies that a notification should be queued up, and then executed at the very end of the chef-client run.
+   
+   ``:immediate``, ``:immediately``
+      Specifies that a notification should be run immediately, per resource notified.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_resources_common/includes_resources_common_notification_subscribes_syntax.rst
+   .. tag resources_common_notification_subscribes_syntax
+   
+   The syntax for ``subscribes`` is:
+   
+   .. code-block:: ruby
+   
+      subscribes :action, 'resource[name]', :timer
+   
+   .. end_tag
+   
    
 ``value``
    **Ruby Type:** String
 
-   |value resource directory|
+   The value with which ``key_name`` is set.
+
+.. end_tag
+

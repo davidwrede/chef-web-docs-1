@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To send a ``POST`` request as |json| data, convert the message to |json| and include the correct content-type header. For example:
+.. tag resource_http_request_send_post
+
+To send a ``POST`` request as JSON data, convert the message to JSON and include the correct content-type header. For example:
 
 .. code-block:: ruby
 
@@ -14,3 +14,6 @@ To send a ``POST`` request as |json| data, convert the message to |json| and inc
        'Content-Type' => 'application/data'
      })
    end
+
+.. end_tag
+

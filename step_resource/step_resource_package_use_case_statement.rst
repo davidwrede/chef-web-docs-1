@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use a case statement to tell the |chef client| which platforms and packages to install using |curl|.
+.. tag resource_package_use_case_statement
+
+The following example shows how to use a case statement to tell the chef-client which platforms and packages to install using cURL.
 
 .. code-block:: ruby
 
@@ -18,7 +18,7 @@ The following example shows how to use a case statement to tell the |chef client
      end
    end
 
-where ``node[:platform]`` for each node is identified by |ohai| during every |chef client| run. For example:
+where ``node[:platform]`` for each node is identified by Ohai during every chef-client run. For example:
 
 .. code-block:: ruby
 
@@ -34,3 +34,6 @@ where ``node[:platform]`` for each node is identified by |ohai| during every |ch
        package 'subversion'
      end
    end
+
+.. end_tag
+

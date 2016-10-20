@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_status
 
 Use the ``status`` subcommand to show the status of all services available to a node in the backend HA cluster. This subcommand has the following syntax:
 
@@ -52,3 +51,6 @@ is similar to:
    run: postgresql: (pid 6640) 106984s; run: log: (pid 6653) 106983s
 
 which shows the state of the services, process identifiers, and uptime (in seconds). Simple output is useful if one (or more) nodes in the backend HA cluster are down or in a degraded state.
+
+.. end_tag
+

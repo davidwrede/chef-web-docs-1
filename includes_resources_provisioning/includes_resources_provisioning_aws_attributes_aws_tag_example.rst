@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resources_provisioning_aws_attributes_aws_tag_example
 
 For example:
 
@@ -11,3 +10,6 @@ For example:
 .. code-block:: ruby
 
    aws_tags 'Name' => 'custom-vpc-name'
+
+.. end_tag
+

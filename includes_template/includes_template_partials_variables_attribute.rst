@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag template_partials_variables_attribute
 
-The ``variables`` property of the |resource template| resource can be used to reference a partial template file by using a |ruby hash|. For example:
+The ``variables`` property of the **template** resource can be used to reference a partial template file by using a Hash. For example:
 
 .. code-block:: ruby
 
@@ -14,7 +13,7 @@ The ``variables`` property of the |resource template| resource can be used to re
      }
    end
 
-where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:
+where each of the partial template files can then be combined using normal Ruby template patterns within a template file, such as:
 
 .. code-block:: ruby
 
@@ -22,3 +21,6 @@ where each of the partial template files can then be combined using normal |ruby
      Here is <%= partial %>
      <%= render partial, :variables => {:message => message} %>
    <% end %>
+
+.. end_tag
+

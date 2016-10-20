@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_delivery_truck_publish_supermarket_private
 
-Publish cookbooks to a private |supermarket|:
+Publish cookbooks to a private Chef Supermarket:
 
 .. code-block:: javascript
 
@@ -11,3 +10,6 @@ Publish cookbooks to a private |supermarket|:
        "supermarket": "https://private-supermarket.example.com"
      }
    }
+
+.. end_tag
+

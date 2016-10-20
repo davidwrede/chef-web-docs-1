@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_deps_summary
 
 Use the ``knife deps`` subcommand to identify dependencies for a node, role, or cookbook.
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_delete_user_key_syntax
 
 This subcommand has the following syntax:
 
@@ -9,3 +8,6 @@ This subcommand has the following syntax:
    $ chef-server-ctl delete-user-key USER_NAME KEY_NAME
 
 .. warning:: The parameters for this subcommand must be in the order specified above.
+
+.. end_tag
+

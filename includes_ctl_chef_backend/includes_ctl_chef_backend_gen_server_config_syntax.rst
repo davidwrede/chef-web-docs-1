@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_gen_server_config_syntax
 
 This subcommand has the following syntax:
 
 .. code-block:: bash
 
    $ chef-backend-ctl gen-server-config FQDN
+
+.. end_tag
+

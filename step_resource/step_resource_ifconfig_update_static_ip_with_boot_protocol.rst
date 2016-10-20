@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_ifconfig_update_static_ip_with_boot_protocol
 
 .. To update a static IP address with a boot protocol*:
 
@@ -16,3 +16,6 @@ will update the interface from ``static`` to ``dhcp``:
 
    iface eth1 inet dhcp
      address 33.33.33.80
+
+.. end_tag
+

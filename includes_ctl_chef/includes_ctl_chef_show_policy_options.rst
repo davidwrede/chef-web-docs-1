@@ -1,23 +1,25 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_show_policy_options
 
 This subcommand has the following options:
 
 ``-c CONFIG_FILE``, ``--config CONFIG_FILE``
-   |chef_exe config|
+   The path to the knife configuration file.
 
 ``-D``, ``--debug``
-   |chef_exe debug| Default value: ``false``.
+   Enable stack traces and other debug output. Default value: ``false``.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-o``, ``--orphans``
-   |chef_exe orphans|
+   Show policy revisions that are not currently assigned to any policy group.
 
 ``--[no-]pager``
-   |no_pager| Default value: ``--pager``.
+   Use ``--pager`` to enable paged output for a Policyfile.lock.json file. Default value: ``--pager``.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

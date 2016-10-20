@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ruby_style_patterns_string_quoting_vs_whitespace_array
 
 When ``%w`` syntax uses a variable, such as ``|foo|``, double quoted strings should be used.
 
@@ -24,3 +24,6 @@ Wrong:
        ...
      end
    end
+
+.. end_tag
+

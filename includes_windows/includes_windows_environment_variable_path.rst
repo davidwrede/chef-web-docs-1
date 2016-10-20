@@ -1,13 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag windows_environment_variable_path
 
-On |windows|, the |chef client| must have two entries added to the ``PATH`` environment variable:
+On Microsoft Windows, the chef-client must have two entries added to the ``PATH`` environment variable:
 
 * ``C:\opscode\chef\bin``
 * ``C:\opscode\chef\embedded\bin``
 
-This is typically done during the installation of the |chef client| automatically. If these values (for any reason) are not in the ``PATH`` environment variable, the |chef client| will not run properly.
+This is typically done during the installation of the chef-client automatically. If these values (for any reason) are not in the ``PATH`` environment variable, the chef-client will not run properly.
 
 .. image:: ../../images/includes_windows_environment_variable_path.png
 
@@ -40,3 +39,6 @@ This value can be set from a recipe. For example, from the ``php`` cookbook:
    
    ...
    
+
+.. end_tag
+

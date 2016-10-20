@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_dsc_resource_zip_file
 
 .. To use a zip file:
 
@@ -11,3 +11,6 @@
       property :path, 'C:\Users\Public\Documents\example.zip'
       property :destination, 'C:\Users\Public\Documents\ExtractionPath'
     end
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_method_edit_resource_bang
 
 Use the ``edit_resource!`` method to:
 
@@ -17,7 +16,7 @@ The syntax for the ``edit_resource!`` method is as follows:
 
 where:
 
-* ``:resource_type`` is the resource type, such as ``:file ``(for the |resource file| resource), ``:template`` (for the |resource template| resource), and so on. Any resource available to |chef| may be declared.
+* ``:resource_type`` is the resource type, such as ``:file ``(for the **file** resource), ``:template`` (for the **template** resource), and so on. Any resource available to Chef may be declared.
 * ``resource_name`` the property that is the default name of the resource, typically the string that appears in the ``resource 'name' do`` block of a resource (but not always); see the Syntax section for the resource to be declared to verify the default name property.
 * ``resource_attrs_block`` is a block in which properties of the instantiated resource are declared.
 
@@ -26,3 +25,6 @@ For example:
 .. code-block:: ruby
 
    edit_resource!(:file, '/x/y.rst')
+
+.. end_tag
+

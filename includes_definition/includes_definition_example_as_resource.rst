@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag definition_example_as_resource
 
 The definition is improved by rewriting it as a custom resource:
 
@@ -21,7 +20,7 @@ The definition is improved by rewriting it as a custom resource:
 
    end
 
-Once built, the custom resource may be used in a recipe just like the any of the resources that are built into |chef|. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``host`` with a custom resource in the ``/resources`` directory named ``porter.rb``. Use it in a recipe like this:
+Once built, the custom resource may be used in a recipe just like the any of the resources that are built into Chef. The resource gets its name from the cookbook and from the file name in the ``/resources`` directory, with an underscore (``_``) separating them. For example, a cookbook named ``host`` with a custom resource in the ``/resources`` directory named ``porter.rb``. Use it in a recipe like this:
 
 .. code-block:: ruby
 
@@ -36,3 +35,6 @@ or:
    host_porter 'www1' do
      port 4001
    end
+
+.. end_tag
+

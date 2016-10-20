@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The ``GET`` method is used to return the details of an organization as |json|.
+.. tag api_chef_server_endpoint_org_name_updated_since_get
+
+The ``GET`` method is used to return the details of an organization as JSON.
 
 **Request**
 
@@ -50,10 +50,13 @@ The response will return an array of paths for objects that have been created, u
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``401``
-     - |response code 401 unauthorized|
+     - Unauthorized. The user or client who made the request could not be authenticated. Verify the user/client name, and that the correct key was used to sign the request.
    * - ``403``
-     - |response code 403 forbidden|
+     - Forbidden. The user who made the request is not authorized to perform the action.
    * - ``404``
-     - |response code 404 not found|
+     - Not found. The requested object does not exist.
+
+.. end_tag
+

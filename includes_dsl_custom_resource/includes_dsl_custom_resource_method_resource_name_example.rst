@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_resource_name_example
 
 For example, the ``httpd.rb`` file in the ``website`` cookbook could be assigned a custom resource name like this:
 
@@ -36,3 +35,6 @@ and is then usable in a recipe like this:
      homepage '<h1>Welcome to the Example Co. website!</h1>'
      action :create
    end
+
+.. end_tag
+

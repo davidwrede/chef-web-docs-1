@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag template_specificity_example
 
 A cookbook may have a ``/templates`` directory structure like this:
 
@@ -23,7 +23,7 @@ and a resource that looks something like the following:
      group 'root'
    end
 
-This resource would be matched in the same order as the ``/templates`` directory structure. For a node named ``host-node-desktop`` that is running |windows 7|, the second item would be the matching item and the location:
+This resource would be matched in the same order as the ``/templates`` directory structure. For a node named ``host-node-desktop`` that is running Windows 7, the second item would be the matching item and the location:
 
 .. code-block:: ruby
 
@@ -33,3 +33,6 @@ This resource would be matched in the same order as the ``/templates`` directory
      windows-6.0/text_file.txt
      windows/text_file.txt
      default/text_file.txt
+
+.. end_tag
+

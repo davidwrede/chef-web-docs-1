@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ohai_custom_plugin_example_multiple_collect_data_blocks
 
-The following |ohai| plugin uses multiple ``collect_data`` blocks and shared methods to define platforms:
+The following Ohai plugin uses multiple ``collect_data`` blocks and shared methods to define platforms:
 
 .. code-block:: ruby
 
@@ -87,3 +86,6 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
       domain collect_domain
      end
    end
+
+.. end_tag
+

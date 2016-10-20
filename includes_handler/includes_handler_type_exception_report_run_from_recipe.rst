@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_type_exception_report_run_from_recipe
 
-The |resource chef_handler| resource allows exception and report handlers to be enabled from within recipes, which can then added to the run-list for any node on which the exception or report handler should run. The |resource chef_handler| resource is available from the |cookbook chef_handler| cookbook.
+The **chef_handler** resource allows exception and report handlers to be enabled from within recipes, which can then added to the run-list for any node on which the exception or report handler should run. The **chef_handler** resource is available from the **chef_handler** cookbook.
 
-To use the |resource chef_handler| resource in a recipe, add code similar to the following:
+To use the **chef_handler** resource in a recipe, add code similar to the following:
 
 .. code-block:: ruby
 
@@ -13,13 +12,13 @@ To use the |resource chef_handler| resource in a recipe, add code similar to the
      action :enable
    end
 
-For example, a handler for |growl| needs to be enabled at the beginning of the |chef client| run:
+For example, a handler for Growl needs to be enabled at the beginning of the chef-client run:
 
 .. code-block:: ruby
 
    chef_gem 'chef-handler-growl'
 
-and then is activated in a recipe by using the |resource chef_handler| resource:
+and then is activated in a recipe by using the **chef_handler** resource:
 
 .. code-block:: ruby
 
@@ -27,3 +26,6 @@ and then is activated in a recipe by using the |resource chef_handler| resource:
      source 'chef/handler/growl'
      action :enable
    end
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_reporting_endpoint_reports_runs_counts_get
 
-The ``GET`` method is used to return the frequency of |chef client| runs, per-minute, per-hour, per-day, or per-week.
+The ``GET`` method is used to return the frequency of chef-client runs, per-minute, per-hour, per-day, or per-week.
 
 This method has the following parameters:
 
@@ -13,7 +12,7 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``granularity``
-     - Required. The length of time for which |chef client| run counts are returned. Possible values: ``hour``, ``minute``, ``day``, or ``week``.
+     - Required. The length of time for which chef-client run counts are returned. Possible values: ``hour``, ``minute``, ``day``, or ``week``.
 
 **Request**
 
@@ -40,8 +39,11 @@ The response is similar to:
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``404``
-     - |response code 404 not found|
+     - Not found. The requested object does not exist.
    * - ``406``
      - Invalid request. The protocol version is incorrect.
+
+.. end_tag
+

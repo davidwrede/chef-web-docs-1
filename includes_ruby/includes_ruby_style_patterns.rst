@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ruby_style_patterns
 
-Most of the code that is authored when working with |chef| is written as |ruby|. Just about every file within a cookbook---with few exceptions!---is a |ruby| file.
+Most of the code that is authored when working with Chef is written as Ruby. Just about every file within a cookbook---with few exceptions!---is a Ruby file.
+
+.. end_tag
+

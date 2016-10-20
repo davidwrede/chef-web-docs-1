@@ -1,7 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-
+.. tag resource_dsc_script_helper_ps_credential
 
 Use the ``ps_credential`` helper to embed a ``PSCredential`` object---`a set of security credentials, such as a user name or password <https://technet.microsoft.com/en-us/magazine/ff714574.aspx>`__---within a script, which allows that script to be run using security credentials.
 
@@ -28,3 +26,6 @@ For example, assuming the ``CertificateID`` is configured in the local configura
       }
     EOH
   end
+
+.. end_tag
+

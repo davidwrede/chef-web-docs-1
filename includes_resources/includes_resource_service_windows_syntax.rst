@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_service_windows_syntax
 
-A |resource service_windows| resource block manages the state of a service on a machine that is running |windows|. For example:
+A **windows_service** resource block manages the state of a service on a machine that is running Microsoft Windows. For example:
 
 .. code-block:: ruby
 
@@ -11,7 +10,7 @@ A |resource service_windows| resource block manages the state of a service on a 
      startup_type :manual
    end
 
-The full syntax for all of the properties that are available to the |resource service_windows| resource is:
+The full syntax for all of the properties that are available to the **windows_service** resource is:
 
 .. code-block:: ruby
 
@@ -39,5 +38,8 @@ where
 
 * ``windows_service`` is the resource
 * ``name`` is the name of the resource block
-* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``run_as_password``, ``run_as_user``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``:action`` identifies the steps the chef-client will take to bring the node into the desired state
+* ``init_command``, ``pattern``, ``provider``, ``reload_command``, ``restart_command``, ``run_as_password``, ``run_as_user``, ``service_name``, ``start_command``, ``startup_type``, ``status_command``, ``stop_command``, ``supports``, and ``timeout`` are properties of this resource, with the Ruby type shown. See "Properties" section below for more information about all of the properties that may be used with this resource.
+
+.. end_tag
+

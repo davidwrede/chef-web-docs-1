@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_service_aix_mkitab
 
-The |resource service| resource does not support using the ``:enable`` and ``:disable`` actions with resources that are managed using |ibm aix_src|. This is because |ibm aix_src| does not have a standard mechanism for enabling and disabling services on system boot.
+The **service** resource does not support using the ``:enable`` and ``:disable`` actions with resources that are managed using System Resource Controller (SRC). This is because System Resource Controller (SRC) does not have a standard mechanism for enabling and disabling services on system boot.
 
-One approach for enabling or disabling services that are managed by |ibm aix_src| is to use the |resource execute| resource to invoke ``mkitab``, and then use that command to enable or disable the service.
+One approach for enabling or disabling services that are managed by System Resource Controller (SRC) is to use the **execute** resource to invoke ``mkitab``, and then use that command to enable or disable the service.
 
 The following example shows how to install a service:
 
@@ -34,3 +33,6 @@ and then enable it using the ``mkitab`` command:
                      -s #{node['chef_client']['svc_name']} > /dev/console 2>&1'"
      not_if "lsitab #{node['chef_client']['svc_name']}"
    end
+
+.. end_tag
+

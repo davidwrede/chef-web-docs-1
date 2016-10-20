@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_kitchen_converge_ubuntu_default
 
-To converge the default |ubuntu| instance, run the following:
+To converge the default Ubuntu instance, run the following:
 
 .. code-block:: bash
 
    $ kitchen converge default-ubuntu-1404
 
-The |chef client| is downloaded the first time this command is run. The output of the command is similar to:
+The chef-client is downloaded the first time this command is run. The output of the command is similar to:
 
 .. code-block:: bash
 
@@ -56,3 +55,6 @@ The |chef client| is downloaded the first time this command is run. The output o
           Chef Client finished, 1/1 resources updated in 1.955915841 seconds       
           Finished converging <default-ubuntu-1404> (0m15.67s).
    -----> Kitchen is finished. (0m15.96s)
+
+.. end_tag
+

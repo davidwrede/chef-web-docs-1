@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To re-read the |chef client| configuration during a |chef client| run:
+.. tag resource_ruby_block_reread_chef_client
+
+.. To re-read the chef-client configuration during a chef-client run:
 
 .. code-block:: ruby
 
@@ -11,3 +11,6 @@
      end
      action :run
    end
+
+.. end_tag
+

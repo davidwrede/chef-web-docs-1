@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_cookbook_common_recipe_unit
 
 Use the ``unit.rb`` recipe to run unit tests for the project.
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag chef_repo_git_master_keep_current
 
 Use the following steps to keep the master branch up to date. 
 
@@ -16,7 +15,7 @@ Use the following steps to keep the master branch up to date.
 
       $ git pull --rebase
    
-The following ``rakefile`` can be used to update |chef|, |ohai|, and cookbooks. Edit as necessary:
+The following ``rakefile`` can be used to update Chef, Ohai, and cookbooks. Edit as necessary:
 
 .. code-block:: ruby
 
@@ -32,3 +31,6 @@ The following ``rakefile`` can be used to update |chef|, |ohai|, and cookbooks. 
        end
      end
    end
+
+.. end_tag
+

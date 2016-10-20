@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_package_installed_version
 
 A package that is installed with a specific version:
 
@@ -12,3 +12,6 @@ A package that is installed with a specific version:
        end
      end
    end
+
+.. end_tag
+

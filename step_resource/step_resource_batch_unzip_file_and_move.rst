@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-To run a batch file that unzips and then moves |ruby|, do something like:
+.. tag resource_batch_unzip_file_and_move
+
+To run a batch file that unzips and then moves Ruby, do something like:
 
 .. code-block:: ruby
 
@@ -37,4 +37,7 @@ or:
    batch 'echo some env vars' do
      code 'echo %TEMP%\\necho %SYSTEMDRIVE%\\necho %PATH%\\necho %WINDIR%'
    end
+
+
+.. end_tag
 

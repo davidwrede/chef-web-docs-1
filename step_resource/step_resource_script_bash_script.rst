@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To run a |bash| script:
+.. tag resource_script_bash_script
+
+.. To run a Bash script:
 
 .. code-block:: ruby
 
@@ -34,4 +34,7 @@ or something like:
      not_if { File.exist?('#{key_dir}/server.crt') }
    end
 
-where ``code`` contains the |open ssl| command to be run. The ``not_if`` property tells the |chef client| not to run the command if the file already exists.
+where ``code`` contains the OpenSSL command to be run. The ``not_if`` property tells the chef-client not to run the command if the file already exists.
+
+.. end_tag
+

@@ -1,9 +1,14 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use ``:filter_result`` as part of a search query to filter the search output based on the pattern specified by a |ruby hash|. Only attributes in the |ruby hash| will be returned.
+.. tag dsl_recipe_method_search_filter_result
 
-.. note:: .. include:: ../../includes_notes/includes_notes_filter_search_vs_partial_search.rst
+Use ``:filter_result`` as part of a search query to filter the search output based on the pattern specified by a Hash. Only attributes in the Hash will be returned.
+
+.. note:: .. tag notes_filter_search_vs_partial_search
+          
+          Prior to chef-client 12.0, this functionality was available from the ``partial_search`` cookbook and was referred to as "partial search".
+          
+          .. end_tag
+          
 
 The syntax for the ``search`` method that uses ``:filter_result`` is as follows:
 
@@ -22,9 +27,9 @@ The syntax for the ``search`` method that uses ``:filter_result`` is as follows:
 
 where:
 
-* ``:index`` is of name of the index on the |chef server| against which the search query will run: ``:client``, ``:data_bag_name``, ``:environment``, ``:node``, and ``:role``
-* ``'query'`` is a valid search query against an object on the |chef server|
-* ``:filter_result`` defines a |ruby hash| of values to be returned
+* ``:index`` is of name of the index on the Chef server against which the search query will run: ``:client``, ``:data_bag_name``, ``:environment``, ``:node``, and ``:role``
+* ``'query'`` is a valid search query against an object on the Chef server
+* ``:filter_result`` defines a Hash of values to be returned
 
 For example:
 
@@ -40,3 +45,6 @@ For example:
      puts result['ip']
      puts result['kernel_version']
    end
+
+.. end_tag
+

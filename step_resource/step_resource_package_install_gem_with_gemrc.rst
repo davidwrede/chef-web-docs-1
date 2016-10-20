@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_package_install_gem_with_gemrc
 
 A template named ``gemrc.erb`` is located in a cookbook's ``/templates`` directory:
 
@@ -34,3 +33,6 @@ A recipe can be built that does the following:
      gem_binary '/opt/chef/embedded/bin/gem'
      action :install
    end
+
+.. end_tag
+

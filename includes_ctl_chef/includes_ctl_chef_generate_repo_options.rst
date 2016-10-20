@@ -1,20 +1,22 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_generate_repo_options
 
 This subcommand has the following options:
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-p``, ``--policy-only``
-   |chef_exe policy_only|
+   Create a repository that does not store cookbook files, only Policyfile files.
 
 ``-P``, ``--policy``
-   |chef_exe no_berkshelf|
+   Use Policyfile instead of Berkshelf.
 
 ``-r``, ``--roles``
-   |chef_exe roles|
+   Create directories for ``/roles`` and ``/environments`` instead of creating directories for Policyfile.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

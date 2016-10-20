@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_provision_arbitrary_options
 
 Use the ``--opt`` option to pass arbitrary command-line options. For example:
 
@@ -13,3 +12,6 @@ Use the ``--opt`` option more than once to pass more than one option. For exampl
 .. code-block:: bash
 
    $ chef provision (other options) --opt foo=bar --opt baz=qux
+
+.. end_tag
+

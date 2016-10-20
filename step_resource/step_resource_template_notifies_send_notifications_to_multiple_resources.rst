@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_template_notifies_send_notifications_to_multiple_resources
 
 To send notifications to multiple resources, just use multiple attributes. Multiple attributes will get sent to the notified resources in the order specified.
 
@@ -12,3 +12,6 @@ To send notifications to multiple resources, just use multiple attributes. Multi
  
    service 'afpd'
    service 'cnid'
+
+.. end_tag
+

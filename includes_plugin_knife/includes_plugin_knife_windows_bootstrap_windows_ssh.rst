@@ -1,6 +1,8 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_windows_bootstrap_windows_ssh
+
+Use the ``bootstrap windows ssh`` argument to bootstrap chef-client installations in a Microsoft Windows environment, using a command shell that is native to Microsoft Windows.
 
 
-Use the ``bootstrap windows ssh`` argument to bootstrap |chef client| installations in a |windows| environment, using a command shell that is native to |windows|.
+.. end_tag
 

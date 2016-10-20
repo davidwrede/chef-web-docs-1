@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_powershell_script_use_flag
 
 .. To use the flags attribute:
 
@@ -14,3 +14,6 @@
      guard_interpreter :powershell_script
      not_if '(Get-WindowsFeature -Name Web-Server).Installed'
    end
+
+.. end_tag
+

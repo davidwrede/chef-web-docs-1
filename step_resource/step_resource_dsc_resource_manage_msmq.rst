@@ -1,9 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_dsc_resource_manage_msmq
 
 .. To manage a message queue:
 
-The following example creates a file on a node (based on one that is located in a cookbook), unpacks the ``MessageQueue.zip`` |windows powershell| module, and then uses the |resource dsc_resource| to ensure that |microsoft msmq| sub-features are installed, a test queue is created, and that permissions are set on the test queue:
+The following example creates a file on a node (based on one that is located in a cookbook), unpacks the ``MessageQueue.zip`` Windows PowerShell module, and then uses the **dsc_resource** to ensure that Message Queuing (MSMQ) sub-features are installed, a test queue is created, and that permissions are set on the test queue:
 
 .. code-block:: ruby
 
@@ -37,3 +37,6 @@ The following example creates a file on a node (based on one that is located in 
      property :QueueNames, 'Test_Queue'
      property :ReadUsers, node['msmq']['read_user']
    end
+
+.. end_tag
+

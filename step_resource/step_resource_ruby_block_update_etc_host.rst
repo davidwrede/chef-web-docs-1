@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how the |resource ruby_block| resource can be used to update the ``/etc/hosts`` file:
+.. tag resource_ruby_block_update_etc_host
+
+The following example shows how the **ruby_block** resource can be used to update the ``/etc/hosts`` file:
 
 .. code-block:: ruby
 
@@ -16,3 +16,6 @@ The following example shows how the |resource ruby_block| resource can be used t
        rc.write_file
      end
    end
+
+.. end_tag
+

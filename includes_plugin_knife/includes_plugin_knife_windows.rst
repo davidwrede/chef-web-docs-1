@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag plugin_knife_windows_summary
 
-The ``knife windows`` subcommand is used to configure and interact with nodes that exist on server and/or desktop machines that are running |windows|. Nodes are configured using |windows remote management|, which allows native objects---batch scripts, |windows powershell| scripts, or scripting library variables---to be called by external applications. The ``knife windows`` subcommand supports |ntlm| and |kerberos| methods of authentication.
+The ``knife windows`` subcommand is used to configure and interact with nodes that exist on server and/or desktop machines that are running Microsoft Windows. Nodes are configured using WinRM, which allows native objects---batch scripts, Windows PowerShell scripts, or scripting library variables---to be called by external applications. The ``knife windows`` subcommand supports NTLM and Kerberos methods of authentication.
+
+.. end_tag
+

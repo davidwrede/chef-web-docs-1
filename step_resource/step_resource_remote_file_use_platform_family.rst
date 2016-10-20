@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following is an example of using the ``platform_family?`` method in the |dsl recipe| to create a variable that can be used with other resources in the same recipe. In this example, ``platform_family?`` is being used to ensure that a specific binary is used for a specific platform before using the |resource remote_file| resource to download a file from a remote location, and then using the |resource execute| resource to install that file by running a command.
+.. tag resource_remote_file_use_platform_family
+
+The following is an example of using the ``platform_family?`` method in the Recipe DSL to create a variable that can be used with other resources in the same recipe. In this example, ``platform_family?`` is being used to ensure that a specific binary is used for a specific platform before using the **remote_file** resource to download a file from a remote location, and then using the **execute** resource to install that file by running a command.
 
 .. code-block:: ruby
 
@@ -25,9 +25,12 @@ The following is an example of using the ``platform_family?`` method in the |dsl
      not_if { File.exists?(pip_binary) }
    end
 
-where a command for installing |python| might look something like:
+where a command for installing Python might look something like:
 
 .. code-block:: ruby
 
     #{node['python']['binary']} distribute_setup.py
     #{::File.dirname(pip_binary)}/easy_install pip
+
+.. end_tag
+

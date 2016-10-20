@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_new_resource
 
-Custom resources are designed to use core resources that are built into |chef|. In some cases, it may be necessary to specify a property in the custom resource that is the same as a property in a core resource, for the purpose of overriding that property when used with the custom resource. For example:
+Custom resources are designed to use core resources that are built into Chef. In some cases, it may be necessary to specify a property in the custom resource that is the same as a property in a core resource, for the purpose of overriding that property when used with the custom resource. For example:
 
 .. code-block:: ruby
 
@@ -37,7 +36,7 @@ Custom resources are designed to use core resources that are built into |chef|. 
      end
    end
 
-where the ``property :cwd``, ``property :environment``, ``property :user``, and ``property :sensitive`` are identical to properties in the |resource execute| resource, embedded as part of the ``action :run`` action. Because both the custom properties and the |resource execute| properties are identical, this will result in an error message similar to:
+where the ``property :cwd``, ``property :environment``, ``property :user``, and ``property :sensitive`` are identical to properties in the **execute** resource, embedded as part of the ``action :run`` action. Because both the custom properties and the **execute** properties are identical, this will result in an error message similar to:
 
 .. code-block:: ruby
 
@@ -45,7 +44,7 @@ where the ``property :cwd``, ``property :environment``, ``property :user``, and 
    -------------
    wrong number of arguments (0 for 1)
 
-To prevent this behavior, use ``new_resource.`` to tell the |chef client| to process the properties from the core resource instead of the properties in the custom resource. For example:
+To prevent this behavior, use ``new_resource.`` to tell the chef-client to process the properties from the core resource instead of the properties in the custom resource. For example:
 
 .. code-block:: ruby
 
@@ -80,4 +79,7 @@ To prevent this behavior, use ``new_resource.`` to tell the |chef client| to pro
      end
    end
 
-where ``cwd new_resource.cwd``, ``environment new_resource.environment``, ``user new_resource.user``, and ``sensitive new_resource.sensitive`` correctly use the properties of the |resource execute| resource and not the identically-named override properties of the custom resource.
+where ``cwd new_resource.cwd``, ``environment new_resource.environment``, ``user new_resource.user``, and ``sensitive new_resource.sensitive`` correctly use the properties of the **execute** resource and not the identically-named override properties of the custom resource.
+
+.. end_tag
+

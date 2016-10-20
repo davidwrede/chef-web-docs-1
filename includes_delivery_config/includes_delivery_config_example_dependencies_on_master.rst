@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_example_dependencies_on_master
 
 The following example shows a run-time dependency against the master branch of a project named ``BackendAPI``:
 
@@ -15,4 +14,7 @@ The following example shows a run-time dependency against the master branch of a
      "skip_phases": [],
      "dependencies": ["BackendAPI"]
    }
+
+
+.. end_tag
 

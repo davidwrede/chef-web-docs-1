@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |chef client| can create users on systems based on the contents of a data bag. For example, a data bag named "admins" can contain a data bag item for each of the administrators that will manage the various systems that each |chef client| is maintaining. A recipe can load the data bag items and then create user accounts on the target system with code similar to the following:
+.. tag data_bag_recipes_create_users
+
+The chef-client can create users on systems based on the contents of a data bag. For example, a data bag named "admins" can contain a data bag item for each of the administrators that will manage the various systems that each chef-client is maintaining. A recipe can load the data bag items and then create user accounts on the target system with code similar to the following:
 
 .. code-block:: ruby
 
@@ -33,3 +33,6 @@ The |chef client| can create users on systems based on the contents of a data ba
      gid '999'
      members 'admins'
    end
+
+.. end_tag
+

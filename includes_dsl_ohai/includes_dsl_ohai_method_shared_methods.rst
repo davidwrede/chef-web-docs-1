@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_ohai_method_shared_methods
 
 A shared method defines behavior that may be used by more than one ``collect_data`` block, such as a data structure, a hash, or a mash. The syntax for a shared method is:
 
@@ -48,3 +47,6 @@ and
    end
 
 and so on, for each of the various cloud providers.
+
+.. end_tag
+

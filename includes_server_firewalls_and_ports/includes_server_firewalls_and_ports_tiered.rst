@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-For back-end servers in a tiered |chef server| installation, ensure that ports marked as external (marked as ``yes`` in the **External** column) are open and accessible via any firewalls that are in use:
+.. tag server_firewalls_and_ports_tiered
+
+For back-end servers in a tiered Chef server installation, ensure that ports marked as external (marked as ``yes`` in the **External** column) are open and accessible via any firewalls that are in use:
 
 .. list-table::
    :widths: 60 420 60
@@ -11,44 +11,95 @@ For back-end servers in a tiered |chef server| installation, ensure that ports m
      - Service Name, Description
      - External
    * - 80, 443, 9683
-     - |service nginx|
+     - **nginx**
 
-       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+       .. tag server_services_nginx
+       
+       The **nginx** service is used to manage traffic to the Chef server, including virtual hosts for internal and external API request/response routing, external add-on request routing, and routing between front- and back-end components.
+       
+       .. end_tag
+       
 
-       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
+       .. note:: Port 9683 is used to internally load balance the **oc_bifrost** service.
      - yes
    * - 9463
-     - |service bifrost|
+     - **oc_bifrost**
 
-       .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
+       .. tag server_services_bifrost
+       
+       The **oc_bifrost** service ensures that every request to view or manage objects stored on the Chef server is authorized.
+       
+       .. end_tag
+       
      - 
    * - 8983
-     - |service solr4|
+     - **opscode-solr4**
 
-       .. include:: ../../includes_server_services/includes_server_services_solr4.rst
+       .. tag server_services_solr4
+       
+       The **opscode-solr4** service is used to create the search indexes used for searching objects like nodes, data bags, and cookbooks. (This service ensures timely search results via the Chef server API; data that is used by the Chef platform is stored in PostgreSQL.)
+       
+       .. end_tag
+       
      - 
    * - 5432
-     - |service postgresql|
+     - **postgresql**
 
-       .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
+       .. tag server_services_postgresql
+       
+       The **postgresql** service is used to store node, object, and user data.
+       
+       .. end_tag
+       
      - 
    * - 5672, 15672
-     - |service rabbitmq|
+     - **rabbitmq**
 
-       .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
+       .. tag server_services_rabbitmq
+       
+       The **rabbitmq** service is used to provide the message queue that is used by the Chef server to get search data to Apache Solr so that it can be indexed for search. When Chef Analytics is confiugred, the **rabbitmq** service is also used to send data from the Chef server to the Chef Analytics server.
+       
+       .. end_tag
+       
      - 
    * - 16379
-     - |service redis_lb|
+     - **redis_lb**
 
-       .. include:: ../../includes_server_services/includes_server_services_redis.rst
+       .. tag server_services_redis
+       
+       Key-value store used in conjunction with Nginx to route requests and populate request data used by the Chef server.
+       
+       .. end_tag
+       
      - 
    * - 4321
-     - |service bookshelf|
+     - **bookshelf**
 
-       .. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
+       .. tag server_services_bookshelf
+       
+       The **bookshelf** service is an Amazon Simple Storage Service (S3)-compatible service that is used to store cookbooks, including all of the files---recipes, templates, and so on---that are associated with each cookbook.
+       
+       .. end_tag
+       
      - 
    * - 8000
-     - |service erchef|
+     - **opscode-erchef**
 
-       .. include:: ../../includes_server_services/includes_server_services_erchef.rst
+       .. tag server_services_erchef
+       
+       The **opscode-erchef** service is an Erlang-based service that is used to handle Chef server API requests to the following areas within the Chef server:
+       
+       * Cookbooks
+       * Data bags
+       * Environments
+       * Nodes
+       * Roles
+       * Sandboxes
+       * Search
+       
+       .. end_tag
+       
      -
+
+.. end_tag
+

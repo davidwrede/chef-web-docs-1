@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag custom_resources_syntax
 
-A custom resource is defined as a |ruby| file and is located in a cookbook's ``/resources`` directory. This file
+A custom resource is defined as a Ruby file and is located in a cookbook's ``/resources`` directory. This file
 
 * Declares the properties of the custom resource
 * Loads current properties, if the resource already exists
@@ -27,3 +26,6 @@ The syntax for a custom resource is. For example:
    end
 
 where the first action listed is the default action.
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_ohai_options
 
 This command has the following syntax:
 
@@ -11,19 +10,22 @@ This command has the following syntax:
 This tool has the following options:
 
 ``ATTRIBUTE_NAME ATTRIBUTE NAME ...``
-   Use to have |ohai| show only output for named attributes.
+   Use to have Ohai show only output for named attributes.
 
 ``-d PATH``, ``--directory PATH``
-   |path plugin_ohai| For example: ``/etc/ohai/plugins``.
+   The directory in which Ohai plugins are located. For example: ``/etc/ohai/plugins``.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-l LEVEL``, ``--log_level LEVEL``
-   |log_level|
+   The level of logging to be stored in a log file.
 
 ``-L LOGLOCATION``, ``--logfile c``
-   |log_location|
+   The location of the log file.
 
 ``-v``, ``--version``
-   |version ohai|
+   The version of Ohai.
+
+.. end_tag
+

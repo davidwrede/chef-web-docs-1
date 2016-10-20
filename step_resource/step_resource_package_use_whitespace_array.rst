@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_use_whitespace_array
 
 The following examples show different ways of doing the same thing. The first shows a series of packages that will be upgraded:
 
@@ -21,7 +21,7 @@ The following examples show different ways of doing the same thing. The first sh
      action :upgrade
    end
 
-and the next uses a single |resource package| resource and a whitespace array (``%w``):
+and the next uses a single **package** resource and a whitespace array (``%w``):
 
 .. code-block:: ruby
    
@@ -32,3 +32,6 @@ and the next uses a single |resource package| resource and a whitespace array (`
    end
 
 where ``|pkg|`` is used to define the name of the resource, but also to ensure that each item in the whitespace array has its own name.
+
+.. end_tag
+

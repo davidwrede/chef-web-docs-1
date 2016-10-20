@@ -1,9 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |chef| extension on the |azure portal| may be used on the following platforms:
+.. tag cloud_azure_portal_platforms
 
-* |windows server| 2012, 2012r2
-* |ubuntu| 12.04 LTS, 14.04 LTS
+The Chef extension on the Azure portal may be used on the following platforms:
 
-.. note:: Virtual machines running on |azure| can also be provisioned from the command-line using the ``knife azure`` plugin for |knife|. This approach is ideal for cases that require automation or for users who are more suited to command-line interfaces.
+* Windows Server 2012, 2012r2
+* Ubuntu 12.04 LTS, 14.04 LTS
+
+.. note:: Virtual machines running on Microsoft Azure can also be provisioned from the command-line using the ``knife azure`` plugin for knife. This approach is ideal for cases that require automation or for users who are more suited to command-line interfaces.
+
+.. end_tag
+

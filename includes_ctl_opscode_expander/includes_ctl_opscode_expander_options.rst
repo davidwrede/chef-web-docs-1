@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_opscode_expander_options
 
 This tool has the following syntax::
 
@@ -19,4 +18,7 @@ This tool has the following options:
 
 ``queue-status``
    Use to show the backlog and consumer counts for each vnode queue.
+
+
+.. end_tag
 

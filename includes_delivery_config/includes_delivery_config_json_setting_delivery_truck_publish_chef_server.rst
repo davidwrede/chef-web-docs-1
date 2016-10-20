@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_delivery_truck_publish_chef_server
 
-If the ``config.json`` file specifies the following cookbooks are published to the |chef server| that is part of this |delivery| configuration:
+If the ``config.json`` file specifies the following cookbooks are published to the Chef server that is part of this Chef Automate configuration:
 
 .. code-block:: javascript
 
@@ -11,3 +10,6 @@ If the ``config.json`` file specifies the following cookbooks are published to t
        "chef_server": "true"
      }
    }
+
+.. end_tag
+

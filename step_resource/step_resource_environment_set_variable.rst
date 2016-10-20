@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_environment_set_variable
 
 .. To set an environment variable:
 
@@ -8,3 +8,6 @@
    env 'ComSpec' do
      value "C:\\Windows\\system32\\cmd.exe"
    end
+
+.. end_tag
+

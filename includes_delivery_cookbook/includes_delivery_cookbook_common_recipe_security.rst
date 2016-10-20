@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_cookbook_common_recipe_security
 
 Use the ``security.rb`` recipe to execute security tests against a project's source code.
+
+.. end_tag
+

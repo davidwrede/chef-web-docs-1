@@ -1,29 +1,28 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_rb_sync_settings
 
 This configuration file has the following settings:
 
 ``bootstrap``
-   Indicates whether an attempt to bootstrap the |chef server| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
+   Indicates whether an attempt to bootstrap the Chef server is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
 
 ``chef_base_path``
    Default value: ``'/opt/opscode'``.
 
 ``ec_sync_client['dir']``
-   |directory generic_working| |default_value_recommended| Default value: ``'/var/opt/chef-sync/ec_sync_client'``.
+   The working directory. The default value is the recommended value. Default value: ``'/var/opt/chef-sync/ec_sync_client'``.
 
 ``ec_sync_client['enable']``
-   |enable service| Default value: ``true``.
+   Enable a service. Default value: ``true``.
 
 ``ec_sync_client['ha']``
-   |use ha| Default value: ``false``.
+   Run the Chef server in a high availability topology. Default value: ``false``.
 
 ``ec_sync_client['log_directory']``
-   |directory logs| |default_value_recommended| Default value: ``'/var/log/opscode/chef-sync/client'``.
+   The directory in which log data is stored. The default value is the recommended value. Default value: ``'/var/log/opscode/chef-sync/client'``.
 
 ``ec_sync_client['log_rotation']``
-   |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+   The log rotation policy for this service. Log files are rotated when they exceed ``file_maxbytes``. The maximum number of log files in the rotation is defined by ``num_to_keep``. Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
 
 ``ec_sync_client['master']``
    Default value: ``'https://127.0.0.1'``.
@@ -47,37 +46,37 @@ This configuration file has the following settings:
    Default value: ``'900'``.
 
 ``ec_sync_server['db_pool_size']``
-   |db_pool_size| Default value: ``10``.
+   The number of open connections to PostgreSQL that are maintained by the service. Default value: ``10``.
 
 ``ec_sync_server['dir']``
-   |directory generic_working| |default_value_recommended| Default value: ``'/var/opt/chef-sync/ec_sync_server'``.
+   The working directory. The default value is the recommended value. Default value: ``'/var/opt/chef-sync/ec_sync_server'``.
 
 ``ec_sync_server['enable']``
-   |enable service| Default value: ``true``.
+   Enable a service. Default value: ``true``.
 
 ``ec_sync_server['ha']``
-   |use ha| Default value: ``false``.
+   Run the Chef server in a high availability topology. Default value: ``false``.
 
 ``ec_sync_server['listen']``
-   |ip_address service| Default value: ``'127.0.0.1'``.
+   The IP address on which the service is to listen. Default value: ``'127.0.0.1'``.
 
 ``ec_sync_server['log_directory']``
-   |directory logs| |default_value_recommended| Default value: ``'/var/log/opscode/chef-sync/server'``.
+   The directory in which log data is stored. The default value is the recommended value. Default value: ``'/var/log/opscode/chef-sync/server'``.
 
 ``ec_sync_server['log_rotation']``
-   |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
+   The log rotation policy for this service. Log files are rotated when they exceed ``file_maxbytes``. The maximum number of log files in the rotation is defined by ``num_to_keep``. Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
 
 ``ec_sync_server['port']``
-   |port service| Default value: ``9996``.
+   The port on which the service is to listen. Default value: ``9996``.
 
 ``ec_sync_server['vip']``
-   |ip_address virtual| Default value: ``'127.0.0.1'``.
+   The virtual IP address. Default value: ``'127.0.0.1'``.
 
 ``install_path'``
    Default value: ``'/opt/chef-sync'``.
 
 ``master``
-   Use to specify the root URL for the master |chef server|.
+   Use to specify the root URL for the master Chef server.
 
 ``name``
    Default value: ``'sync'``.
@@ -86,16 +85,19 @@ This configuration file has the following settings:
    An array that specifies the source and destination organization pairs for synchronization.
 
 ``replica``
-   Use to specify the root URL for the replica |chef server|.
+   Use to specify the root URL for the replica Chef server.
 
 ``role``
-   Use to specify if ``chef-sync`` is installed as a master |chef server|, a replica |chef server|, or both. Possible values: ``:master``, ``:master_and_replica``, ``:replica``. Default value: ``:replica``.
+   Use to specify if ``chef-sync`` is installed as a master Chef server, a replica Chef server, or both. Possible values: ``:master``, ``:master_and_replica``, ``:replica``. Default value: ``:replica``.
 
 ``user['home']``
-   The home directory for the user under which |chef server| services run. Default value: ``'/opt/opscode/embedded'``.
+   The home directory for the user under which Chef server services run. Default value: ``'/opt/opscode/embedded'``.
 
 ``user['shell']``
-   The shell for the user under which |chef server| services run. Default value: ``'/bin/sh'``.
+   The shell for the user under which Chef server services run. Default value: ``'/bin/sh'``.
 
 ``user['username']``
-   The user name under which |chef server| services run. Default value: ``opscode``.
+   The user name under which Chef server services run. Default value: ``opscode``.
+
+.. end_tag
+

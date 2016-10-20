@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use the |resource ruby_block| resource to stash a |bittorrent| file in a data bag so that it can be distributed to nodes in the organization.
+.. tag resource_ruby_block_stash_file_in_data_bag
+
+The following example shows how to use the **ruby_block** resource to stash a BitTorrent file in a data bag so that it can be distributed to nodes in the organization.
 
 .. code-block:: ruby
 
@@ -26,3 +26,6 @@ The following example shows how to use the |resource ruby_block| resource to sta
      action :nothing
      subscribes :create, "bittorrent_torrent[#{node['bittorrent']['torrent']}]", :immediately
    end
+
+.. end_tag
+

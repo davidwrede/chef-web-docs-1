@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_script_ksh_actions
 
 This resource has the following actions:
 
@@ -8,3 +8,6 @@ This resource has the following actions:
 
 ``:run``
    Default. Run a script.
+
+.. end_tag
+

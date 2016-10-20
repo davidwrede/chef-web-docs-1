@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use variables within a |ruby| block to set environment variables using |rbenv|.
+.. tag resource_ruby_block_use_variables_to_set_env_variables
+
+The following example shows how to use variables within a Ruby block to set environment variables using rbenv.
 
 .. code-block:: ruby
 
@@ -14,3 +14,6 @@ The following example shows how to use variables within a |ruby| block to set en
        ENV['PATH'] = "#{node[:rbenv][:root]}/bin:#{node[:ruby_build][:bin_path]}:#{ENV['PATH']}"
      end
    end
+
+.. end_tag
+

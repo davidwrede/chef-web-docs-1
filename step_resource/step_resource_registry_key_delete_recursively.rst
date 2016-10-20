@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_registry_key_delete_recursively
 
 .. To delete a registry key and all of its subkeys recursively:
 
@@ -21,4 +21,12 @@ or a single-quoted string:
      action :delete_key
    end
 
-.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_resource_recursive.rst
+.. note:: .. tag notes_registry_key_resource_recursive
+          
+          Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key, all of its values and all of the names, types, and data associated with them. This cannot be undone by the chef-client.
+          
+          .. end_tag
+          
+
+.. end_tag
+

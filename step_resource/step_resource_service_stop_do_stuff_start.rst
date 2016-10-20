@@ -1,13 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use the |resource execute|, |resource service|, and |resource mount| resources together to ensure that a node running on |amazon ec2| is running |mysql|. This example does the following:
+.. tag resource_service_stop_do_stuff_start
 
-* Checks to see if the |amazon ec2| node has |mysql|
-* If the node has |mysql|, stops |mysql|
-* Installs |mysql|
+The following example shows how to use the **execute**, **service**, and **mount** resources together to ensure that a node running on Amazon EC2 is running MySQL. This example does the following:
+
+* Checks to see if the Amazon EC2 node has MySQL
+* If the node has MySQL, stops MySQL
+* Installs MySQL
 * Mounts the node
-* Restarts |mysql|
+* Restarts MySQL
 
 .. code-block:: ruby
 
@@ -48,6 +48,9 @@ The following example shows how to use the |resource execute|, |resource service
 
 where
 
-* the two |resource service| resources are used to stop, and then restart the |mysql| service
-* the |resource execute| resource is used to install |mysql|
-* the |resource mount| resource is used to mount the node and enable |mysql|
+* the two **service** resources are used to stop, and then restart the MySQL service
+* the **execute** resource is used to install MySQL
+* the **mount** resource is used to mount the node and enable MySQL
+
+.. end_tag
+

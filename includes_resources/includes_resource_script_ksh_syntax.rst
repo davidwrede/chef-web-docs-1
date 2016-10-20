@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-A |resource script_ksh| resource block executes scripts using |csh|:
+.. tag resource_script_ksh_syntax
+
+A **ksh** resource block executes scripts using csh:
 
 .. code-block:: ruby
 
@@ -16,7 +16,7 @@ where
 
 * ``code`` specifies the command to run
 
-The full syntax for all of the properties that are available to the |resource script_ksh| resource is:
+The full syntax for all of the properties that are available to the **ksh** resource is:
 
 .. code-block:: ruby
 
@@ -42,5 +42,8 @@ where
 
 * ``ksh`` is the resource
 * ``name`` is the name of the resource block
-* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``code``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``:action`` identifies the steps the chef-client will take to bring the node into the desired state
+* ``code``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``path``, ``provider``, ``returns``, ``timeout``, ``user``, and ``umask`` are properties of this resource, with the Ruby type shown. See "Properties" section below for more information about all of the properties that may be used with this resource.
+
+.. end_tag
+

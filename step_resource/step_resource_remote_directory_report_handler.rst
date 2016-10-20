@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use the |resource remote_directory| resource and the |resource chef_handler| resource to reboot a handler named ``WindowsRebootHandler``:
+.. tag resource_remote_directory_report_handler
+
+The following example shows how to use the **remote_directory** resource and the **chef_handler** resource to reboot a handler named ``WindowsRebootHandler``:
 
 .. code-block:: ruby
 
@@ -21,3 +21,6 @@ The following example shows how to use the |resource remote_directory| resource 
      supports :report => true, :exception => false
      action :enable
    end
+
+.. end_tag
+

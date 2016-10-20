@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_export_config
 
-The |client rb| file on that machine requires the following settings:
+The client.rb file on that machine requires the following settings:
 
 ``deployment_group``
    This setting should be set to ``'$POLICY_NAME-local'``.
@@ -15,3 +14,6 @@ The |client rb| file on that machine requires the following settings:
 
 ``versioned_cookbooks``
    This setting should be set to ``true``.
+
+.. end_tag
+

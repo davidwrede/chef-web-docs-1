@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_delivery_truck_lint_foodcritic_excludes
 
 If the ``config.json`` file specifies:
 
@@ -16,4 +15,7 @@ If the ``config.json`` file specifies:
      }
    }
 
-then |foodcritic| rules are not run against tests that are located in the specified directories, in this case the ``/spec`` and ``/test`` directories.
+then Foodcritic rules are not run against tests that are located in the specified directories, in this case the ``/spec`` and ``/test`` directories.
+
+.. end_tag
+

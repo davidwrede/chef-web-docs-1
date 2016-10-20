@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_stop
 
-Use the ``stop`` subcommand to stop all services enabled on the |chef server| backend HA cluster. This command can also be run for an individual service by specifying the name of the service in the command. 
+Use the ``stop`` subcommand to stop all services enabled on the Chef server backend HA cluster. This command can also be run for an individual service by specifying the name of the service in the command. 
 
 This subcommand has the following syntax:
 
@@ -28,3 +27,6 @@ will return something similar to:
 
    ok: down: etcd: 393s, normally up
    ok: down: postgresql: 388s, normally up
+
+.. end_tag
+

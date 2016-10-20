@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_provisioning_aws_route_table_define_vpc_key_machine
 
 .. To define a VPC, route table, key pair, and machine:
 
@@ -24,3 +24,6 @@
    m = machine 'test' do
      machine_options bootstrap_options: { key_name: 'ref-key-pair' }
    end
+
+.. end_tag
+

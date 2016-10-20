@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_provision_machine_with_lockfile
 
 .. To create a machine with lock file, synchronized to the Chef server:
 
@@ -30,7 +29,7 @@ and then to provision the machine, run the following:
 
    $ chef provision test123 --sync -n aar-dev
 
-This will synchronize the |policylock| file to the |chef server|, and then run the |chef client| on the node.
+This will synchronize the Policyfile.lock.json file to the Chef server, and then run the chef-client on the node.
 .. code-block:: bash
 
    Recipe: code_generator::cookbook
@@ -76,3 +75,6 @@ and which creates a directory structure similar to::
      README.md
      /recipes
        default.rb
+
+.. end_tag
+

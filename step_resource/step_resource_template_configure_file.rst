@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_template_configure_file
 
 .. To configure a file from a template:
 
@@ -8,3 +8,6 @@
    template '/tmp/config.conf' do
      source 'config.conf.erb'
    end
+
+.. end_tag
+

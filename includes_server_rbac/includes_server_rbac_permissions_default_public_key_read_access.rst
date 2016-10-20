@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_rbac_permissions_default_public_key_read_access
 
 The ``public_key_read_access`` group controls which users and clients have :doc:`read permissions to the following endpoints </api_chef_server>`:
 
@@ -39,3 +38,6 @@ By default, the ``public_key_read_access`` assigns all members of the ``users`` 
      - yes
      - yes
      - yes
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag cookbooks_version_constraints_operators
 
 The following operators may be used:
 
@@ -10,14 +10,17 @@ The following operators may be used:
    * - Operator
      - Description
    * - ``=``
-     - |ruby equal|
+     - equal to
    * - ``>``
-     - |ruby greater|
+     - greater than
    * - ``<``
-     - |ruby less|
+     - less than
    * - ``>=``
-     - |ruby greater_optimistic|
+     - greater than or equal to; also known as "optimistically greater than", or "optimistic"
    * - ``<=``
-     - |ruby less_or_equal|
+     - less than or equal to
    * - ``~>``
-     - |ruby greater_pessimistic|
+     - approximately greater than; also known as "pessimistically greater than", or "pessimistic"
+
+.. end_tag
+

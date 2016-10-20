@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_install_version
 
 .. To install a specific package version:
 
@@ -9,3 +9,6 @@
      version '1.16.1-1'
      action :install
    end
+
+.. end_tag
+

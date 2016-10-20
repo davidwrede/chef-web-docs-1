@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_log_add_message
 
 .. To add a message to a log file:
 
@@ -9,3 +9,6 @@
      message 'This is the message that will be added to the log.'
      level :info
    end
+
+.. end_tag
+

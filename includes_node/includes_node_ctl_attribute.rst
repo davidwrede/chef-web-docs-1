@@ -1,8 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag node_ctl_attribute
+
 .. This file documents specifc behavior related to the -j option in the chef-client, chef-solo, and chef-shell executables.
 
-Any other attribute type that is contained in this |json| file will be treated as a ``normal`` attribute. For example, attempting to update ``override`` attributes using the ``-j`` option:
+Any other attribute type that is contained in this JSON file will be treated as a ``normal`` attribute. For example, attempting to update ``override`` attributes using the ``-j`` option:
 
 .. code-block:: javascript
 
@@ -34,3 +35,6 @@ will result in a node object similar to:
        }  
      }
    }
+
+.. end_tag
+

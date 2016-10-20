@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Any recipes using the ``git-deploy`` |gem| can continue using the same API. To include this behavior in a recipe, do something like the following:
+.. tag resource_deploy_use_same_api_as_gitdeploy_gems
+
+Any recipes using the ``git-deploy`` gem can continue using the same API. To include this behavior in a recipe, do something like the following:
 
 .. code-block:: ruby
 
@@ -18,3 +18,6 @@ Any recipes using the ``git-deploy`` |gem| can continue using the same API. To i
      action :deploy
      restart_command 'touch tmp/restart.txt'
    end
+
+.. end_tag
+

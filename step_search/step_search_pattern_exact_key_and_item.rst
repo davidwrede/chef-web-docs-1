@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag search_pattern_exact_key_and_item
 
 To search in a specific data bag for a specific data bag item, enter the following:
 
@@ -20,3 +20,6 @@ where ``admins`` is the name of the data bag and ``charlie`` is the name of the 
    id:         charlie
    shell:      /bin/zsh
    uid:        1005
+
+.. end_tag
+

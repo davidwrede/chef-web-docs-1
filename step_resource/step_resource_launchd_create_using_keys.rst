@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_launchd_create_using_keys
 
 .. Create a Launch Daemon using keys**
 
@@ -10,3 +10,6 @@
      start_calendar_interval 'weekday' => 7, 'hourly' => 10
      time_out 300
    end
+
+.. end_tag
+

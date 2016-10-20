@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_rbac_permissions_key
 
 Keys should have ``DELETE``, ``GRANT``, ``READ`` and ``UPDATE`` permissions.
 
@@ -25,8 +24,11 @@ Use the following code to set the correct permissions:
      end
    end
 
-Save it as a |ruby| script---``chef_server_permissions.rb``, for example---in the ``.chef/scripts`` directory located in the |chef repo|, and then run a |knife| command similar to:
+Save it as a Ruby script---``chef_server_permissions.rb``, for example---in the ``.chef/scripts`` directory located in the chef-repo, and then run a knife command similar to:
 
 .. code-block:: bash
 
    $ knife exec chef_server_permissions.rb
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_registry_key_set_default
 
 .. To set the "(Default)" name of a registry key:
 
@@ -28,3 +28,6 @@ or a single-quoted string:
    end
 
 where ``:name => ''`` contains an empty string, which will set the name of the registry key to ``(Default)``.
+
+.. end_tag
+

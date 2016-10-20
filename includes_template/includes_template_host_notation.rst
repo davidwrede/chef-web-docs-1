@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag template_host_notation
 
 The naming of folders within cookbook directories must literally match the host notation used for template specificity matching. For example, if a host is named ``foo.example.com``, then the folder must be named ``host-foo.example.com``.
+
+.. end_tag
+

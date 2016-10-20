@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag search_boolean_operators_andnot
 
 Operators must be in ALL CAPS. Parentheses can be used to group clauses and to form sub-queries.
 
@@ -17,3 +16,6 @@ Operators must be in ALL CAPS. Parentheses can be used to group clauses and to f
    .. code-block:: bash
 
       $ knife search sample "id:foo AND -id:bar"
+
+.. end_tag
+

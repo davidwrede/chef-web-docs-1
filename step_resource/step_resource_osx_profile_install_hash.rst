@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_osx_profile_install_hash
 
 The ``profiles`` command will be used to install the configuration profile, which is provided as a hash.
 
@@ -40,3 +40,6 @@ The ``profiles`` command will be used to install the configuration profile, whic
    osx_profile 'Install screensaver profile' do
      profile profile_hash
    end
+
+.. end_tag
+

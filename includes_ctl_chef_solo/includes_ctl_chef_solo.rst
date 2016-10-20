@@ -1,7 +1,10 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |chef solo| executable is run as a command-line tool.
+.. tag ctl_chef_solo_summary
+
+The chef-solo executable is run as a command-line tool.
 
 
+
+
+.. end_tag
 

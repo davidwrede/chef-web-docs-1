@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_file_sshd_configuration
 
 The following example shows how to verify ``sshd`` configration, including whether it's installed, what the permissions are, and how it can be accessed:
 
@@ -36,3 +36,6 @@ The following example shows how to verify ``sshd`` configration, including wheth
 where
 
 * ``let(:config_file) { file('/etc/ssh/sshd_config') }`` uses the ``file`` matcher to test specific settings within the ``sshd`` configuration file
+
+.. end_tag
+

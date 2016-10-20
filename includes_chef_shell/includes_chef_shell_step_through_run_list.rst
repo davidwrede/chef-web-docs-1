@@ -1,8 +1,10 @@
-.. The contents of this file are included in multiple topics.
+
+.. tag chef_shell_step_through_run_list
+
 .. This file describes a command or a subcommand for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To explore how using the |resource breakpoint| to manually step through a |chef client| run, create a simple recipe in |chef shell|:
+To explore how using the **breakpoint** to manually step through a chef-client run, create a simple recipe in chef-shell:
 
 .. code-block:: bash
 
@@ -12,7 +14,7 @@ To explore how using the |resource breakpoint| to manually step through a |chef 
      chef:recipe > breakpoint "foo"
      chef:recipe > file "/tmp/after-breakpoint"
 
-and then run the |chef client|:
+and then run the chef-client:
 
 .. code-block:: bash
 
@@ -23,7 +25,7 @@ and then run the |chef client|:
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: Processing [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in 'new']
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in 'new'] using Chef::Provider::Breakpoint
 
-The |chef client| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The |chef client| attempted to name the breakpoint after its position in the source file, but the |chef client| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef client| run:
+The chef-client ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The chef-client attempted to name the breakpoint after its position in the source file, but the chef-client was confused because the resource was entered interactively. From here, chef-shell can resume the chef-client run:
 
 .. code-block:: bash
 
@@ -37,7 +39,7 @@ A quick view of the ``/tmp`` directory shows that the following files were creat
    after-breakpoint
    before-breakpoint
 
-The |chef client| run can also be rewound, and then stepped through.
+The chef-client run can also be rewound, and then stepped through.
 
 .. code-block:: bash
 
@@ -58,14 +60,14 @@ The |chef client| run can also be rewound, and then stepped through.
      [Fri, 15 Jan 2010 14:40:56 -0800] DEBUG: file[/tmp/after-breakpoint] using Chef::Provider::File
        => 3
 
-From the output, the rewound run-list is shown, but when the resources are executed again, they will repeat their checks for the existence of files. If they exist, the |chef client| will skip creating them. If the files are deleted, then:
+From the output, the rewound run-list is shown, but when the resources are executed again, they will repeat their checks for the existence of files. If they exist, the chef-client will skip creating them. If the files are deleted, then:
 
 .. code-block:: bash
 
    $ chef:recipe > ls("/tmp").grep(/breakpoint/).each {|f| rm "/tmp/#{f}" }
        => ["after-breakpoint", "before-breakpoint"]
 
-Rewind, and then resume the |chef client| run to get the expected results: 
+Rewind, and then resume the chef-client run to get the expected results: 
 
 .. code-block:: bash
 
@@ -80,3 +82,6 @@ Rewind, and then resume the |chef client| run to get the expected results:
      [Fri, 15 Jan 2010 14:49:20 -0800] DEBUG: Processing file[/tmp/after-breakpoint]
      [Fri, 15 Jan 2010 14:49:20 -0800] DEBUG: file[/tmp/after-breakpoint] using Chef::Provider::File
      [Fri, 15 Jan 2010 14:49:20 -0800] INFO: Creating file[/tmp/after-breakpoint] at /tmp/after-breakpoint
+
+.. end_tag
+

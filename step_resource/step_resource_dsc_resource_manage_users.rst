@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_dsc_resource_manage_users
 
 .. To manage users and groups
 
@@ -24,3 +24,6 @@
      property :GroupName, 'demo1'
      property :MembersToInclude, ['Foobar1']
    end
+
+.. end_tag
+

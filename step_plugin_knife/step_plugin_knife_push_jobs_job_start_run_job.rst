@@ -1,9 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_push_jobs_job_start_run_job
 
 To run a job named ``add-glasses`` against a node named ``ricardosalazar``, run the following command:
 
 .. code-block:: bash
 
    $ knife job start add-glasses 'ricardosalazar'
+
+
+.. end_tag
 

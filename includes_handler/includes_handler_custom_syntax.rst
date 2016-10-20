@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The syntax for a handler can vary, depending on what the the situations the handler is being asked to track, the type of handler being used, and so on. All custom exception and report handlers are defined using |ruby| and must be a subclass of the ``Chef::Handler`` class. 
+.. tag handler_custom_syntax
+
+The syntax for a handler can vary, depending on what the the situations the handler is being asked to track, the type of handler being used, and so on. All custom exception and report handlers are defined using Ruby and must be a subclass of the ``Chef::Handler`` class. 
 
 .. code-block:: ruby
 
@@ -17,12 +17,12 @@ The syntax for a handler can vary, depending on what the the situations the hand
 
 where:
 
-* ``require`` ensures that the logging functionality of the |chef client| is available to the handler
+* ``require`` ensures that the logging functionality of the chef-client is available to the handler
 * ``ModuleName`` is the name of the module as it exists within the ``Chef`` library
 * ``HandlerName`` is the name of the handler as it is used in a recipe
 * ``report`` is an interface that is used to define the custom handler
 
-For example, the following shows a custom handler that sends an email that contains the exception data when a |chef client| run fails:
+For example, the following shows a custom handler that sends an email that contains the exception data when a chef-client run fails:
 
 .. code-block:: ruby
 
@@ -54,3 +54,6 @@ and then is used in a recipe like:
    send_email 'blah' do
      # recipe code
    end
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_cron_run_only_in_november
 
 The following example shows a schedule that will run at 8:00 PM, every weekday (Monday through Friday), but only in November:
 
@@ -13,3 +13,6 @@ The following example shows a schedule that will run at 8:00 PM, every weekday (
      weekday '1-5'
      action :create
    end
+
+.. end_tag
+

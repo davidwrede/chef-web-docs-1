@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to install new |yum| repositories from a file, where the installation of the repository triggers a creation of the |yum| cache that forces the internal cache for the |chef client| to reload:
+.. tag resource_yum_package_install_yum_repo_from_file
+
+The following example shows how to install new Yum repositories from a file, where the installation of the repository triggers a creation of the Yum cache that forces the internal cache for the chef-client to reload:
 
 .. code-block:: ruby
 
@@ -23,3 +23,6 @@ The following example shows how to install new |yum| repositories from a file, w
      notifies :run, 'execute[create-yum-cache]', :immediately
      notifies :create, 'ruby_block[reload-internal-yum-cache]', :immediately
    end
+
+.. end_tag
+

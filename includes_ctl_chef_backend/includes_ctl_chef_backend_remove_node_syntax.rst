@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_remove_node_syntax
 
 This subcommand has the following syntax:
 
 .. code-block:: bash
 
    $ chef-backend-ctl remove-node NODE_NAME
+
+.. end_tag
+

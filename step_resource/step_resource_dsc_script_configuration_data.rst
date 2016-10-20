@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_dsc_script_configuration_data
 
 The following example shows how to specify custom configuration data using the ``configuration_data`` property:
 
@@ -42,3 +42,6 @@ The following example shows how to specify custom configuration data using the `
          }
        EOH
    end
+
+.. end_tag
+

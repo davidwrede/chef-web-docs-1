@@ -1,10 +1,12 @@
-.. The contents of this file are included in multiple topics.
+
+.. tag chef_shell_example_hello_world
+
 .. This file describes a command or a subcommand for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This example shows how to run |chef shell| in standalone mode. (For |chef solo| or |chef client| modes, you would need to run |chef shell| using the ``-s`` or ``-z`` command line options, and then take into consideration the necessary configuration settings.)
+This example shows how to run chef-shell in standalone mode. (For chef-solo or chef-client modes, you would need to run chef-shell using the ``-s`` or ``-z`` command line options, and then take into consideration the necessary configuration settings.)
 
-When the |chef client| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When the |chef client| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:
+When the chef-client is installed using RubyGems or a package manager, chef-shell should already be installed. When the chef-client is run from a git clone, it will be located in ``chef/bin/chef shell``. To start chef-shell, just run it without any options. You'll see the loading message, then the banner, and then the chef-shell prompt:
 
 .. code-block:: bash
 
@@ -63,7 +65,7 @@ Typing is evaluated in the same context as recipes. Create a file resource:
           @cookbook_name=nil, 
           @ignore_failure=false> 
 
-(The previous example was formatted for presentation.) At this point, |chef shell| has created the resource and put it in the run-list, but not yet created the file. To initiate the |chef client| run, use the ``run_chef`` command:
+(The previous example was formatted for presentation.) At this point, chef-shell has created the resource and put it in the run-list, but not yet created the file. To initiate the chef-client run, use the ``run_chef`` command:
 
 .. code-block:: bash
 
@@ -73,7 +75,7 @@ Typing is evaluated in the same context as recipes. Create a file resource:
      [Fri, 15 Jan 2010 10:42:47 -0800] INFO: Creating file[/tmp/ohai2u_shef] at /tmp/ohai2u_shef
        => true
 
-|chef shell| can also switch to the same context as attribute files. Set an attribute with the following syntax:
+chef-shell can also switch to the same context as attribute files. Set an attribute with the following syntax:
 
 .. code-block:: bash
 
@@ -90,7 +92,7 @@ Switch back to recipe_mode context and use the attributes:
        => :attributes 
      chef:recipe_mode > file "/tmp/#{node.hello}"
 
-Now, run the |chef client| again:
+Now, run the chef-client again:
 
 .. code-block:: bash
 
@@ -103,10 +105,13 @@ Now, run the |chef client| again:
        => true
      chef:recipe_mode > 
 
-Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, the |chef client| doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:
+Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, the chef-client doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:
 
 .. code-block:: bash
 
    $ chef:recipe_mode > ls("/tmp").grep(/ohai/)
        => ["ohai2u-again", "ohai2u_shef"] 
 	 Shell Tutorial
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_remote_file_transfer_remote_source_changes
 
 .. To transfer a file only if the remote source has changed (using the |resource http request| resource):
 
@@ -21,3 +21,6 @@
      end
      notifies :create, 'remote_file[/tmp/couch.png]', :immediately
    end
+
+.. end_tag
+

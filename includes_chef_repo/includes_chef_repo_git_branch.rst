@@ -1,11 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Commits to the |chef| repositories should never be made against the master branch. Use a topic branch instead. A topic branch solves a single and unique problem and often maps closely to an issue being tracked in the repository. For example, a topic branch to add support for a new init system or a topic branch to resolve a bug that occurs in a specific version of |centos|. Ideally, a topic branch is named in a way that associates it closely with the issue it is attempting to resolve. This helps ensure that others may easily find it.
+.. tag chef_repo_git_branch
+
+Commits to the Chef repositories should never be made against the master branch. Use a topic branch instead. A topic branch solves a single and unique problem and often maps closely to an issue being tracked in the repository. For example, a topic branch to add support for a new init system or a topic branch to resolve a bug that occurs in a specific version of CentOS. Ideally, a topic branch is named in a way that associates it closely with the issue it is attempting to resolve. This helps ensure that others may easily find it.
 
 Use the following steps to create a topic branch:
 
-#. For a brand new clone of the |chef| repository (that was created using the steps listed earlier), fetch the ``opscode`` remote:
+#. For a brand new clone of the Chef repository (that was created using the steps listed earlier), fetch the ``opscode`` remote:
 
    .. code-block:: bash
 
@@ -33,7 +33,7 @@ Use the following steps to create a topic branch:
 
 #. Rebase the commits against ``chef/master``. After work in the topic branch is finished, rebase these commits against the upstream master. Do this manually with ``git fetch`` followed by a ``git rebase`` or use ``git pull --rebase``.
 
-   |git| will let you know if there are any problems. In the event of problems, fix them as directed, and then mark as fixed with a ``git add``, and then continue the rebase process using ``git rebase --continue``.
+   git will let you know if there are any problems. In the event of problems, fix them as directed, and then mark as fixed with a ``git add``, and then continue the rebase process using ``git rebase --continue``.
 
    For example:
 
@@ -53,10 +53,13 @@ Use the following steps to create a topic branch:
 
       $ git pull --rebase
 
-#. Push the local topic branch to |github|:
+#. Push the local topic branch to GitHub:
 
    .. code-block:: bash
 
       $ git push origin CHEF-XX
 
-#. Send a |github| pull request for the changes, and then update the |chef| ticket with the appropriate information.
+#. Send a GitHub pull request for the changes, and then update the Chef ticket with the appropriate information.
+
+.. end_tag
+

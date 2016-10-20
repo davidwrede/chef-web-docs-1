@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_admin_users_remove_admin_from_org
 
 Removing a member of the ``admins`` group from an organization requires the user to be removed from the ``admins`` group before they can be removed from the organization:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Administration**.
 #. Click **Groups**.
 #. Select the **Groups** group.
@@ -21,3 +20,6 @@ Removing a member of the ``admins`` group from an organization requires the user
 #. Click **Remove from Organization**.
 
    .. image:: ../../images/step_manage_webui_admin_remove_admin_success.png
+
+.. end_tag
+

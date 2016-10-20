@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The ``GET`` method is used to get a list of policies (including policy revisions) from the |chef server|.
+.. tag api_chef_server_endpoint_policies_get
+
+The ``GET`` method is used to get a list of policies (including policy revisions) from the Chef server.
 
 This method has no parameters.
 
@@ -51,6 +51,9 @@ The response groups policies by name and revision and is similar to:
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``403``
-     - |response code 403 forbidden|
+     - Forbidden. The user who made the request is not authorized to perform the action.
+
+.. end_tag
+

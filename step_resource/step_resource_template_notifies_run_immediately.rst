@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-By default, notifications are ``:delayed``, that is they are queued up as they are triggered, and then executed at the very end of a |chef client| run. To run an action immediately, use ``:immediately``:
+.. tag resource_template_notifies_run_immediately
+
+By default, notifications are ``:delayed``, that is they are queued up as they are triggered, and then executed at the very end of a chef-client run. To run an action immediately, use ``:immediately``:
 
 .. code-block:: ruby
 
@@ -10,7 +10,7 @@ By default, notifications are ``:delayed``, that is they are queued up as they a
      notifies :run, 'execute[test-nagios-config]', :immediately
    end
 
-and then the |chef client| would immediately run the following:
+and then the chef-client would immediately run the following:
 
 .. code-block:: ruby
 
@@ -18,3 +18,6 @@ and then the |chef client| would immediately run the following:
      command 'nagios3 --verify-config'
      action :nothing
    end
+
+.. end_tag
+

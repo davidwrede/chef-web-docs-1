@@ -1,13 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use ``ldapsearch`` to test the ability of the |chef server| to use |windows ad| or |ldap|. First, translate the |chef server| |ldap| settings into ``ldapsearch`` parameters:
+.. tag server_ldap_test
+
+Use ``ldapsearch`` to test the ability of the Chef server to use Active Directory or LDAP. First, translate the Chef server LDAP settings into ``ldapsearch`` parameters:
 
 .. list-table::
    :widths: 200 200
    :header-rows: 1
 
-   * - |chef server_title| Setting
+   * - Chef Server Setting
      - ``ldapsearch`` Parameter
    * - ``ldap['host']`` and ``ldap['port']``
      - ``-H [HOST:PORT]``
@@ -20,7 +20,7 @@ Use ``ldapsearch`` to test the ability of the |chef server| to use |windows ad| 
    * - ``ldap['login_attribute']``
      - Defaults to ``SAMAccountName``
 
-And then from a front end machine (in a high availability or tiered configuration) or from the |chef server| in a standalone configuration, run the following command. Be sure to replace the uppercase placeholders with the values for your organization:
+And then from a front end machine (in a high availability or tiered configuration) or from the Chef server in a standalone configuration, run the following command. Be sure to replace the uppercase placeholders with the values for your organization:
 
 .. code-block:: bash
 
@@ -51,4 +51,7 @@ Output similar to the following is returned:
    distinguishedName: CN=Robert Forster,OU=Employees,OU=Domain users,DC=opscodecorp,DC
     =com
 
-.. note:: The ``ldapsearch`` command may need to be installed on the platform. It is not included as part of the |chef server| package.
+.. note:: The ``ldapsearch`` command may need to be installed on the platform. It is not included as part of the Chef server package.
+
+.. end_tag
+

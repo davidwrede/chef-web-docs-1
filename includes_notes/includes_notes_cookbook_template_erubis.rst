@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag notes_cookbook_template_erubis
 
-The |chef client| uses |erubis| for templates, which is a fast, secure, and extensible implementation of embedded |ruby|. |erubis| should be familiar to members of the |ruby on rails|, |merb|, or |puppet| communities. For more information about |erubis|, see: http://www.kuwata-lab.com/erubis/.    
+The chef-client uses Erubis for templates, which is a fast, secure, and extensible implementation of embedded Ruby. Erubis should be familiar to members of the Ruby on Rails, Merb, or Puppet communities. For more information about Erubis, see: http://www.kuwata-lab.com/erubis/.    
+
+.. end_tag
+

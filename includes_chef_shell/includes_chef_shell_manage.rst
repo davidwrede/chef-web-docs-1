@@ -1,10 +1,12 @@
-.. The contents of this file are included in multiple topics.
+
+.. tag chef_shell_manage
+
 .. This file describes a command or a subcommand for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When |chef shell| is configured to access a |chef server|, |chef shell| can list, show, search for and edit cookbooks, clients, nodes, roles, environments, and data bags.
+When chef-shell is configured to access a Chef server, chef-shell can list, show, search for and edit cookbooks, clients, nodes, roles, environments, and data bags.
 
-The syntax for managing objects on the |chef server| is as follows:
+The syntax for managing objects on the Chef server is as follows:
 
 .. code-block:: bash
 
@@ -77,7 +79,7 @@ to return something similar to:
 
    $ => "ec2-111-22-333-44.compute-1.amazonaws.com"
 
-The ``find`` command can be used to search the |chef server| from the |chef shell|. For example:
+The ``find`` command can be used to search the Chef server from the chef-shell. For example:
 
 .. code-block:: bash
 
@@ -117,3 +119,6 @@ to return something similar to:
         ami-a89870c1
         ami-eef61587
         ami-f8927a91
+
+.. end_tag
+

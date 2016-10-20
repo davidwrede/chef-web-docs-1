@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_apt_update_summary
 
-Use the |resource apt_update| resource to manage |apt| repository updates on |debian| and |ubuntu| platforms.
+Use the **apt_update** resource to manage Apt repository updates on Debian and Ubuntu platforms.
+
+.. end_tag
+

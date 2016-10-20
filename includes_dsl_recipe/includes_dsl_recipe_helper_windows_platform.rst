@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_helper_windows_platform
 
-A recipe can define specific behaviors for specific |windows| platform versions by using a series of helper methods. To enable these helper methods, add the following to a recipe:
+A recipe can define specific behaviors for specific Microsoft Windows platform versions by using a series of helper methods. To enable these helper methods, add the following to a recipe:
 
 .. code-block:: ruby
 
@@ -14,7 +13,7 @@ Then declare a variable using the ``Chef::ReservedNames::Win32::Version`` class:
 
    variable_name = Chef::ReservedNames::Win32::Version.new
 
-And then use this variable to define specific behaviors for specific |windows| platform versions. For example:
+And then use this variable to define specific behaviors for specific Microsoft Windows platform versions. For example:
 
 .. code-block:: ruby
 
@@ -37,3 +36,6 @@ And then use this variable to define specific behaviors for specific |windows| p
      end
    
    end
+
+.. end_tag
+

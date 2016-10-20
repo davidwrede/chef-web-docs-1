@@ -1,120 +1,159 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_bootstrap_options
 
 This subcommand has the following options:
 
 ``-A``, ``--forward-agent``
-   |forward_agent|
+   Enable SSH agent forwarding.
 
 ``--bootstrap-curl-options OPTIONS``
-   |bootstrap curl_options| |bootstrap no_install_command|
+   Arbitrary options to be added to the bootstrap command when using cURL. This option may not be used in the same command with ``--bootstrap-install-command``.
 
 ``--bootstrap-install-command COMMAND``
-   |bootstrap install_command| |bootstrap no_curl_sh_wget|
+   Execute a custom installation command sequence for the chef-client. This option may not be used in the same command with ``--bootstrap-curl-options``, ``--bootstrap-install-sh``, or ``--bootstrap-wget-options``.
 
 ``--bootstrap-install-sh URL``
-   |bootstrap install_sh| |bootstrap no_install_command|
+   Fetch and execute an installation script at the specified URL. This option may not be used in the same command with ``--bootstrap-install-command``.
 
 ``--bootstrap-no-proxy NO_PROXY_URL_or_IP``
-   |bootstrap no_proxy|
+   A URL or IP address that specifies a location that should not be proxied.
 
-   .. note:: This option is used internally by |company_name| to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation.
+   .. note:: This option is used internally by Chef to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation.
 
 ``--bootstrap-proxy PROXY_URL``
-   |bootstrap proxy|
+   The proxy server for the node that is the target of a bootstrap operation.
 
 ``--bootstrap-vault-file VAULT_FILE``
-   |bootstrap vault_file|
+   The path to a JSON file that contains a list of vaults and items to be updated.
 
 ``--bootstrap-vault-item VAULT_ITEM``
-   |bootstrap vault_item|
+   A single vault and item to update as ``vault:item``.
 
 ``--bootstrap-vault-json VAULT_JSON``
-   |bootstrap vault_json|
+   A JSON string that contains a list of vaults and items to be updated.
 
-   .. include:: ../../step_knife/step_knife_bootstrap_vault_json.rst
+   .. tag knife_bootstrap_vault_json
+   
+   For example: 
+   
+   .. code-block:: none
+   
+      --bootstrap-vault-json '{ "vault1": ["item1", "item2"], "vault2": "item2" }'
+   
+   .. end_tag
+   
 
 ``--bootstrap-version VERSION``
-   |bootstrap version|
+   The version of the chef-client to install.
 
 ``--bootstrap-wget-options OPTIONS``
-   |bootstrap wget_options| |bootstrap no_install_command|
+   Arbitrary options to be added to the bootstrap command when using GNU Wget. This option may not be used in the same command with ``--bootstrap-install-command``.
 
 ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |name environment| When this option is added to a command, the command will run only against the named environment.
+   The name of the environment. When this option is added to a command, the command will run only against the named environment.
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
-   |ssh_gateway|
+   The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
 
 ``--hint HINT_NAME[=HINT_FILE]``
-   |hint|
+   An Ohai hint to be set on the target node.
 
-   .. include:: ../../includes_ohai/includes_ohai_hints.rst
+   .. tag ohai_hints
+   
+   Ohai hints are used to tell Ohai something about the system that it is running on that it would not be able to discover itself. An Ohai hint exists if a JSON file exists in the hint directory with the same name as the hint. For example, calling ``hint?('antarctica')`` in an Ohai plugin would return an empty hash if the file ``antarctica.json`` existed in the hints directory, and return nil if the file does not exist.
+   
+   .. end_tag
+   
 
-   .. include:: ../../includes_ohai/includes_ohai_hints_json.rst
+   .. tag ohai_hints_json
+   
+   If the hint file contains JSON content, it will be returned as a hash from the call to ``hint?``.
+   
+   .. code-block:: javascript
+   
+      {
+        "snow": true,
+        "penguins": "many"
+      }
+   
+   .. code-block:: ruby
+   
+      antarctica_hint = hint?('antarctica')
+      if antarctica_hint['snow']
+        "There are #{antarctica_hint['penguins']} penguins here."
+      else
+        'There is no snow here, and penguins like snow.'
+      end
+   
+   The default directory in which hint files are located is ``/etc/chef/ohai/hints/``. Use the ``Ohai::Config[:hints_path]`` setting in the client.rb file to customize this location.
+   
+   .. end_tag
+   
 
-   |hint_file| |hint_name| |hint_multiple|
+   ``HINT_FILE`` is the name of the JSON file. ``HINT_NAME`` is the name of a hint in a JSON file. Use multiple ``--hint`` options to specify multiple hints.
 
 ``-i IDENTITY_FILE``, ``--ssh-identity-file IDENTITY_FILE``
-   |identity_file|
+   The SSH identity file used for authentication. Key-based authentication is recommended.
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
-   |json first_run_string|
+   A JSON string that is added to the first run of a chef-client.
 
 ``-N NAME``, ``--node-name NAME``
-   |name node|
+   The name of the node.
 
-   .. note:: This option is required for a validatorless bootstrap (as of |chef client| version 12.4).
+   .. note:: This option is required for a validatorless bootstrap (as of chef-client version 12.4).
 
 ``--[no-]fips``
-  |chef_client fips|
+  Allows OpenSSL to enforce FIPS-validated security during the chef-client run.
 
 ``--[no-]host-key-verify``
-   |no_host_key_verify| Default setting: ``--host-key-verify``.
+   Use ``--no-host-key-verify`` to disable host key verification. Default setting: ``--host-key-verify``.
 
 ``--[no-]node-verify-api-cert``
-   |ssl_verify_mode_verify_api_cert| If this option is not specified, the setting for ``verify_api_cert`` in the configuration file is applied.
+   Verify the SSL certificate on the Chef server. When ``true``, the chef-client always verifies the SSL certificate. When ``false``, the chef-client uses the value of ``ssl_verify_mode`` to determine if the SSL certificate requires verification. If this option is not specified, the setting for ``verify_api_cert`` in the configuration file is applied.
 
 ``--node-ssl-verify-mode PEER_OR_NONE``
-   |ssl_verify_mode|
+   Set the verify mode for HTTPS requests.
 
-   |ssl_verify_bootstrap_none|
+   Use ``none`` to do no validation of SSL certificates.
 
-   |ssl_verify_bootstrap_peer| This is the recommended setting.
+   Use ``peer`` to do validation of all SSL certificates, including the Chef server connections, S3 connections, and any HTTPS **remote_file** resource URLs used in the chef-client run. This is the recommended setting.
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh_port|
+   The SSH port.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh_password|
+   The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) knife prompts for the password.
 
 ``--prerelease``
-   |prerelease|
+   Install pre-release gems.
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
-   |run_list|
+   A comma-separated list of roles and/or recipes to be applied.
 
 ``--secret SECRET``
-   |secret|
+   The encryption key that is used for values contained within a data bag item.
 
 ``--secret-file FILE``
-   |secret_file|
+   The path to the file that contains the encryption key.
 
 ``--sudo``
-   |sudo bootstrap|
+   Execute a bootstrap operation with sudo.
 
 ``--sudo-preserve-home``
    Use to preserve the non-root user's ``HOME`` environment.
 
 ``-t TEMPLATE``, ``--bootstrap-template TEMPLATE``
-   |template bootstrap| Default value: ``chef-full``, which installs the |chef client| using the |omnibus installer| on all supported platforms.
+   The bootstrap template to use. This may be the name of a bootstrap template---``chef-full``, for example---or it may be the full path to an Embedded Ruby (ERB) template that defines a custom bootstrap. Default value: ``chef-full``, which installs the chef-client using the omnibus installer on all supported platforms.
 
 ``--use-sudo-password``
-   |use sudo_password|
+   Perform a bootstrap operation with sudo; specify the password with the ``-P`` (or ``--ssh-password``) option.
 
 ``-V -V``
-   |verbose knife_bootstrap|
+   Run the initial chef-client run at the ``debug`` log-level (e.g. ``chef-client -l debug``).
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
-   |ssh_user|
+   The SSH user name.
+
+.. end_tag
+

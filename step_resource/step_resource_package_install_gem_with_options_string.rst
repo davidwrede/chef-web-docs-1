@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_package_install_gem_with_options_string
 
-.. To install a |gem| with an options string:
+.. To install a gem with an options string:
 
 .. code-block:: ruby
 
@@ -10,3 +9,6 @@
      gem_binary('/opt/ree/bin/gem')
      options('--prerelease --no-format-executable')
    end
+
+.. end_tag
+

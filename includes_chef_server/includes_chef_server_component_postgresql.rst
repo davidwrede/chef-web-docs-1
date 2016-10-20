@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-|postgresql| is the data storage repository for the |chef server|.
+.. tag chef_server_component_postgresql
+
+PostgreSQL is the data storage repository for the Chef server.
+
+.. end_tag
+

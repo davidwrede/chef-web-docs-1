@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_template_configure_file_with_variable_map
 
 .. To configure a file from a template with a variable map:
 
@@ -11,3 +11,6 @@
        :config_var => node['configs']['config_var']
      )
    end
+
+.. end_tag
+

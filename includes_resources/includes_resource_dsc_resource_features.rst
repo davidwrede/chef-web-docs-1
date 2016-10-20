@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-For built-in |windows powershell_dsc_short| resources, use the following values:
+.. tag resource_dsc_resource_features
+
+For built-in DSC resources, use the following values:
 
 .. list-table::
    :widths: 250 250
@@ -32,8 +32,11 @@ For built-in |windows powershell_dsc_short| resources, use the following values:
    * - ``:windowsfeature``
      - Use to to `add or remove Windows features and roles <https://msdn.microsoft.com/en-us/powershell/dsc/windowsfeatureresource>`_.
    * - ``:windowsoptionalfeature``
-     - Use to configure |windows| optional features.
+     - Use to configure Microsoft Windows optional features.
    * - ``:windowsprocess``
      - Use to to `configure Windows processes <https://msdn.microsoft.com/en-us/powershell/dsc/windowsprocessresource>`_.
 
-Any |windows powershell_dsc_short| resource may be used in a |chef| recipe. For example, the |windows powershell_dsc_resource_kit| contains resources for `configuring Active Directory components <http://www.powershellgallery.com/packages/xActiveDirectory/2.8.0.0>`_, such as ``xADDomain``, ``xADDomainController``, and ``xADUser``. Assuming that these resources are available to the |chef client|, the corresponding values for the ``resource`` attribute would be: ``:xADDomain``, ``:xADDomainController``, and ``xADUser``.
+Any DSC resource may be used in a Chef recipe. For example, the DSC Resource Kit contains resources for `configuring Active Directory components <http://www.powershellgallery.com/packages/xActiveDirectory/2.8.0.0>`_, such as ``xADDomain``, ``xADDomainController``, and ``xADUser``. Assuming that these resources are available to the chef-client, the corresponding values for the ``resource`` attribute would be: ``:xADDomain``, ``:xADDomainController``, and ``xADUser``.
+
+.. end_tag
+

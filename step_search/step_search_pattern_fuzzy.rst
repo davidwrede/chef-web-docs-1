@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag search_pattern_fuzzy_summary
 
 To use a fuzzy search pattern enter something similar to:
 
@@ -25,3 +25,6 @@ where ``boo~`` defines the fuzzy search pattern. This will return something simi
        }
      ]
    }
+
+.. end_tag
+

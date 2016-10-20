@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_delete_user_key
 
 Use the ``delete-user-key`` subcommand to delete a user key. 
+
+.. end_tag
+

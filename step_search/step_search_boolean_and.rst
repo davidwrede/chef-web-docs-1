@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag search_boolean_and
 
 To join queries using the ``AND`` boolean operator, enter the following:
 
@@ -23,7 +23,7 @@ to return something like:
      ]
    }
 
-Or, to find all of the computers running on the |windows| platform that are associated with a role named ``jenkins``, enter:
+Or, to find all of the computers running on the Microsoft Windows platform that are associated with a role named ``jenkins``, enter:
 
 .. code-block:: bash
 
@@ -54,3 +54,6 @@ to return something like:
    Recipes:     jenkins::node_windows, git_windows
    Platform:    windows 6.1.7601
    Tags:        
+
+.. end_tag
+

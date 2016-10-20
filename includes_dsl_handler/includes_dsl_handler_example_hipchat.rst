@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_example_hipchat
 
-Event messages can be sent to a team communication tool like |hipchat|. For example, if a |chef client| run fails:
+Event messages can be sent to a team communication tool like HipChat. For example, if a chef-client run fails:
 
 .. code-block:: ruby
 
@@ -23,3 +22,6 @@ or send an alert on a configuration change:
        end
      end
    end
+
+.. end_tag
+

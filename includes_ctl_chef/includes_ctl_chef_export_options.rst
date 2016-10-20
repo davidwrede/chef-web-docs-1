@@ -1,20 +1,22 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_export_options
 
 This subcommand has the following options:
 
 ``-a``, ``--archive``
-   |chef_exe archive| Default value: ``false``.
+   Export an archive as a tarball, instead as a directory. Default value: ``false``.
 
 ``-D``, ``--debug``
-   |chef_exe debug| Default value: ``false``.
+   Enable stack traces and other debug output. Default value: ``false``.
 
 ``-f``, ``--force``
-   |chef_exe force| Default value: ``false``.
+   Remove the contents of the destination directory if that directory is not empty. Default value: ``false``.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

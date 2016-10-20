@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_slide_send_email_handler
 
 Invoke the library helper in a recipe:
 
@@ -17,4 +16,7 @@ Invoke the library helper in a recipe:
 * Use ``Chef.event_handler`` to define the event handler
 * Use the ``on`` method to specify the event type
 
-Within the ``on`` block, tell the |chef client| how to handle the event when it's triggered.
+Within the ``on`` block, tell the chef-client how to handle the event when it's triggered.
+
+.. end_tag
+

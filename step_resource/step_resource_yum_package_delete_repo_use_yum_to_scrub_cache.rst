@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To delete a repository while using |yum| to scrub the cache to avoid issues:
+.. tag resource_yum_package_delete_repo_use_yum_to_scrub_cache
+
+.. To delete a repository while using Yum to scrub the cache to avoid issues:
 
 .. code-block:: ruby
 
@@ -17,3 +17,6 @@
      notifies :run, 'execute[clean-yum-cache]', :immediately
      notifies :create, 'ruby_block[reload-internal-yum-cache]', :immediately
    end
+
+.. end_tag
+

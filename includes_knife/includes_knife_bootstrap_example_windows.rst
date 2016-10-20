@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_bootstrap_example_windows
 
-The following example shows how to modify the default script for |windows| and |windows powershell|:
+The following example shows how to modify the default script for Microsoft Windows and Windows PowerShell:
 
 ..   # Moved this license/header info out of the code sample; keeping it in the topic just because
 ..   @rem
@@ -75,3 +74,6 @@ The following example shows how to modify the default script for |windows| and |
    )
    
    <%= start_chef %>
+
+.. end_tag
+

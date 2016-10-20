@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_converge_if_changed
 
 Use the ``converge_if_changed`` method inside an ``action`` block in a custom resource to compare the desired property values against the current property values (as loaded by the ``load_current_value`` method). Use the ``converge_if_changed`` method to ensure that updates only occur when property values on the system are not the desired property values and to otherwise prevent a resource from being converged.
 
@@ -16,7 +15,7 @@ To use the ``converge_if_changed`` method, wrap it around the part of a recipe o
    
    end
 
-For example, a custom resource defines two properties (``content`` and ``path``) and a single action (``:create``). Use the ``load_current_value`` method to load the property value to be compared, and then use the ``converge_if_changed`` method to tell the |chef client| what to do if that value is not the desired value:
+For example, a custom resource defines two properties (``content`` and ``path``) and a single action (``:create``). Use the ``load_current_value`` method to load the property value to be compared, and then use the ``converge_if_changed`` method to tell the chef-client what to do if that value is not the desired value:
 
 .. code-block:: ruby
 
@@ -35,7 +34,7 @@ For example, a custom resource defines two properties (``content`` and ``path``)
      end
    end
 
-When the file does not exist, the ``IO.write(path, content)`` code is executed and the |chef client| output will print something similar to:
+When the file does not exist, the ``IO.write(path, content)`` code is executed and the chef-client output will print something similar to:
 
 .. code-block:: bash
 
@@ -43,3 +42,6 @@ When the file does not exist, the ``IO.write(path, content)`` code is executed a
      * resource_name[blah] action create
        - update my_file[blah]
        -   set content to "hola mundo" (was "hello world")
+
+.. end_tag
+

@@ -1,8 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
-Use the following command to remove the |chef dk| on |debian|-based platforms:
+.. tag uninstall_chef_dk_ubuntu
+
+Use the following command to remove the Chef development kit on Debian-based platforms:
 
 .. code-block:: bash
 
    $ dpkg -P chefdk
+
+.. end_tag
+

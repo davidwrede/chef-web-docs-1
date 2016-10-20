@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_manage_ssh_based_on_node_platform
 
 .. To manage a service whose name depends on the platform of the node on which it runs:
 
@@ -15,3 +15,6 @@
      supports :restart => true
      action [ :enable, :start ]
    end
+
+.. end_tag
+

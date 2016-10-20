@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_ohai_method_collect_data_mash
 
 Use a mash to store data. This is done by creating a new mash, and then setting an attribute to it. For example:
 
@@ -9,3 +8,6 @@ Use a mash to store data. This is done by creating a new mash, and then setting 
    provides 'name_of_mash'
    name_of_mash Mash.new
    name_of_mash[:attribute] = 'value'
+
+.. end_tag
+

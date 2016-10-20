@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following table lists the Foundational platforms for the |push jobs|:
+.. tag adopted_platforms_push_jobs
+
+The following table lists the Foundational platforms for the Chef push jobs:
 
 .. list-table::
    :widths: 280 100 120
@@ -10,24 +10,27 @@ The following table lists the Foundational platforms for the |push jobs|:
    * - Platform
      - Architecture
      - Version
-   * - |centos|
+   * - CentOS
      - ``i386``
      - ``5``, ``6``
    * -
      - ``x86_64``
      - ``5``, ``6``, ``7``
-   * - |debian|
+   * - Debian
      - ``i386``, ``x86_64``
      - ``7``
-   * - |redhat enterprise linux|
+   * - Red Hat Enterprise Linux
      - ``i386``
      - ``5``, ``6``
    * -
      - ``x86_64``
      - ``5``, ``6``, ``7``
-   * - |ubuntu|
+   * - Ubuntu
      - ``x86``, ``x86_64``
      - ``12.04``, ``14.04``
-   * - |windows|
+   * - Microsoft Windows
      - ``x86``, ``x86_64``
      - ``2008r2``, ``2012``, ``2012r2``, ``7``, ``8``, ``8.1``, ``10``
+
+.. end_tag
+

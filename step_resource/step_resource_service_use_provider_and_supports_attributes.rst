@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_use_provider_and_supports_attributes
 
 .. To use the ``provider`` and ``supports`` common attributes in a recipe:
 
@@ -10,3 +10,6 @@
      supports :status => true, :restart => true, :reload => true
      action [ :enable, :start ]
    end
+
+.. end_tag
+

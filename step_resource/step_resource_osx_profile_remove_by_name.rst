@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_osx_profile_remove_by_name
 
 The ``profiles`` command will be used to remove the configuration profile specified by the provided ``identifier`` property.
 
@@ -8,3 +8,6 @@ The ``profiles`` command will be used to remove the configuration profile specif
    osx_profile 'com.company.screensaver' do
      action :remove
    end
+
+.. end_tag
+

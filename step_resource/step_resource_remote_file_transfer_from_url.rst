@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_remote_file_transfer_from_url
 
 .. To transfer a file from a URL:
 
@@ -10,3 +10,6 @@
      mode '0755'
      checksum '3a7dac00b1' # A SHA256 (or portion thereof) of the file.
    end
+
+.. end_tag
+

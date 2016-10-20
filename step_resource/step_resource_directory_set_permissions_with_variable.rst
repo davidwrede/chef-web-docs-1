@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_directory_set_permissions_with_variable
 
 The following example shows how read/write/execute permissions can be set using a variable named ``user_home``, and then for owners and groups on any matching node:
 
@@ -26,3 +26,6 @@ where ``matching_node`` represents a type of node. For example, if the ``user_ho
      mode '0755'
      action :create
    end
+
+.. end_tag
+

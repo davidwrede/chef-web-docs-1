@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To set system proxy settings to be the same as used by the |chef client|:
+.. tag resource_registry_key_set_proxy_settings_to_same_as_chef_client
+
+.. To set system proxy settings to be the same as used by the chef-client:
 
 Use a double-quoted string:
 
@@ -28,3 +28,6 @@ or a single-quoted string:
             ]
      action :create
    end
+
+.. end_tag
+

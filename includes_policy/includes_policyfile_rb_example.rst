@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag policyfile_rb_example
 
 For example:
 
@@ -12,3 +11,6 @@ For example:
    cookbook "policyfile_demo", path: "cookbooks/policyfile_demo"
    cookbook "jenkins", "~> 2.1"
    cookbook "mysql", github: "chef-cookbooks/mysql", branch: "master"
+
+.. end_tag
+

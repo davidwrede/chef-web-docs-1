@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_machines_build_machines_dynamically
 
 .. To build machines dynamically:
 
@@ -19,3 +19,6 @@
        recipe 'mywebapp'
      end
    end
+
+.. end_tag
+

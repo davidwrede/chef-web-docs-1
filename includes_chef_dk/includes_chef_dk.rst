@@ -1,13 +1,16 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |chef dk| is a package that contains everything that is needed to start using |chef|:
+.. tag chef_dk
 
-* |chef client|
-* |chef ctl|
-* |ohai|
-* |chef zero|
-* Testing tools like |kitchen|, |chef spec|, and |foodcritic|
+The Chef development kit is a package that contains everything that is needed to start using Chef:
+
+* chef-client
+* chef
+* Ohai
+* chef-zero
+* Testing tools like Kitchen, ChefSpec, and Foodcritic
 * Policy, including policy files
-* |chef provisioning|
-* Everything else needed to author cookbooks and upload them to the |chef server|
+* Chef provisioning
+* Everything else needed to author cookbooks and upload them to the Chef server
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_user_create_random
 
 .. To create a user named "random":
 
@@ -14,3 +14,6 @@
      shell '/bin/bash'
      password '$1$JJsvHslV$szsCjVEroftprNn4JHtDi'
    end
+
+.. end_tag
+

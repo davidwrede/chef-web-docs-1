@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use the ``search`` method in the |dsl recipe| to search for users:
+.. tag resource_execute_use_search_dsl_method
+
+The following example shows how to use the ``search`` method in the Recipe DSL to search for users:
 
 .. code-block:: ruby
 
@@ -47,6 +47,9 @@ The following example shows how to use the ``search`` method in the |dsl recipe|
 
 where 
 
-* the search will use both of the |resource execute| resources, unless the condition specified by the ``not_if`` commands are met
-* the ``environments`` property in the first |resource execute| resource is being used to define values that appear as variables in the |openvpn| configuration 
-* the |resource template| resource tells the |chef client| which template to use
+* the search will use both of the **execute** resources, unless the condition specified by the ``not_if`` commands are met
+* the ``environments`` property in the first **execute** resource is being used to define values that appear as variables in the OpenVPN configuration 
+* the **template** resource tells the chef-client which template to use
+
+.. end_tag
+

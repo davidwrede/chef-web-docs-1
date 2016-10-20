@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The ``%w`` syntax is a |ruby| shortcut for creating an array without requiring quotes and commas around the elements.
+.. tag ruby_style_basics_array_shortcut
+
+The ``%w`` syntax is a Ruby shortcut for creating an array without requiring quotes and commas around the elements.
 
 For example:
 
@@ -19,3 +19,6 @@ For example:
 
 .. future example: step_resource_package_use_whitespace_array
 .. future example: step_resource_template_use_whitespace_array
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_method_on
 
-Use the ``on`` method to associate an event type with a callback. The callback defines what steps are taken if the event occurs during the |chef client| run and is defined using arbitrary |ruby| code. The syntax is as follows:
+Use the ``on`` method to associate an event type with a callback. The callback defines what steps are taken if the event occurs during the chef-client run and is defined using arbitrary Ruby code. The syntax is as follows:
 
 .. code-block:: ruby
 
@@ -14,8 +13,8 @@ Use the ``on`` method to associate an event type with a callback. The callback d
 
 where
 
-* ``Chef.event_handler`` declares a block of code within a recipe that is processed when the named event occurs during a |chef client| run
-* ``on`` defines the block of code that will tell the |chef client| how to handle the event
+* ``Chef.event_handler`` declares a block of code within a recipe that is processed when the named event occurs during a chef-client run
+* ``on`` defines the block of code that will tell the chef-client how to handle the event
 * ``:event_type`` is a valid exception event type, such as ``:run_start``, ``:run_failed``, ``:converge_failed``, ``:resource_failed``, or ``:recipe_not_found``
 
 For example:
@@ -27,3 +26,6 @@ For example:
        puts "Ohai! I have started a converge."
      end
    end
+
+.. end_tag
+

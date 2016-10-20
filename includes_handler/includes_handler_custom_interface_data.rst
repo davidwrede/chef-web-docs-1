@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_custom_interface_data
 
 The ``data`` method is used to return the Hash representation of the ``run_status`` object. For example:
 
@@ -9,3 +8,6 @@ The ``data`` method is used to return the Hash representation of the ``run_statu
    def data
      @run_status.to_hash
    end
+
+.. end_tag
+

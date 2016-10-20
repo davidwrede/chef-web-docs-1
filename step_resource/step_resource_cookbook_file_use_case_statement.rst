@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_cookbook_file_use_case_statement
 
 The following example shows how a case statement can be used to handle a situation where an application needs to be installed on multiple platforms, but where the install directories are different paths, depending on the platform:
 
@@ -19,3 +19,6 @@ The following example shows how a case statement can be used to handle a situati
      group 'root'
      mode '0755'
    end
+
+.. end_tag
+

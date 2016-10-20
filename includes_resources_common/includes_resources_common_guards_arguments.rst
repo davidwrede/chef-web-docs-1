@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resources_common_guards_arguments
 
 The following arguments can be used with the ``not_if`` or ``only_if`` guard properties:
 
@@ -18,7 +18,7 @@ The following arguments can be used with the ``not_if`` or ``only_if`` guard pro
       not_if 'grep adam /etc/passwd', :group => 'adam'
 
 ``:environment``
-   Specify a |ruby hash| of environment variables to be set. For example:
+   Specify a Hash of environment variables to be set. For example:
 
    .. code-block:: ruby
 
@@ -39,3 +39,6 @@ The following arguments can be used with the ``not_if`` or ``only_if`` guard pro
    .. code-block:: ruby
 
       not_if 'sleep 10000', :timeout => 10
+
+.. end_tag
+

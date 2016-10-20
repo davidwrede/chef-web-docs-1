@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_registry_key_actions
 
 This resource has the following actions:
 
@@ -16,6 +16,19 @@ This resource has the following actions:
    Delete the specified registry key and all of its subkeys.
 
 ``:nothing``
-   .. include:: ../../includes_resources_common/includes_resources_common_actions_nothing.rst
+   .. tag resources_common_actions_nothing
+   
+   Define this resource block to do nothing until notified by another resource to take action. When this resource is notified, this resource block is either run immediately or it is queued up to be run at the end of the chef-client run.
+   
+   .. end_tag
+   
 
-.. note:: .. include:: ../../includes_notes/includes_notes_registry_key_resource_recursive.rst
+.. note:: .. tag notes_registry_key_resource_recursive
+          
+          Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key, all of its values and all of the names, types, and data associated with them. This cannot be undone by the chef-client.
+          
+          .. end_tag
+          
+
+.. end_tag
+

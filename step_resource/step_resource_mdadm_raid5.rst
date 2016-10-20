@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |mdadm| command can be used to create |raid| arrays. For example, a |raid| 5 array named ``/dev/sd0`` with 4, and a superblock type of ``0.90`` would be similar to:
+.. tag resource_mdadm_raid5
+
+The mdadm command can be used to create RAID arrays. For example, a RAID 5 array named ``/dev/sd0`` with 4, and a superblock type of ``0.90`` would be similar to:
 
 .. code-block:: ruby
 
@@ -12,3 +12,6 @@ The |mdadm| command can be used to create |raid| arrays. For example, a |raid| 5
      chunk 32
      action :create
    end
+
+.. end_tag
+

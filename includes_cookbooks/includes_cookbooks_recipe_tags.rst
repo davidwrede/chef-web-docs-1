@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag cookbooks_recipe_tags
 
 Tags can be added and removed. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following:
 
@@ -43,3 +43,6 @@ Will return something like this:
 
    [Thu, 22 Jul 2010 18:01:45 +0000] INFO: Hey I'm machine 
    [Thu, 22 Jul 2010 18:01:45 +0000] INFO: I has no tagz
+
+.. end_tag
+

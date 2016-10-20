@@ -1,12 +1,14 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_org_create_options
 
 This subcommand has the following options:
 
 ``-a USER_NAME``, ``--association_user USER_NAME``
-   |associate_user|
+   Associate a user with an organization and add them to the ``admins`` and ``billing_admins`` security groups.
 
 ``-f FILE_NAME``, ``--filename FILE_NAME``
-   |key organization_create|
+   Write the ORGANIZATION-validator.pem to ``FILE_NAME`` instead of printing it to ``STDOUT``.
+
+
+.. end_tag
 

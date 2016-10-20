@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-If a |windows powershell_dsc_short| script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` property. For example, the following |windows powershell| script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
+.. tag resource_dsc_script_flags
+
+If a DSC script contains configuration data that takes parameters, those parameters may be passed using the ``flags`` property. For example, the following Windows PowerShell script takes parameters for the ``EditorChoice`` and ``EditorFlags`` settings:
 
 .. code-block:: powershell
 
@@ -29,3 +29,6 @@ Use the following recipe to set those parameters:
      flags ({ :EditorChoice => 'emacs', :EditorFlags => '--maximized' })
      command 'c:\dsc_scripts\editors.ps1'
    end
+
+.. end_tag
+

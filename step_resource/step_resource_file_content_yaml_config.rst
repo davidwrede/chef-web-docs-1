@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use the ``content`` property to write a |yaml| file: 
+.. tag resource_file_content_yaml_config
+
+The following example shows how to use the ``content`` property to write a YAML file: 
 
 .. code-block:: ruby
 
@@ -11,3 +11,6 @@ The following example shows how to use the ``content`` property to write a |yaml
      mode '0755'
      content app.to_yaml
    end
+
+.. end_tag
+

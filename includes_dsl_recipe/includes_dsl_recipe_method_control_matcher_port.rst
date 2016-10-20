@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_method_control_matcher_port
 
 Matchers are available for ports and may be used to define audits that test if a port is listening. The following matchers are available:
 
@@ -26,7 +26,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening
           end
 
-       For a specific port type use ``.with('port_type')``. For example, |udp|:
+       For a specific port type use ``.with('port_type')``. For example, UDP:
 
        .. code-block:: ruby
 
@@ -34,7 +34,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with('udp')
           end
 
-       For |udp|, version 6:
+       For UDP, version 6:
 
        .. code-block:: ruby
 
@@ -42,7 +42,7 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with('udp6')
           end
 
-       For |tcpip|:
+       For TCP/IP:
 
        .. code-block:: ruby
 
@@ -50,10 +50,13 @@ Matchers are available for ports and may be used to define audits that test if a
             expect(port(23)).to_not be_listening.with('tcp')
           end
 
-       For |tcpip|, version 6:
+       For TCP/IP, version 6:
 
        .. code-block:: ruby
 
           it 'should be listening with TCP6' do
             expect(port(23)).to_not be_listening.with('tcp6')
           end
+
+.. end_tag
+

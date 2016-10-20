@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_server_admin_grant_user
 
 The ``grant-server-admin-permissions`` subcommand is used to add a user to the ``server-admins`` group. Run the command once per user added.
 
@@ -25,3 +24,6 @@ returns:
    User bob was added to server-admins. This user can now list,
    read, and create users (even for orgs they are not members of)
    for this Chef Server.
+
+.. end_tag
+

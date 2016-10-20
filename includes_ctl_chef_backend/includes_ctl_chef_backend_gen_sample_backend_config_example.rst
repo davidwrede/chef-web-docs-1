@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_gen_sample_backend_config_example
 
 The following example shows the results of running the ``chef-backend-ctl gen-sample-backend-config`` subcommand. The settings and output will vary, depending on the configuration. The ``elasticsearch``, ``etcd``, ``leaderl``, and ``postgresql`` settings are generated automatically and should not be modified:
 
@@ -91,3 +90,6 @@ The following example shows the results of running the ``chef-backend-ctl gen-sa
    ssl.duration = 3650
    ssl.key_length = 2048
    ssl.organizational_unit_name = 'Operations'
+
+.. end_tag
+

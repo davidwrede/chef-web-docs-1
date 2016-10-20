@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Matchers are available for files and directories. Use this matcher to define audits for files that test if the file exists, its version, if it is is executable, writable, or readable, who owns it, verify checksums (both |md5| and |sha256|) and so on. The following matchers are available for files:
+.. tag dsl_recipe_method_control_matcher_file
+
+Matchers are available for files and directories. Use this matcher to define audits for files that test if the file exists, its version, if it is is executable, writable, or readable, who owns it, verify checksums (both MD5 and SHA-256) and so on. The following matchers are available for files:
 
 .. list-table::
    :widths: 60 420
@@ -139,7 +139,7 @@ Matchers are available for files and directories. Use this matcher to define aud
           end
 
    * - ``be_version``
-     - |windows| only. Use to test if a file is the specified version. For example:
+     - Microsoft Windows only. Use to test if a file is the specified version. For example:
 
        .. code-block:: ruby
 
@@ -188,3 +188,6 @@ Matchers are available for files and directories. Use this matcher to define aud
           it 'should contain docs.chef.io' do
             expect(file('/etc/file')).to contain('docs.chef.io')
           end
+
+.. end_tag
+

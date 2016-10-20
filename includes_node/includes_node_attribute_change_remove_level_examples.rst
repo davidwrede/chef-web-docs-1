@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag node_attribute_change_remove_level_examples
 
 The following examples show how to remove a specific, named attribute precedence level.
 
@@ -141,3 +141,6 @@ The other attribute precedence levels are unaffected:
 .. code-block:: ruby
 
    node.rm_default("no", "such", "thing") #=> nil
+
+.. end_tag
+

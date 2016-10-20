@@ -1,11 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following is an example of how to install the ``foo123`` module for |nginx|. This module adds shell-style functionality to an |nginx| configuration file and does the following:
+.. tag resource_remote_file_install_with_bash
+
+The following is an example of how to install the ``foo123`` module for Nginx. This module adds shell-style functionality to an Nginx configuration file and does the following:
 
 * Declares three variables
-* Gets the |nginx| file from a remote location
-* Installs the file using |bash| to the path specified by the ``src_filepath`` variable
+* Gets the Nginx file from a remote location
+* Installs the file using Bash to the path specified by the ``src_filepath`` variable
 
 .. code-block:: ruby
 
@@ -40,3 +40,6 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
        EOH
      not_if { ::File.exists?(extract_path) }
    end
+
+.. end_tag
+

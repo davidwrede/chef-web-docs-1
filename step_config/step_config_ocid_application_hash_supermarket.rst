@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_ocid_application_hash_supermarket
 
-To define |oauth| 2 information for |supermarket|, create a |ruby hash| similar to:
+To define OAuth 2 information for Chef Supermarket, create a Hash similar to:
 
    .. code-block:: ruby
 
@@ -10,3 +9,6 @@ To define |oauth| 2 information for |supermarket|, create a |ruby hash| similar 
       oc_id['applications']['supermarket'] = {
         'redirect_uri' => 'https://supermarket.mycompany.com/auth/chef_oauth2/callback'
       }
+
+.. end_tag
+

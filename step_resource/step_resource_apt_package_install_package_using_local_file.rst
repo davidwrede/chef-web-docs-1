@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_apt_package_install_package_using_local_file
 
 .. To install a package using local file:
 
@@ -9,3 +9,6 @@
      action :install
      source '/path/to/jwhois.deb'
    end   
+
+.. end_tag
+

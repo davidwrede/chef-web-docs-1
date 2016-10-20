@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_list_user_keys_summary
 
 To view a list of user keys (including public key output):
 
@@ -41,4 +40,7 @@ Returns:
    -----END PUBLIC KEY-----
 
 
+
+
+.. end_tag
 

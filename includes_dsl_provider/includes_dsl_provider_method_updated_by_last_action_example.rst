@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_provider_method_updated_by_last_action_example
 
 Cookbooks that contain custom resources in the ``/libraries`` directory of a cookbook should:
 
-* Be inspected for instances of a) the ``Chef::Provider`` base class, and then b) for the presence of any core resources from the |chef client|
+* Be inspected for instances of a) the ``Chef::Provider`` base class, and then b) for the presence of any core resources from the chef-client
 * Be updated to use the ``LWRPBase`` base class
 
 For example:
@@ -49,3 +48,6 @@ For example:
          end
          new_resource.updated_by_last_action(updates.any?)
        end
+
+.. end_tag
+

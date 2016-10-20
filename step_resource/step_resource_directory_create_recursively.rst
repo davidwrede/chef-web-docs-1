@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_directory_create_recursively
 
 .. To create a directory recursively:
 
@@ -14,3 +14,6 @@
        recursive true
      end
    end
+
+.. end_tag
+

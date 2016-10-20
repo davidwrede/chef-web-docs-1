@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Attributes are always applied by the |chef client| in the following order:
+.. tag node_attribute_precedence
+
+Attributes are always applied by the chef-client in the following order:
 
 #. A ``default`` attribute located in a cookbook attribute file
 #. A ``default`` attribute located in a recipe
@@ -17,7 +17,7 @@ Attributes are always applied by the |chef client| in the following order:
 #. An ``override`` attribute located in an environment
 #. A ``force_override`` attribute located in a cookbook attribute file
 #. A ``force_override`` attribute located in a recipe
-#. An ``automatic`` attribute identified by |ohai| at the start of the |chef client| run
+#. An ``automatic`` attribute identified by Ohai at the start of the chef-client run
 
 where the last attribute in the list is the one that is applied to the node.
 
@@ -30,3 +30,6 @@ Attribute precedence, viewed from the same perspective as the overview diagram, 
 Attribute precedence, when viewed as a table:
 
 .. image:: ../../images/overview_chef_attributes_table.png
+
+.. end_tag
+

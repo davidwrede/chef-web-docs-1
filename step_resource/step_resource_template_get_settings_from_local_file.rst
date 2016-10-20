@@ -1,12 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |resource template| resource can be used to render a template based on settings contained in a local file on disk or to get the settings from a template in a cookbook. Most of the time, the settings are retrieved from a template in a cookbook. The following example shows how the |resource template| resource can be used to retrieve these settings from a local file.
+.. tag resource_template_get_settings_from_local_file
+
+The **template** resource can be used to render a template based on settings contained in a local file on disk or to get the settings from a template in a cookbook. Most of the time, the settings are retrieved from a template in a cookbook. The following example shows how the **template** resource can be used to retrieve these settings from a local file.
 
 The following example is based on a few assumptions:
 
-* The environment is a |ruby on rails| application that needs render a file named ``database.yml``
-* Information about the application---the user, their password, the server---is stored in a data bag on the |chef server|
+* The environment is a Ruby on Rails application that needs render a file named ``database.yml``
+* Information about the application---the user, their password, the server---is stored in a data bag on the Chef server
 * The application is already deployed to the system and that only requirement in this example is to render the ``database.yml`` file
 
 The application source tree looks something like::
@@ -15,7 +15,7 @@ The application source tree looks something like::
    -> config/
       -> database.yml.erb
 
-.. note:: There should not be a file named ``database.yml`` (without the ``.erb``), as the ``database.yml`` file is what will be rendered using the |resource template| resource.
+.. note:: There should not be a file named ``database.yml`` (without the ``.erb``), as the ``database.yml`` file is what will be rendered using the **template** resource.
 
 The deployment of the app will end up in ``/srv``, so the full path to this template would be something like ``/srv/myapp/current/config/database.yml.erb``. 
 
@@ -54,7 +54,7 @@ The recipe will be similar to the following:
 
 where: 
 
-* the ``search`` method in the |dsl recipe| is used to find the first node that is the database master (of which there should only be one)
+* the ``search`` method in the Recipe DSL is used to find the first node that is the database master (of which there should only be one)
 * the ``:adapter`` variable property may also require an attribute to have been set on a role, which then determines the correct adapter
 
 The template will render similar to the following:
@@ -70,8 +70,11 @@ The template will render similar to the following:
      encoding: utf8
      reconnect: true
 
-This example showed how to use the |resource template| resource to render a template based on settings contained in a local file. Some other issues that should be considered when using this type of approach include:
+This example showed how to use the **template** resource to render a template based on settings contained in a local file. Some other issues that should be considered when using this type of approach include:
 
 * Should the ``database.yml`` file be in a ``.gitignore`` file?
 * How do developers run the application locally?
-* Does this work with |chef solo|?
+* Does this work with chef-solo?
+
+.. end_tag
+

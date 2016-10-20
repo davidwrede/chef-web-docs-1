@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_reporting_endpoint_reports_status_get
 
-The ``GET`` method is used to return the status of the system components used by |reporting|. 
+The ``GET`` method is used to return the status of the system components used by Reporting. 
 
 This method does not have any parameters.
 
@@ -24,7 +23,7 @@ The response is similar to:
      "index" : "online"
    }
 
-where ``index`` is the |chef server| search index. If the system component is not online, the response will return ``offline``.
+where ``index`` is the Chef server search index. If the system component is not online, the response will return ``offline``.
 
 **Response Codes**
 
@@ -35,8 +34,11 @@ where ``index`` is the |chef server| search index. If the system component is no
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``404``
-     - |response code 404 not found|
+     - Not found. The requested object does not exist.
    * - ``406``
      - Invalid request. The protocol version is incorrect.
+
+.. end_tag
+

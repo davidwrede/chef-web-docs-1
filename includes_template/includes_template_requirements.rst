@@ -1,12 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag template_requirements
 
 To use a template, two things must happen:
 
 #. A template resource must be added to a recipe
-#. An |erb| template must be added to a cookbook
+#. An Embedded Ruby (ERB) template must be added to a cookbook
 
-For example, the following template file and template resource settings can be used to manage a configuration file named |path etc sudoers|. Within a cookbook that uses |sudo cmd|, the following resource could be added to |path recipes default rb|:
+For example, the following template file and template resource settings can be used to manage a configuration file named ``/etc/sudoers``. Within a cookbook that uses sudo, the following resource could be added to ``/recipes/default.rb``:
 
 .. code-block:: ruby
 
@@ -48,9 +48,12 @@ And then create a template called ``sudoers.erb`` and save it to ``templates/def
    %<%= group %> ALL=(ALL) <%= "NOPASSWD:" if @passwordless %>ALL
    <% end -%>
 
-And then set the default attributes in |path attributes default rb|:
+And then set the default attributes in ``attributes/default.rb``:
 
 .. code-block:: ruby
 
    default['authorization']['sudo']['groups'] = [ 'sysadmin', 'wheel', 'admin' ]
    default['authorization']['sudo']['users']  = [ 'jerry', 'greg']
+
+.. end_tag
+

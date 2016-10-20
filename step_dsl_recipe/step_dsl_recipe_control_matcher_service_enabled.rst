@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_service_enabled
 
 A service that is enabled and running:
 
@@ -17,7 +17,7 @@ A service that is enabled and running:
      end
    end
 
-If the audit was successful, the |chef client| will return output similar to:
+If the audit was successful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -26,3 +26,6 @@ If the audit was successful, the |chef client| will return output similar to:
        mysql service
          is enabled
          is running
+
+.. end_tag
+

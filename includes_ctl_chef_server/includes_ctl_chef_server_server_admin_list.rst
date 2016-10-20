@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_server_admin_list
 
 The ``list-server-admins`` subcommand is used to return a list of users who are members of the ``server-admins`` group.
 
@@ -19,3 +18,6 @@ and will return a list of users similar to:
    bob
    carol
    dan
+
+.. end_tag
+

@@ -1,8 +1,10 @@
-.. The contents of this file are included in multiple topics.
+
+.. tag chef_shell_advanced_debug
+
 .. This file describes a command or a subcommand for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In |chef shell|, it is possible to get extremely verbose debugging using the tracing feature in |ruby irb|. |chef shell| provides a shortcut for turning tracing on and off. For example:
+In chef-shell, it is possible to get extremely verbose debugging using the tracing feature in Interactive Ruby (IRb). chef-shell provides a shortcut for turning tracing on and off. For example:
 
 .. code-block:: bash
 
@@ -33,3 +35,6 @@ and:
      tracing is off
       => nil
      chef > 
+
+.. end_tag
+

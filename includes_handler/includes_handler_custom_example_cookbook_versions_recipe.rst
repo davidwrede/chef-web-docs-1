@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_custom_example_cookbook_versions_recipe
 
-The following recipe is added to the run-list for every node on which a list of cookbooks and versions will be generated as report output after every |chef client| run.
+The following recipe is added to the run-list for every node on which a list of cookbooks and versions will be generated as report output after every chef-client run.
 
 .. code-block:: ruby
 
@@ -30,3 +29,6 @@ This recipe will generate report output similar to the following:
    [2013-11-26T03:11:06+00:00] INFO: Running report handlers 
    [2013-11-26T03:11:06+00:00] INFO: Cookbooks and versions run: ["chef_handler 1.1.4", "cookbook_versions_handler 1.0.0"]
    [2013-11-26T03:11:06+00:00] INFO: Report handlers complete
+
+.. end_tag
+

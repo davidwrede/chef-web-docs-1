@@ -1,8 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag node_ctl_run_list
+
 .. This file documents specifc behavior related to the -j option in the chef-client, chef-solo, and chef-shell executables.
 
-Use this option to define a ``run_list`` object. For example, a |json| file similar to:
+Use this option to define a ``run_list`` object. For example, a JSON file similar to:
 
 .. code-block:: javascript
 
@@ -16,3 +17,6 @@ Use this option to define a ``run_list`` object. For example, a |json| file simi
 may be used by running ``chef-client -j path/to/file.json``.
 
 In certain situations this option may be used to update ``normal`` attributes.
+
+.. end_tag
+

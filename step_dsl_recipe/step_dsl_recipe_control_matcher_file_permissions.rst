@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_control_matcher_file_permissions
 
 The following example shows how to verify that a file has the desired permissions and contents:
 
@@ -18,7 +18,7 @@ The following example shows how to verify that a file has the desired permission
      end
    end
 
-If the audit was successful, the |chef client| will return output similar to:
+If the audit was successful, the chef-client will return output similar to:
 
 .. code-block:: bash
 
@@ -27,3 +27,6 @@ If the audit was successful, the |chef client| will return output similar to:
        mysql config file
          exists with correct permissions
          contains required configuration
+
+.. end_tag
+

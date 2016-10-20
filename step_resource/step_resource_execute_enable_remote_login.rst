@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To enable remote login on |mac os x|:
+.. tag resource_execute_enable_remote_login
+
+.. To enable remote login on Mac OS X:
 
 .. code-block:: ruby
 
@@ -10,3 +10,6 @@
      not_if '/usr/sbin/systemsetup -getremotelogin | /usr/bin/grep On'
      action :run
    end
+
+.. end_tag
+

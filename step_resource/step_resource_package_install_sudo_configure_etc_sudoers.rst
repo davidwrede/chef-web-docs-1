@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to install |sudo cmd| and then configure the ``/etc/sudoers`` file:
+.. tag resource_package_install_sudo_configure_etc_sudoers
+
+The following example shows how to install sudo and then configure the ``/etc/sudoers`` file:
 
 .. code-block:: ruby
 
@@ -42,7 +42,10 @@ The following example shows how to install |sudo cmd| and then configure the ``/
 
 where 
 
-* the |resource package| resource is used to install |sudo cmd|
+* the **package** resource is used to install sudo
 * the ``if`` statement is used to ensure availability of the ``/etc/sudoers.d`` directory
-* the |resource template| resource tells the |chef client| where to find the ``sudoers`` template
+* the **template** resource tells the chef-client where to find the ``sudoers`` template
 * the ``variables`` property is a hash that passes values to template files (that are located in the ``templates/`` directory for the cookbook
+
+.. end_tag
+

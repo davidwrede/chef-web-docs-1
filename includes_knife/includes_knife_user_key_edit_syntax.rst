@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_user_key_edit_syntax
 
 This argument has the following syntax:
 
 .. code-block:: bash
 
    $ knife user key edit USER_NAME KEY_NAME (options)
+
+.. end_tag
+

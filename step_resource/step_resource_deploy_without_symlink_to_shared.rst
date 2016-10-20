@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_deploy_without_symlink_to_shared
 
 To deploy without creating symbolic links to a shared folder:
 
@@ -9,7 +9,7 @@ To deploy without creating symbolic links to a shared folder:
      symlinks {}
    end
 
-When deploying code that is not |ruby on rails| and symbolic links to a shared folder are not wanted, use parentheses ``()`` or ``Hash.new`` to avoid ambiguity. For example, using parentheses:
+When deploying code that is not Ruby on Rails and symbolic links to a shared folder are not wanted, use parentheses ``()`` or ``Hash.new`` to avoid ambiguity. For example, using parentheses:
 
 .. code-block:: ruby
 
@@ -24,3 +24,6 @@ or using ``Hash.new``:
    deploy '/my/apps/dir/deploy' do
      symlinks Hash.new
    end
+
+.. end_tag
+

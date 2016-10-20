@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_yum_package_install_package
 
 .. To install a package:
 
@@ -8,3 +8,6 @@
    yum_package 'netpbm' do
      action :install
    end
+
+.. end_tag
+

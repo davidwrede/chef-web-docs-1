@@ -1,11 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |chef client| can be run interactively by using |windows remote desktop| to connect to the virtual machine, and then running the |chef client|:
+.. tag cloud_azure_portal_log_files_chef_client
+
+The chef-client can be run interactively by using Windows Remote Desktop to connect to the virtual machine, and then running the chef-client:
 
 #. Log into the virtual machine.
 
-#. Start up a |windows powershell| command shell.
+#. Start up a Windows PowerShell command shell.
 
 #. Run the following command:
    
@@ -18,3 +18,6 @@ The |chef client| can be run interactively by using |windows remote desktop| to 
    .. code-block:: bash
 
       $ tail -f /var/log/azure/Chef.Bootstrap.WindowsAzure.LinuxChefClient/1210.12.102.1000/chef-client.log
+
+.. end_tag
+

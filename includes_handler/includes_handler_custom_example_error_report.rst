@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_custom_example_error_report
 
-The `error_report <https://github.com/chef/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler is built into the |chef client| and can be used for both exceptions and reports. It serializes error report data to a |json| file. This handler may be enabled in one of the following ways.
+The `error_report <https://github.com/chef/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler is built into the chef-client and can be used for both exceptions and reports. It serializes error report data to a JSON file. This handler may be enabled in one of the following ways.
 
-By adding the following lines of |ruby| code to either the |client rb| file or the |solo rb| file, depending on how the |chef client| is being run:
+By adding the following lines of Ruby code to either the client.rb file or the solo.rb file, depending on how the chef-client is being run:
 
 .. code-block:: ruby
 
@@ -20,3 +19,6 @@ By using the `chef_handler <https://docs.chef.io/resource_chef_handler.html>`_ r
      source 'chef/handler/error_report'
      action :enable
    end
+
+.. end_tag
+

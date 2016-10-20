@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_client_bootstrap_initial_run_list
 
-A node's initial run-list is specified using a |json| file on the host system. When running the |chef client| as an executable, use the ``-j`` option to tell the |chef client| which |json| file to use. For example:
+A node's initial run-list is specified using a JSON file on the host system. When running the chef-client as an executable, use the ``-j`` option to tell the chef-client which JSON file to use. For example:
 
 .. code-block:: bash
 
@@ -23,3 +22,6 @@ where ``file.json`` is similar to:
 and where ``_default`` is the name of the environment that is assigned to the node.
 
 .. warning:: This approach may be used to update ``normal`` attributes, but should never be used to update any other attribute type, as all attributes updated using this option are treated as ``normal`` attributes.
+
+.. end_tag
+

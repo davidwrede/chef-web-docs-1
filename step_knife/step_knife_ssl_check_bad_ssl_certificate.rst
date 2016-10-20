@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_ssl_check_bad_ssl_certificate
 
-If the |ssl| certificate cannot be verified, the response to
+If the SSL certificate cannot be verified, the response to
 
 .. code-block:: bash
 
@@ -44,4 +43,7 @@ is similar to:
    
    using SSH/SCP or some other secure method, then re-run this command to
    confirm that the certificate is now trusted.
+
+
+.. end_tag
 

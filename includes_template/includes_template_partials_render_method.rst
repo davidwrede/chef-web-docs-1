@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag template_partials_render_method
 
 Use the ``render`` method in a template to reference a partial template file:
 
@@ -30,3 +29,6 @@ For example:
 .. code-block:: ruby
 
    <%= render "simple.txt.erb", :variables => {:user => Etc.getlogin }, :local => true %>
+
+.. end_tag
+

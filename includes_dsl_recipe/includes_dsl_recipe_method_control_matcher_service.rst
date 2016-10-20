@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_method_control_matcher_service
 
 Matchers are available for services and may be used to define audits that test for conditions related to services, such as if they are enabled, running, have the correct startup mode, and so on. The following matchers are available:
 
@@ -27,7 +27,7 @@ Matchers are available for services and may be used to define audits that test f
           end
 
    * - ``be_installed``
-     - |windows| only. Use to test if the named service is installed on the |windows| platform. For example:
+     - Microsoft Windows only. Use to test if the named service is installed on the Microsoft Windows platform. For example:
 
        .. code-block:: ruby
 
@@ -44,7 +44,7 @@ Matchers are available for services and may be used to define audits that test f
             expect(service('ntpd')).to be_running
           end
 
-       For a service that is running under |supervisor|:
+       For a service that is running under supervisor:
 
        .. code-block:: ruby
 
@@ -52,7 +52,7 @@ Matchers are available for services and may be used to define audits that test f
             expect(service('ntpd')).to be_running.under('supervisor')
           end
 
-       or |daemontools|:
+       or daemontools:
 
        .. code-block:: ruby
 
@@ -60,7 +60,7 @@ Matchers are available for services and may be used to define audits that test f
             expect(service('ntpd')).to be_running.under('daemontools')
           end
 
-       or |upstart|:
+       or Upstart:
 
        .. code-block:: ruby
 
@@ -78,10 +78,13 @@ Matchers are available for services and may be used to define audits that test f
           end
 
    * - ``have_start_mode``
-     - |windows| only. Use to test if the named service's startup mode is correct on the |windows| platform. For example:
+     - Microsoft Windows only. Use to test if the named service's startup mode is correct on the Microsoft Windows platform. For example:
 
        .. code-block:: ruby
 
           it 'should start manually' do
             expect(service('DNS Client')).to have_start_mode.Manual
           end
+
+.. end_tag
+

@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_node_reset_key
 
 To reset the validation key for a node:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Nodes**.
 #. Select a node.
 #. Click **Edit Run List**.
@@ -15,3 +14,6 @@ To reset the validation key for a node:
 #. In the **Reset Key** dialog box, copy the key directly from the dialog box or click the **Download** button to download the key to your local machine:
 
    .. image:: ../../images/step_manage_webui_admin_organization_reset_key_regenerated.png
+
+.. end_tag
+

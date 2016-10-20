@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_security_ssl_cert_custom
 
-The |chef server| can be configured to use |ssl| certificates by adding the following settings to the server configuration file:
+The Chef server can be configured to use SSL certificates by adding the following settings to the server configuration file:
 
 .. list-table::
    :widths: 200 300
@@ -11,8 +10,11 @@ The |chef server| can be configured to use |ssl| certificates by adding the foll
    * - Setting
      - Description
    * - ``nginx['ssl_certificate']``
-     - |ssl_certificate|
+     - The SSL certificate used to verify communication over HTTPS.
    * - ``nginx['ssl_certificate_key']``
-     - |ssl_certificate key|
+     - The certificate key used for SSL communication.
 
 and then setting their values to define the paths to the certificate and key.
+
+.. end_tag
+

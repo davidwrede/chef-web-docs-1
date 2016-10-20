@@ -1,10 +1,12 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_psql
 
-The ``psql`` subcommand is used to log into the |postgresql| database associated with the named service. This subcommand:
+The ``psql`` subcommand is used to log into the PostgreSQL database associated with the named service. This subcommand:
 
-* Uses ``psql`` (the interactive terminal for |postgresql|)
+* Uses ``psql`` (the interactive terminal for PostgreSQL)
 * Has read-only access by default
-* Is the recommended way to interact with any |postgresql| database that is part of the |chef server|
+* Is the recommended way to interact with any PostgreSQL database that is part of the Chef server
 * Automatically handles authentication
+
+.. end_tag
+

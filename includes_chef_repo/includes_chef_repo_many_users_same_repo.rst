@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag chef_repo_many_users_same_repo
 
-It is possible for multiple users to access the |chef server| using the same |knife rb| file. (A user can even access multiple organizations if, for example, each instance of the |chef repo| contained the same copy of the |knife rb| file.) This can be done by adding the |knife rb| file to the |chef repo|, and then using environment variables to handle the user-specific credential details and/or sensitive values. For example:
+It is possible for multiple users to access the Chef server using the same knife.rb file. (A user can even access multiple organizations if, for example, each instance of the chef-repo contained the same copy of the knife.rb file.) This can be done by adding the knife.rb file to the chef-repo, and then using environment variables to handle the user-specific credential details and/or sensitive values. For example:
 
 .. code-block:: none
 
@@ -26,3 +25,6 @@ It is possible for multiple users to access the |chef server| using the same |kn
      # Rackspace Cloud
      knife[:rackspace_api_username] = ENV['RACKSPACE_USERNAME']
      knife[:rackspace_api_key] = ENV['RACKSPACE_API_KEY']
+
+.. end_tag
+

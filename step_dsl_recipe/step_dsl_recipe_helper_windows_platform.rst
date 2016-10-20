@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_recipe_helper_windows_platform_summary
 
-The following example installs |windows powershell| 2.0 on systems that do not already have it installed. |windows| platform helper methods are used to define specific behaviors for specific platform versions:
+The following example installs Windows PowerShell 2.0 on systems that do not already have it installed. Microsoft Windows platform helper methods are used to define specific behaviors for specific platform versions:
 
 .. code-block:: ruby
 
@@ -51,3 +50,6 @@ The following example installs |windows powershell| 2.0 on systems that do not a
    end
 
 The previous example is from the `ms_dotnet2 cookbook <https://github.com/juliandunn/ms_dotnet2>`_, created by community member ``juliandunn``.
+
+.. end_tag
+

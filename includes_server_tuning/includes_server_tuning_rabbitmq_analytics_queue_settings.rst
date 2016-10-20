@@ -1,67 +1,70 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following settings may be used for tuning |rabbitmq| queues used by |chef analytics| and the |chef server|:
+.. tag server_tuning_rabbitmq_analytics_queue_settings
+
+The following settings may be used for tuning RabbitMQ queues used by Chef Analytics and the Chef server:
 
 ``rabbitmq['analytics_max_length']``
-   |rabbitmq analytics_max_length| Default value: ``10000``.
+   The maximum number of messages that can be queued before RabbitMQ automatically drops messages from the front of the queue to make room for new messages. Default value: ``10000``.
 
 ``rabbitmq['drop_on_full_capacity']``
-   |rabbitmq drop_on_full| Default value: ``true``.
+   Specify if messages will stop being sent to the RabbitMQ queue when it is at capacity. Default value: ``true``.
 
 ``rabbitmq['management_enabled']``
-   |rabbitmq management_enabled| Default value: ``true``.
+   Specify if the rabbitmq-management plugin is enabled. Default value: ``true``.
 
 ``rabbitmq['management_password']``
-   |rabbitmq management_password| Default value: ``'chefrocks'``.
+   The rabbitmq-management plugin password. Default value: ``'chefrocks'``.
 
 ``rabbitmq['management_port']``
-   |rabbitmq management_port| Default value: ``15672``.
+   The rabbitmq-management plugin port. Default value: ``15672``.
 
 ``rabbitmq['management_user']``
-   |rabbitmq management_user| Default value: ``'rabbitmgmt'``.
+   The rabbitmq-management plugin user. Default value: ``'rabbitmgmt'``.
 
 ``rabbitmq['prevent_erchef_startup_on_full_capacity']``
-   |rabbitmq prevent_startup| Default value: ``false``.
+   Specify if the Chef server will start when the monitored RabbitMQ queue is full. Default value: ``false``.
 
 ``rabbitmq['queue_at_capacity_affects_overall_status']``
-   |rabbitmq capacity_affects_status| Default value: ``false``.
+   Specify if the ``_status`` endpoint in the Chef server API will fail if the monitored queue is at capacity. Default value: ``false``.
 
 ``rabbitmq['queue_length_monitor_enabled']``
-   |rabbitmq qmon_enabled| Default value: ``true``.
+   Specify if the queue length monitor is enabled. Default value: ``true``.
 
 ``rabbitmq['queue_length_monitor_millis']``
-   |rabbitmq qmon_milliseconds| Default value: ``30000``.
+   The frequency (in milliseconds) at which the length of the RabbitMQ queue is checked. Default value: ``30000``.
 
 ``rabbitmq['queue_length_monitor_timeout_millis']``
-   |rabbitmq qmon_timeout_milliseconds| Default value: ``5000``.
+   The timeout (in milliseconds) at which calls to the queue length monitor will stop if the Chef server is overloaded. Default value: ``5000``.
 
 ``rabbitmq['queue_length_monitor_queue']``
-   |rabbitmq qmon_queue| Default value: ``'alaska'``.
+   The RabbitMQ queue that is observed by queue length monitor. Default value: ``'alaska'``.
 
 ``rabbitmq['queue_length_monitor_vhost']``
-   |rabbitmq qmon_vhost| Default value: ``'/analytics'``.
+   The virtual host for the RabbitMQ queue that is observed by queue length monitor. Default value: ``'/analytics'``.
 
 ``rabbitmq['rabbit_mgmt_http_cull_interval']``
-   |rabbit_mgmt_http_cull_interval| Default value: ``60``.
+   The maximum cull interval (in seconds) for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``60``.
 
 ``rabbitmq['rabbit_mgmt_http_init_count']``
-   |rabbit_mgmt_http_init_count| Default value: ``25``.
+   The initial worker count for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``25``.
 
 ``rabbitmq['rabbit_mgmt_http_max_age']``
-   |rabbit_mgmt_http_max_age| Default value: ``70``.
+   The maximum connection worker age (in seconds) for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``70``.
 
 ``rabbitmq['rabbit_mgmt_http_max_connection_duration']``
-   |rabbit_mgmt_http_max_connection_duration| Default value: ``70``.
+   The maximum connection duration (in seconds) for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``70``.
 
 ``rabbitmq['rabbit_mgmt_http_max_count']``
-   |rabbit_mgmt_http_max_count| Default value: ``100``.
+   The maximum worker count for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``100``.
 
 ``rabbitmq['rabbit_mgmt_ibrowse_options']``
-   |rabbit_mgmt_ibrowse_options| Default value: ``'{connect_timeout, 10000}'``.
+   An array of comma-separated key-value pairs of ibrowse options for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``'{connect_timeout, 10000}'``.
 
 ``rabbitmq['rabbit_mgmt_timeout']``
-   |rabbit_mgmt_timeout| Default value: ``30000``.
+   The timeout for the HTTP connection pool that is used by the rabbitmq-management plugin. Default value: ``30000``.
 
 ``rabbitmq['ssl_versions']``
-   |rabbitmq ssl_versions| (See also |url rabbitmqssl|.) Default value: ``['tlsv1.2', 'tlsv1.1']``.
+   The SSL versions used by the rabbitmq-management plugin. (See also |url rabbitmqssl|.) Default value: ``['tlsv1.2', 'tlsv1.1']``.
+
+.. end_tag
+

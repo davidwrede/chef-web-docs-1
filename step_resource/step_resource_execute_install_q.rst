@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_execute_install_q
 
-The following example shows how to install a lightweight |javascript| framework into |vagrant|:
+The following example shows how to install a lightweight JavaScript framework into Vagrant:
 
 .. code-block:: ruby
 
@@ -13,4 +12,7 @@ The following example shows how to install a lightweight |javascript| framework 
      command "npm install -g q zombie should mocha coffee-script"
      action :run
    end
+
+
+.. end_tag
 

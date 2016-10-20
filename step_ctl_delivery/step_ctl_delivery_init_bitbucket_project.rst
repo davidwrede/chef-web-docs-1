@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_delivery_init_bitbucket_project
 
-To initialize a project using a |bitbucket| repository, run a command similar to:
+To initialize a project using a Bitbucket repository, run a command similar to:
 
 .. code-block:: bash
 
    $ delivery init --bitbucket PROJECT_KEY -r REPO_NAME
 
-where ``PROJECT_KEY`` is the name of the project key in |bitbucket| and ``REPO_NAME`` is the name of the repository in |bitbucket|. For example to initialize the ``anagrams`` repository in |bitbucket| with the ``TEST`` project key:
+where ``PROJECT_KEY`` is the name of the project key in Bitbucket and ``REPO_NAME`` is the name of the repository in Bitbucket. For example to initialize the ``anagrams`` repository in Bitbucket with the ``TEST`` project key:
 
 .. code-block:: bash
 
@@ -56,3 +55,6 @@ and returns output similar to:
    Created new patchset
    https://delivery.chef.co/e/Chef/#/organizations/sandbox/projects/anagrams/changes/695f2bb9-ab21-4adf-a6e0-b9fc79854478
      anagrams git:(add-delivery-config)
+
+.. end_tag
+

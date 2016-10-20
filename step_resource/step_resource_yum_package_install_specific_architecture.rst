@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_yum_package_install_specific_architecture
 
 .. To install a specific architecture:
 
@@ -14,3 +14,6 @@ or:
 .. code-block:: ruby
 
    yum_package 'netpbm.x86_64'
+
+.. end_tag
+

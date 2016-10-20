@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag ctl_chef_server_delete_client_key_options
 
 This subcommand has the following arguments:
 
@@ -11,3 +11,6 @@ This subcommand has the following arguments:
 
 ``KEY_NAME``
    The unique name to be assigned to the key you wish to delete.
+
+.. end_tag
+

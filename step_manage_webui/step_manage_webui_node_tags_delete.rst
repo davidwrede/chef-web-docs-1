@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_node_tags_delete
 
 To delete tags for a node (or a group of nodes):
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Nodes**.
 #. Select a node (or a group of nodes).
 #. Click **Manage Tags**.
@@ -13,3 +12,6 @@ To delete tags for a node (or a group of nodes):
    .. image:: ../../images/step_manage_webui_node_tags_delete.png
 
 #. Click **Update Tags**.
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_custom_resource_method_provides
 
-Use the ``provides`` method to associate a custom resource with the |dsl recipe| on different operating systems. When multiple custom resources use the same DSL, specificity rules are applied to determine the priority, from highest to lowest:
+Use the ``provides`` method to associate a custom resource with the Recipe DSL on different operating systems. When multiple custom resources use the same DSL, specificity rules are applied to determine the priority, from highest to lowest:
 
 #. provides :resource_name, platform_version: ‘0.1.2’
 #. provides :resource_name, platform: ‘platform_name’
@@ -28,3 +27,6 @@ For example:
 
 
 This allows you to use multiple custom resources files that provide the same resource to the user, but for different operating systems or operation system versions. With this you can eliminate the need for platform or platform version logic within your resources.
+
+.. end_tag
+

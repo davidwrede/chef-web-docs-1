@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. warning:: This is an example of something that should NOT be done. Use the |resource service| resource to control a service, not the |resource execute| resource.
+.. tag resource_execute_control_a_service
+
+.. warning:: This is an example of something that should NOT be done. Use the **service** resource to control a service, not the **execute** resource.
 
 Do something like this:
 
@@ -20,4 +20,7 @@ and NOT something like this:
      action :run
    end
 
-There is no reason to use the |resource execute| resource to control a service because the |resource service| resource exposes the ``start_command`` property directly, which gives a recipe full control over the command issued in a much cleaner, more direct manner.
+There is no reason to use the **execute** resource to control a service because the **service** resource exposes the ``start_command`` property directly, which gives a recipe full control over the command issued in a much cleaner, more direct manner.
+
+.. end_tag
+

@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_cookbook_common_recipe_quality
 
 Use the ``quality.rb`` recipe to run additional code quality and reporting tools. 
+
+.. end_tag
+

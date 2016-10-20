@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag handler_custom_interface_report
 
 The ``report`` interface is used to define how a handler will behave and is a required part of any custom handler. The syntax for the ``report`` interface is as follows:
 
@@ -10,7 +9,7 @@ The ``report`` interface is used to define how a handler will behave and is a re
      # Ruby code
    end
 
-The |ruby| code used to define a custom handler will vary significantly from handler to handler. The |chef client| includes two default handlers: ``error_report`` and ``json_file``. Their use of the ``report`` interface is shown below.
+The Ruby code used to define a custom handler will vary significantly from handler to handler. The chef-client includes two default handlers: ``error_report`` and ``json_file``. Their use of the ``report`` interface is shown below.
 
 The `error_report <https://github.com/chef/chef/blob/master/lib/chef/handler/error_report.rb>`_ handler:
 
@@ -70,3 +69,6 @@ The `json_file <https://github.com/chef/chef/blob/master/lib/chef/handler/json_f
        end
      end
    end
+
+.. end_tag
+

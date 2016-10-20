@@ -1,8 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag policy_ctl_run_list
+
 .. This file documents specifc behavior related to the -j option in the chef-client, chef-solo, and chef-shell executables.
 
-Use this option to use policy files by specifying a |json| file that contains the following settings:
+Use this option to use policy files by specifying a JSON file that contains the following settings:
 
 .. list-table::
    :widths: 200 300
@@ -11,9 +12,9 @@ Use this option to use policy files by specifying a |json| file that contains th
    * - Setting
      - Description
    * - ``policy_group``
-     - |name policy_name|
+     - The name of a policy, as identified by the ``name`` setting in a Policyfile.rb file.
    * - ``policy_name``
-     - |name policy_group|
+     - The name of a policy group that exists on the Chef server.
 
 For example:
 
@@ -23,3 +24,6 @@ For example:
      "policy_name": "appserver",
      "policy_group": "staging"
    }
+
+.. end_tag
+

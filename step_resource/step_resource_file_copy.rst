@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_file_copy
 
 The following example shows how to copy a file from one directory to another, locally on a node:
 
@@ -10,4 +10,7 @@ The following example shows how to copy a file from one directory to another, lo
      action :create
    end
 
-where the ``content`` attribute uses the |ruby| ``IO.read`` method to get the contents of the ``/tmp/1.txt`` file.
+where the ``content`` attribute uses the Ruby ``IO.read`` method to get the contents of the ``/tmp/1.txt`` file.
+
+.. end_tag
+

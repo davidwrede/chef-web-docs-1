@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_change_service_provider_based_on_node
 
 .. To change a service provider depending on a node's platform:
 
@@ -14,3 +14,6 @@
      end
      action [:enable, :start]
    end
+
+.. end_tag
+

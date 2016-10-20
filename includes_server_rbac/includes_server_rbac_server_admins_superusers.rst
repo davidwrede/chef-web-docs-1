@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_rbac_server_admins_superusers
 
 Superuser accounts may not be managed by users who belong to the ``server-admins`` group. For example, Alice attempts to delete the ``pivotal`` superuser account:
 
@@ -17,3 +16,6 @@ and the following error is returned:
    Response: Missing read permission
 
 Alice's action is unauthorized even with membership in the ``server-admins`` group.
+
+.. end_tag
+

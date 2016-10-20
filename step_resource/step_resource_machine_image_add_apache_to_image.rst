@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_machine_image_add_apache_to_image
 
 .. To add Apache to a machine image, and then build a machine:
 
@@ -12,3 +12,6 @@
    machine 'web_machine' do
     from_image 'web_image'
    end
+
+.. end_tag
+

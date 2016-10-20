@@ -1,14 +1,16 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_install_options
 
 This subcommand has the following options:
 
 ``-D``, ``--debug``
-   |chef_exe debug|
+   Enable stack traces and other debug output.
 
 ``-h``, ``--help``
-   |help subcommand|
+   Show help for the command.
 
 ``-v``, ``--version``
-   |version chef|
+   The version of the chef-client.
+
+.. end_tag
+

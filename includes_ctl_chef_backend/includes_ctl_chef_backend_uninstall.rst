@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_uninstall
 
-The ``uninstall`` subcommand is used to remove the |chef server| application from a machine in the backend HA cluster, but without removing any of the data. This subcommand will shut down all services (including the ``runit`` process supervisor).
+The ``uninstall`` subcommand is used to remove the Chef server application from a machine in the backend HA cluster, but without removing any of the data. This subcommand will shut down all services (including the ``runit`` process supervisor).
 
 This subcommand has the following syntax:
 
@@ -11,3 +10,6 @@ This subcommand has the following syntax:
    $ chef-backend-ctl uninstall
 
 .. note:: To revert the ``uninstall`` subcommand, run the ``reconfigure`` subcommand (because the ``start`` subcommand is disabled by the ``uninstall`` command).
+
+.. end_tag
+

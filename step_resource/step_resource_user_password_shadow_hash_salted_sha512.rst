@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-|mac os x| 10.7 calculates the password shadow hash using SALTED-SHA512. The length of the shadow hash value is 68 bytes, the salt value is the first 4 bytes, with the remaining 64 being the shadow hash itself. The following code will calculate password shadow hashes for |mac os x| 10.7:
+.. tag resource_user_password_shadow_hash_salted_sha512
+
+Mac OS X 10.7 calculates the password shadow hash using SALTED-SHA512. The length of the shadow hash value is 68 bytes, the salt value is the first 4 bytes, with the remaining 64 being the shadow hash itself. The following code will calculate password shadow hashes for Mac OS X 10.7:
 
 .. code-block:: ruby
 
@@ -10,10 +10,13 @@
    encoded_password = OpenSSL::Digest::SHA512.hexdigest(salt + password)
    shadow_hash = salt.unpack('H*').first + encoded_password
 
-Use the calculated password shadow hash with the |resource user| resource:
+Use the calculated password shadow hash with the **user** resource:
 
 .. code-block:: ruby
 
    user 'my_awesome_user' do
      password 'c9b3bd....d843'  # Length: 136
    end
+
+.. end_tag
+

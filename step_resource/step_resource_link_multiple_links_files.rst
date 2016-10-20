@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_link_multiple_links_files
 
 The following example creates symbolic links from two files in the ``/vol/webserver/cert/`` directory to files located in the ``/etc/ssl/certs/`` directory:
 
@@ -12,3 +12,6 @@ The following example creates symbolic links from two files in the ``/vol/webser
    link '/vol/webserver/cert/server.key' do
      to '/etc/ssl/certs/ssl-cert-name.key'
    end
+
+.. end_tag
+

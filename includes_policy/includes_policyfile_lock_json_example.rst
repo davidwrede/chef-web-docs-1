@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag policyfile_lock_json_example
 
-A |policylock| file is similar to:
+A Policyfile.lock.json file is similar to:
 
 .. code-block:: javascript
 
@@ -36,3 +35,6 @@ A |policylock| file is similar to:
          "artifactserver": "https://supermarket.chef.io/api/v1/cookbooks/java/versions/1.24.0/download",
          "version": "1.24.0"
        }
+
+.. end_tag
+

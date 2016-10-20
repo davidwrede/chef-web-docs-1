@@ -1,9 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-If a custom resource was created in the ``/libraries`` directory of a cookbook that also uses a core resource from the |chef client| within the custom resource, the base class that is associated with that custom resource must be updated. In previous versions of the |chef client|, the ``Chef::Provider`` class was all that was necessary because the |dsl recipe| was included in the ``Chef::Provider`` base class. 
+.. tag 16_method_updated_by_last_action_example
 
-For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <https://github.com/chef-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb>`_ uses the |resource directory| and |resource mount| resources:
+If a custom resource was created in the ``/libraries`` directory of a cookbook that also uses a core resource from the chef-client within the custom resource, the base class that is associated with that custom resource must be updated. In previous versions of the chef-client, the ``Chef::Provider`` class was all that was necessary because the Recipe DSL was included in the ``Chef::Provider`` base class. 
+
+For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <https://github.com/chef-cookbooks/lvm/blob/master/libraries/provider_lvm_logical_volume.rb>`_ uses the **directory** and **mount** resources:
 
 .. code-block:: ruby
 
@@ -46,4 +46,7 @@ For example, the ``lvm_logical_volume`` custom resource from the `lvm cookbook <
          new_resource.updated_by_last_action(updates.any?)
        end
 
-Starting with |chef client| 12, the |dsl recipe| is removed from the ``Chef::Provider`` base class and is only available by using ``LWRPBase``. Cookbooks that contain custom resources authored for the |chef client| 11 version should be inspected and updated.
+Starting with chef-client 12, the Recipe DSL is removed from the ``Chef::Provider`` base class and is only available by using ``LWRPBase``. Cookbooks that contain custom resources authored for the chef-client 11 version should be inspected and updated.
+
+.. end_tag
+

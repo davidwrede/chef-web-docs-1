@@ -1,6 +1,8 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_reporting_runs_list
+
+Use the ``runs list`` argument to return a list of chef-client runs by organization or by node.
 
 
-Use the ``runs list`` argument to return a list of |chef client| runs by organization or by node.
+.. end_tag
 

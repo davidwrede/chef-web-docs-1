@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_push_jobs_job_start_search_by_nodes
 
 To search for a specific set of nodes (named ``chico``, ``harpo``, ``groucho``, ``gummo``, ``zeppo``), and where 90% of those nodes must be available, run the following command:
 
@@ -29,4 +29,7 @@ to return something similar to:
 
 
 
+
+
+.. end_tag
 

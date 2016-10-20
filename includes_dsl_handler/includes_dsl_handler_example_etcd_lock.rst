@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_example_etcd_lock
 
-The following example shows how to prevent concurrent |chef client| runs from both holding a lock on |etcd|:
+The following example shows how to prevent concurrent chef-client runs from both holding a lock on etcd:
 
 .. code-block:: ruby
 
@@ -19,3 +18,6 @@ The following example shows how to prevent concurrent |chef client| runs from bo
        Etcd.lock_release(lock_key)
      end
    end
+
+.. end_tag
+

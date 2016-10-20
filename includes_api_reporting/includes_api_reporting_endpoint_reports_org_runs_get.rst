@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag api_reporting_endpoint_reports_org_runs_get
 
-The ``GET`` method is used to return information about |chef client| runs for all nodes in the specified organization. 
+The ``GET`` method is used to return information about chef-client runs for all nodes in the specified organization. 
 
 This method has the following parameters:
 
@@ -48,8 +47,11 @@ The response is similar to:
    * - Response Code
      - Description
    * - ``200``
-     - |response code 200 ok|
+     - OK. The request was successful.
    * - ``404``
-     - |response code 404 not found|
+     - Not found. The requested object does not exist.
    * - ``406``
      - Invalid request. The protocol version is incorrect.
+
+.. end_tag
+

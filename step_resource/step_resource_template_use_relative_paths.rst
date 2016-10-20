@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_use_relative_paths
 
 .. To use a relative path:
 
@@ -10,3 +9,6 @@
      source 'chef-getting-started.txt.erb'
      mode '0755'
    end
+
+.. end_tag
+

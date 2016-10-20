@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_rbac_server_admins_scenario
 
-The following user accounts exist on the |chef server|: ``pivotal`` (a superuser account), ``alice``, ``bob``, ``carol``, and ``dan``. Run the following command to view a list of users on the |chef server|:
+The following user accounts exist on the Chef server: ``pivotal`` (a superuser account), ``alice``, ``bob``, ``carol``, and ``dan``. Run the following command to view a list of users on the Chef server:
 
 .. code-block:: bash
 
@@ -18,7 +17,7 @@ and it returns the same list of users:
    carol
    dan
 
-Alice is a member of the IT team whose responsibilities include day-to-day administration of the |chef server|, in particular managing the user accounts on the |chef server| that are used by the rest of the organization. From a workstation, Alice runs the following command:
+Alice is a member of the IT team whose responsibilities include day-to-day administration of the Chef server, in particular managing the user accounts on the Chef server that are used by the rest of the organization. From a workstation, Alice runs the following command:
 
 .. code-block:: bash
 
@@ -32,7 +31,7 @@ and it returns the following error:
           but you are not authorized for this action
    Response: Missing read permission
 
-Alice is not a superuser and does not have permissions on other users because user accounts are global to organizations in the |chef server|. Let's add Alice to the ``server-admins`` group:
+Alice is not a superuser and does not have permissions on other users because user accounts are global to organizations in the Chef server. Let's add Alice to the ``server-admins`` group:
 
 .. code-block:: bash
 
@@ -44,7 +43,7 @@ and it returns the following response:
 
    User alice was added to server-admins.
 
-Alice can now create, read, update, and delete user accounts on the |chef server|, even for organizations to which Alice is not a member. From a workstation, Alice re-runs the following command:
+Alice can now create, read, update, and delete user accounts on the Chef server, even for organizations to which Alice is not a member. From a workstation, Alice re-runs the following command:
 
 .. code-block:: bash
 
@@ -60,7 +59,7 @@ which now returns:
    carol
    dan
 
-Alice is now a server administrator and can use the following |knife| subcommands to manage users on the |chef server|: 
+Alice is now a server administrator and can use the following knife subcommands to manage users on the Chef server: 
 
 * ``knife user-create``
 * ``knife user-delete``
@@ -74,4 +73,7 @@ For example, Alice runs the following command:
 
    $ knife user edit carol -c ~/.chef/alice.rb
 
-and the |chef editor| opens in which Alice makes changes, and then saves them.
+and the $EDITOR opens in which Alice makes changes, and then saves them.
+
+.. end_tag
+

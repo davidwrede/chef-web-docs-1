@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use the |resource load_balancer| resource to create or destroy a load balancer.  
+.. tag resource_load_balancer_summary
+
+Use the **load_balancer** resource to create or destroy a load balancer.  
+
+.. end_tag
+

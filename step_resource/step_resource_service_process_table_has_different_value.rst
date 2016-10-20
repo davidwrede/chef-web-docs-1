@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_service_process_table_has_different_value
 
 .. To handle situations when the process table has a different value than the name of the service script:
 
@@ -9,3 +9,6 @@
      pattern 'smbd'
      action [:enable, :start]
    end
+
+.. end_tag
+

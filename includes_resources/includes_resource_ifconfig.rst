@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-Use the |resource ifconfig| resource to manage interfaces. 
+.. tag resource_ifconfig_summary
+
+Use the **ifconfig** resource to manage interfaces. 
+
+.. end_tag
+

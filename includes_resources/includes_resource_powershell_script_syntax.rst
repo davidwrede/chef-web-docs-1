@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_powershell_script_syntax
 
-A |resource powershell_script| resource block executes a batch script using the |windows powershell| interpreter. For example, writing to an interpolated path:
+A **powershell_script** resource block executes a batch script using the Windows PowerShell interpreter. For example, writing to an interpolated path:
 
 .. code-block:: ruby
 
@@ -14,7 +13,7 @@ A |resource powershell_script| resource block executes a batch script using the 
      EOH
    end
 
-The full syntax for all of the properties that are available to the |resource powershell_script| resource is:
+The full syntax for all of the properties that are available to the **powershell_script** resource is:
 
 .. code-block:: ruby
 
@@ -43,5 +42,8 @@ where
 * ``powershell_script`` is the resource
 * ``name`` is the name of the resource block
 * ``command`` is the command to be run and ``cwd`` is the location from which the command is run
-* ``:action`` identifies the steps the |chef client| will take to bring the node into the desired state
-* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, and ``timeout`` are properties of this resource, with the |ruby| type shown. |see attributes|
+* ``:action`` identifies the steps the chef-client will take to bring the node into the desired state
+* ``architecture``, ``code``, ``command``, ``convert_boolean_return``, ``creates``, ``cwd``, ``environment``, ``flags``, ``group``, ``guard_interpreter``, ``interpreter``, ``provider``, ``returns``, and ``timeout`` are properties of this resource, with the Ruby type shown. See "Properties" section below for more information about all of the properties that may be used with this resource.
+
+.. end_tag
+

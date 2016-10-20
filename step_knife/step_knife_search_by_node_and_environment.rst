@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag knife_search_by_node_and_environment
 
-To search for all nodes running |centos| in the production environment, enter:
+To search for all nodes running CentOS in the production environment, enter:
 
 .. code-block:: bash
 
    $ knife search node 'chef_environment:production AND platform:centos'
+
+.. end_tag
+

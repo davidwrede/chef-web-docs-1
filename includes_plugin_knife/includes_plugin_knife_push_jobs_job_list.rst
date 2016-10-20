@@ -1,6 +1,8 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag plugin_knife_push_jobs_job_list
+
+Use the ``job list`` argument to view a list of Chef push jobs jobs.
 
 
-Use the ``job list`` argument to view a list of |push jobs| jobs.
+.. end_tag
 

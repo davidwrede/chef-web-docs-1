@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_template_consistent_proxy_settings
 
 The following example shows how a template can be used to apply consistent proxy settings for all nodes of the same type:
 
@@ -22,4 +21,7 @@ The following example shows how a template can be used to apply consistent proxy
      )
    end
 
-where ``matching_node`` represents a type of node (like |nginx|) and ``site_proxy`` represents the type of proxy being used for that type of node (like |nexus|).
+where ``matching_node`` represents a type of node (like Nginx) and ``site_proxy`` represents the type of proxy being used for that type of node (like Nexus).
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to use a variable within a |ruby| block to set the ``java_home`` environment variable:
+.. tag resource_ruby_block_use_variables_to_set_java_home
+
+The following example shows how to use a variable within a Ruby block to set the ``java_home`` environment variable:
 
 .. code-block:: ruby
 
@@ -10,3 +10,6 @@ The following example shows how to use a variable within a |ruby| block to set t
        ENV['JAVA_HOME'] = java_home
      end
    end
+
+.. end_tag
+

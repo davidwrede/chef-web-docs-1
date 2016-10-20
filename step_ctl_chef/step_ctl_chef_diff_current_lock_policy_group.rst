@@ -1,9 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_diff_current_lock_policy_group
 
 .. To compare current lock with latest lock for policy group:
 
 .. code-block:: bash
 
    $ chef diff staging
+
+.. end_tag
+

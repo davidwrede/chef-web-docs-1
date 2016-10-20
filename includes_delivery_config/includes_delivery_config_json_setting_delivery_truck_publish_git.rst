@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_config_json_setting_delivery_truck_publish_git
 
-If the ``config.json`` file specifies the following cookbooks are published to a |git| repository located on an open source |git| server:
+If the ``config.json`` file specifies the following cookbooks are published to a git repository located on an open source git server:
 
 .. code-block:: javascript
 
@@ -12,4 +11,7 @@ If the ``config.json`` file specifies the following cookbooks are published to a
      }
    }
 
-This publishing option requires the ``git`` deploy key for that repository to be available from a data bag on the |chef server| that is part of this |delivery| configuration.
+This publishing option requires the ``git`` deploy key for that repository to be available from a data bag on the Chef server that is part of this Chef Automate configuration.
+
+.. end_tag
+

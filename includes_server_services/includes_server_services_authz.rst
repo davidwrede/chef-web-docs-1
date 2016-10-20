@@ -1,4 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The |service authz| service is used to handle authorization requests to the |chef server|.
+.. tag server_services_authz
+
+The **opscode-authz** service is used to handle authorization requests to the Chef server.
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_windows_download_custom_package
 
 .. To download a custom package:
 
@@ -10,3 +10,6 @@
      installer_type :custom
      options '/Q'
    end
+
+.. end_tag
+

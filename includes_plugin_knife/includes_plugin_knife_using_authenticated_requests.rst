@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag plugin_knife_using_authenticated_requests
 
-A |knife| plugin can be used to make authenticated API requests to the |chef server| using the following methods:
+A knife plugin can be used to make authenticated API requests to the Chef server using the following methods:
 
 .. list-table::
    :widths: 60 420
@@ -11,13 +10,13 @@ A |knife| plugin can be used to make authenticated API requests to the |chef ser
    * - Method
      - Description
    * - ``rest.delete_rest``
-     - Use to delete an object from the |chef server|.
+     - Use to delete an object from the Chef server.
    * - ``rest.get_rest``
-     - Use to get the details of an object on the |chef server|.
+     - Use to get the details of an object on the Chef server.
    * - ``rest.post_rest``
-     - Use to add an object to the |chef server|.
+     - Use to add an object to the Chef server.
    * - ``rest.put_rest``
-     - Use to update an object on the |chef server|.
+     - Use to update an object on the Chef server.
 
 For example:
 
@@ -43,3 +42,6 @@ For example:
         end
       end
    end
+
+.. end_tag
+

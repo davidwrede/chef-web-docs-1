@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag dsl_handler_slide_send_email_test
 
-Use the following code block to trigger the exception and have the |chef client| send email to the specified email address:
+Use the following code block to trigger the exception and have the chef-client send email to the specified email address:
 
 .. code-block:: ruby
 
@@ -11,3 +10,6 @@ Use the following code block to trigger the exception and have the |chef client|
        fail 'deliberately fail the run'
      end
    end
+
+.. end_tag
+

@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag config_rb_ohai
 
-|ohai| configuration settings can be added to the |client rb| file.
+Ohai configuration settings can be added to the client.rb file.
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag node_run_list_format
 
 A run-list must be in one of the following formats: fully qualified, cookbook, or default. Both roles and recipes must be in quotes, for example:
 
@@ -19,3 +18,6 @@ Use a comma to separate roles and recipes when adding more than one item the run
 .. code-block:: ruby
 
    'recipe[COOKBOOK::RECIPE],COOKBOOK::RECIPE,role[NAME]'
+
+.. end_tag
+

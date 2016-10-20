@@ -1,10 +1,14 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag install_chef_server_start
+
 .. This topic is hooked in globally to install topics for Chef server applications.
 
 
-Start the |chef server|:
+Start the Chef server:
 
 .. code-block:: bash 
 
    $ sudo chef-server-ctl start
+
+.. end_tag
+

@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics. 
 
+.. tag install_chef_client_aix_en_us
 
-The |chef client| uses the EN_US (UTF-8) character set. By default, the |ibm aix| base operating system does not include the EN_US (UTF-8) character set and it must be installed prior to installing the |chef client|. The EN_US (UTF-8) character set may be installed from the first disc in the |ibm aix| media or may be copied from ``/installp/ppc/*EN_US*`` to a location on the logical partition (LPAR). This topic assumes this location to be ``/tmp/rte``. 
+The chef-client uses the EN_US (UTF-8) character set. By default, the AIX base operating system does not include the EN_US (UTF-8) character set and it must be installed prior to installing the chef-client. The EN_US (UTF-8) character set may be installed from the first disc in the AIX media or may be copied from ``/installp/ppc/*EN_US*`` to a location on the logical partition (LPAR). This topic assumes this location to be ``/tmp/rte``. 
 
 Use ``smit`` to install the EN_US (UTF-8) character set. This ensures that any workload partitions (WPARs) also have UTF-8 applied.
 
@@ -70,3 +69,6 @@ Remember to point ``INPUT device/directory`` to ``/tmp/rte`` when not installing
 #. Cursor over the first two entries---``CULTURAL convention to install`` and ``LANGUAGE translation to install``---and use ``F4`` to navigate through the list until ``UTF-8 English (United States) [EN_US]`` is selected. (EN_US is in capital letters!)
 
 #. Press ``Enter`` to apply and install the language set.
+
+.. end_tag
+

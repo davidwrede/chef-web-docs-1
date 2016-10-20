@@ -1,10 +1,9 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_node_details_set_environment
 
 To set the environment for a node:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Nodes**.
 #. Select a node.
 #. Click the **Details** tab.
@@ -13,3 +12,6 @@ To set the environment for a node:
    .. image:: ../../images/step_manage_webui_node_details_set_environment.png
 
 #. Click **Save**.
+
+.. end_tag
+

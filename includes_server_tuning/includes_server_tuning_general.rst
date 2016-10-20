@@ -1,10 +1,10 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag server_tuning_general
 
 The following settings are typically added to the server configuration file (no equal sign is necessary to set the value):
 
 ``api_fqdn``
-   The |fqdn| for the |chef server|. This setting is not in the server configuration file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. For example: ``api_fqdn "chef.example.com"``.
+   The FQDN for the Chef server. This setting is not in the server configuration file by default. When added, its value should be equal to the FQDN for the service URI used by the Chef server. For example: ``api_fqdn "chef.example.com"``.
 
 ``bootstrap``
    Default value: ``true``.
@@ -14,3 +14,6 @@ The following settings are typically added to the server configuration file (no 
 
 ``notification_email``
    Default value: ``info@example.com``.
+
+.. end_tag
+

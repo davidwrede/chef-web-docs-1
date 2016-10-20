@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_breakpoint_no
 
 .. A resource without breakpoints:
 
@@ -18,3 +18,6 @@
      exclude node['yum']['elrepo']['exclude']
      action :create
    end
+
+.. end_tag
+

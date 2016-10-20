@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_ifconfig_static_ip_address
 
 .. To specify a static IP address:
 
@@ -15,3 +15,6 @@ will create the following interface:
 
    iface eth1 inet static
      address 33.33.33.80
+
+.. end_tag
+

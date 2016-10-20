@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_package_avoid_unnecessary_string_interpolation
 
 .. To avoid unnecessary string interpolation
 
@@ -20,3 +20,6 @@ and not this:
      version "#{node['mysql']['version']}"
      action :install
    end
+
+.. end_tag
+

@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_join_cluster_options
 
 This subcommand has the following options:
 
@@ -23,4 +22,7 @@ This subcommand has the following options:
    The path to the location of the ``secrets.json`` file on the bootstrapping node. Default value: ``/etc/chef-backend/secrets.json``.
 
 ``-y``, ``--yes``
-   |no_confirmation|
+   Do not prompt for confirmation.
+
+.. end_tag
+

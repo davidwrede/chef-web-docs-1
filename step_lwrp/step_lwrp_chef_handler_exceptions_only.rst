@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag lwrp_chef_handler_exceptions_only
 
 .. To handle exceptions only:
 
@@ -11,3 +11,6 @@
      supports :exception => true
      action :enable
    end
+
+.. end_tag
+

@@ -1,14 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_kitchen_converge_centos_default
 
-To converge the default |centos| instance, run the following:
+To converge the default CentOS instance, run the following:
 
 .. code-block:: bash
 
    $ kitchen converge default-centos-71
 
-The |chef client| is downloaded the first time this command is run. The output of the command is similar to:
+The chef-client is downloaded the first time this command is run. The output of the command is similar to:
 
 .. code-block:: bash
 
@@ -57,3 +56,6 @@ The |chef client| is downloaded the first time this command is run. The output o
           Chef Client finished, 1/1 resources updated in 7.152725504 seconds
           Finished converging <default-centos-71> (0m8.43s).
    -----> Kitchen is finished. (0m15.96s)
+
+.. end_tag
+

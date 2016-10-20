@@ -1,11 +1,11 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-The following example shows how to reload the configuration of a |chef client| using the |resource remote_file| resource to:
+.. tag resource_ruby_block_reload_configuration
+
+The following example shows how to reload the configuration of a chef-client using the **remote_file** resource to:
 
 * using an if statement to check whether the plugins on a node are the latest versions
-* identify the location from which |ohai| plugins are stored
-* using the ``notifies`` property and a |resource ruby_block| resource to trigger an update (if required) and to then reload the |client rb| file.
+* identify the location from which Ohai plugins are stored
+* using the ``notifies`` property and a **ruby_block** resource to trigger an update (if required) and to then reload the client.rb file.
 
 .. code-block:: ruby
 
@@ -30,3 +30,6 @@ The following example shows how to reload the configuration of a |chef client| u
        end
      end
    end
+
+.. end_tag
+

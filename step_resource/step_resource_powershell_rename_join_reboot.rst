@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_powershell_rename_join_reboot
 
 The following example shows how to rename a computer, join a domain, and then reboot the computer:
 
@@ -23,7 +23,10 @@ The following example shows how to rename a computer, join a domain, and then re
 
 where:
 
-* The |resource powershell_script| resource block renames a computer, and then joins a domain
-* The |resource reboot| resource restarts the computer
-* The ``not_if`` guard prevents the |windows powershell| script from running when the settings in the ``not_if`` guard match the desired state
-* The ``notifies`` statement tells the |resource reboot| resource block to run if the |resource powershell_script| block was executed during the |chef client| run
+* The **powershell_script** resource block renames a computer, and then joins a domain
+* The **reboot** resource restarts the computer
+* The ``not_if`` guard prevents the Windows PowerShell script from running when the settings in the ``not_if`` guard match the desired state
+* The ``notifies`` statement tells the **reboot** resource block to run if the **powershell_script** block was executed during the chef-client run
+
+.. end_tag
+

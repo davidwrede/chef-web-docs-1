@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_file_content_add_string
 
 The following example specifies a directory, and then uses the ``content`` property to add a string to the file created in that directory: 
 
@@ -13,3 +13,6 @@ The following example specifies a directory, and then uses the ``content`` prope
      mode '0755'
      content 'My favourite foremost coastal Antarctic shelf, oh Larsen B!'
    end
+
+.. end_tag
+

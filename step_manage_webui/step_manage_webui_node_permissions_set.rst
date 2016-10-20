@@ -1,11 +1,13 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag manage_webui_node_permissions_set
 
 To set permissions list for a node object:
 
-#. Open the |chef manage|.
+#. Open the Chef management console.
 #. Click **Nodes**.
 #. Select a node.
 #. Click the **Permissions** tab.
 #. For each group listed under **Name**, select or de-select the **Read**, **Update**, **Delete**, and **Grant** permissions.
+
+.. end_tag
+

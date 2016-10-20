@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag resource_execute_source_a_file
 
-The |resource execute| resource cannot be used to source a file (e.g. ``command 'source filename'``). The following example will fail because ``source`` is not an executable:
+The **execute** resource cannot be used to source a file (e.g. ``command 'source filename'``). The following example will fail because ``source`` is not an executable:
 
 .. code-block:: ruby
 
@@ -10,10 +9,13 @@ The |resource execute| resource cannot be used to source a file (e.g. ``command 
      command 'source /tmp/foo.sh'
    end
 
-Instead, use the |resource script| resource or one of the |resource script|-based resources (|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, or |resource script_ruby|). For example:
+Instead, use the **script** resource or one of the **script**-based resources (**bash**, **csh**, **perl**, **python**, or **ruby**). For example:
 
 .. code-block:: ruby
 
    bash 'foo' do
      code 'source /tmp/foo.sh'
    end
+
+.. end_tag
+

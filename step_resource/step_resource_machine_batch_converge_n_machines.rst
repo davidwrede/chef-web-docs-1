@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_machine_batch_converge_n_machines
 
 .. To converge multiple machines in-parallel:
 
@@ -9,3 +9,6 @@
      action :converge
      machines 'a', 'b', 'c', 'd', 'e'
    end
+
+.. end_tag
+

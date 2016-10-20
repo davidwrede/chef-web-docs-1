@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_http_request_send_get
 
 .. To send a GET request:
 
@@ -10,3 +10,6 @@
    end
 
 The message is sent as ``http://example.com/check_in?message=some_message``.
+
+.. end_tag
+

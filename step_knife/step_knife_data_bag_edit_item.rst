@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag knife_data_bag_edit_item
 
 To edit an item named "charlie" that is contained in a data bag named "admins", enter:
 
@@ -7,7 +7,7 @@ To edit an item named "charlie" that is contained in a data bag named "admins", 
 
    $ knife data bag edit admins charlie
 
-to open the |chef editor|. Once opened, you can update the data before saving it to the |chef server|. For example, by changing:
+to open the $EDITOR. Once opened, you can update the data before saving it to the Chef server. For example, by changing:
 
 .. code-block:: javascript
 
@@ -27,4 +27,7 @@ to:
       "comment": "Crazy Charlie"
    }
 
+
+
+.. end_tag
 

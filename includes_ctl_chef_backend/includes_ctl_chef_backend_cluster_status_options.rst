@@ -1,8 +1,10 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_backend_cluster_status_options
 
 This subcommand has the following options:
 
 ``--json``
-   Return cluster health information as |json|.
+   Return cluster health information as JSON.
+
+.. end_tag
+

@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` property can be used to specifically tell the |chef client| to apply (or not apply) inherited rights from its parent directory.
+.. tag resources_common_windows_security_inherits
+
+By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` property can be used to specifically tell the chef-client to apply (or not apply) inherited rights from its parent directory.
 
 For example, the following example specifies the rights for a directory:
 
@@ -41,4 +41,7 @@ but then not use the ``inherits`` property to deny those rights on a child direc
      deny_rights :read, 'MORDOR\Minions' # Oops, not specific enough
    end
 
-Because the ``inherits`` property is not specified, the |chef client| will default it to ``true``, which will ensure that security settings for existing files remain unchanged.
+Because the ``inherits`` property is not specified, the chef-client will default it to ``true``, which will ensure that security settings for existing files remain unchanged.
+
+.. end_tag
+

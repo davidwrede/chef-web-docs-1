@@ -1,7 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
-.. To create a directory in |windows|:
+.. tag resource_directory_create_in_windows
+
+.. To create a directory in Microsoft Windows:
 
 .. code-block:: ruby
 
@@ -21,4 +21,7 @@ or:
      action :create
    end
 
-.. note:: The difference between the two previous examples is the single- versus double-quoted strings, where if the double quotes are used, the backslash character (``\``) must be escaped using the |ruby| escape character (which is a backslash).
+.. note:: The difference between the two previous examples is the single- versus double-quoted strings, where if the double quotes are used, the backslash character (``\``) must be escaped using the Ruby escape character (which is a backslash).
+
+.. end_tag
+

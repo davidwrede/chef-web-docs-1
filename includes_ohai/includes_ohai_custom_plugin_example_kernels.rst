@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ohai_custom_plugin_example_kernels
 
-The following |ohai| example shows part of a file that gets initial kernel attribute values:
+The following Ohai example shows part of a file that gets initial kernel attribute values:
 
 .. code-block:: ruby
 
@@ -42,3 +41,6 @@ The following |ohai| example shows part of a file that gets initial kernel attri
      end
     
      ...
+
+.. end_tag
+

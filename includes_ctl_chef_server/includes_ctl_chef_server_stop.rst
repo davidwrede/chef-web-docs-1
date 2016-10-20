@@ -1,8 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag ctl_chef_server_stop
 
-The ``stop`` subcommand is used to stop all services enabled on the |chef server|. This command can also be run for an individual service by specifying the name of the service in the command. 
+The ``stop`` subcommand is used to stop all services enabled on the Chef server. This command can also be run for an individual service by specifying the name of the service in the command. 
 
 This subcommand has the following syntax:
 
@@ -35,3 +34,6 @@ will return something similar to:
    ok: down: postgresql: 388s, normally up
    ok: down: rabbitmq: 388s, normally up
    ok: down: redis_lb: 387s, normally up
+
+.. end_tag
+

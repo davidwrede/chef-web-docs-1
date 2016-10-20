@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_apt_update_periodic
 
 .. To update the Apt repository at a specified interval:
 
@@ -9,3 +9,6 @@
      frequency 86400
      action :periodic
    end
+
+.. end_tag
+

@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag dsl_recipe_method_control_matcher_directory
 
 Matchers are available for directories. Use this matcher to define audits for directories that test if the directory exists, is mounted, and if it is linked to. This matcher uses the same matching syntax---``expect(file('foo'))``---as the files. The following matchers are available for directories:
 
@@ -54,3 +54,6 @@ Matchers are available for directories. Use this matcher to define audits for di
               :attribute => 'value',
           )
           end
+
+.. end_tag
+

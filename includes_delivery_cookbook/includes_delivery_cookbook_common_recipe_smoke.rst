@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag delivery_cookbook_common_recipe_smoke
 
 Use the ``smoke.rb`` recipe to run smoke tests against deployed build artifacts to ensure they were deployed correctly and are minimally functional.
+
+.. end_tag
+

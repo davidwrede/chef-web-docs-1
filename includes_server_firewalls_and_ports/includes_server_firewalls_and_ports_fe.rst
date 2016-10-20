@@ -1,6 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
 
+.. tag server_firewalls_and_ports_fe
 
 For front-end servers, ensure that ports marked as external (marked as ``yes`` in the **External** column) are open and accessible via any firewalls that are in use:
 
@@ -12,24 +11,55 @@ For front-end servers, ensure that ports marked as external (marked as ``yes`` i
      - Service Name, Description
      - External
    * - 80, 443, 9683
-     - |service nginx|
+     - **nginx**
 
-       .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+       .. tag server_services_nginx
+       
+       The **nginx** service is used to manage traffic to the Chef server, including virtual hosts for internal and external API request/response routing, external add-on request routing, and routing between front- and back-end components.
+       
+       .. end_tag
+       
 
-       .. note:: Port 9683 is used to internally load balance the |service bifrost| service.
+       .. note:: Port 9683 is used to internally load balance the **oc_bifrost** service.
      - yes
    * - 9463
-     - |service bifrost|
+     - **oc_bifrost**
 
-       .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
+       .. tag server_services_bifrost
+       
+       The **oc_bifrost** service ensures that every request to view or manage objects stored on the Chef server is authorized.
+       
+       .. end_tag
+       
      - 
    * - 9090
-     - |service ocid|
+     - **oc-id**
 
-       .. include:: ../../includes_server_services/includes_server_services_oc_id.rst
+       .. tag server_services_oc_id
+       
+       The **oc-id** service enables OAuth 2.0 authentication to the Chef server by external applications, including Chef Supermarket and Chef Analytics. OAuth 2.0 uses token-based authentication, where external applications use tokens that are issued by the **oc-id** provider. No special credentials---``webui_priv.pem`` or privileged keys---are stored on the external application.
+       
+       .. end_tag
+       
      - 
    * - 8000
-     - |service erchef|
+     - **opscode-erchef**
 
-       .. include:: ../../includes_server_services/includes_server_services_erchef.rst
+       .. tag server_services_erchef
+       
+       The **opscode-erchef** service is an Erlang-based service that is used to handle Chef server API requests to the following areas within the Chef server:
+       
+       * Cookbooks
+       * Data bags
+       * Environments
+       * Nodes
+       * Roles
+       * Sandboxes
+       * Search
+       
+       .. end_tag
+       
      - 
+
+.. end_tag
+

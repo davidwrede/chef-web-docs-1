@@ -1,5 +1,5 @@
-.. The contents of this file may be included in multiple topics (using the includes directive).
-.. The contents of this file should be modified in a way that preserves its ability to appear in multiple topics.
+
+.. tag resource_cron_run_program_on_fifth_hour
 
 .. To run a program on the fifth hour of the day:
 
@@ -10,3 +10,6 @@
      minute '0'
      command '/bin/true'
    end
+
+.. end_tag
+
