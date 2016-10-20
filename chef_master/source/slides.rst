@@ -2,7 +2,7 @@
 Slide Decks
 =====================================================
 
-The following links present information that is found elsewhere in the |chef| documentation, but as revealjs slide decks. Some of them are based on |chef| training presentations, others are paired with important features. The information in them is built from the same source as the rest of the |chef| documentation.
+The following links present information that is found elsewhere in the Chef documentation, but as revealjs slide decks. Some of them are based on Chef training presentations, others are paired with important features. The information in them is built from the same source as the rest of the Chef documentation.
 
 * `chef-repo <https://docs.chef.io/decks/chef_repo.html>`__
 * `ChefSpec <https://docs.chef.io/decks/chefspec.html>`__

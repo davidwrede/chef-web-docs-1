@@ -2,35 +2,89 @@
 Simple Walkthrough
 =====================================================
 
-The |chef dk| is a package that contains everything you need to start using |chef|, along with a collection of tools and libaries that can help improve the code you are using to run your business.
+The Chef development kit is a package that contains everything you need to start using Chef, along with a collection of tools and libaries that can help improve the code you are using to run your business.
 
-Install the |chef dk_title|
+Install the Chef DK
 =====================================================
-.. include:: ../../includes_install/includes_install_chef_dk.rst
+.. tag install_chef_dk
+
+To install the Chef development kit:
+
+#. Visit this page: http://downloads.chef.io/chef-dk/. The Chef development kit supports Mac OS X, Red Hat Enterprise Linux, Ubuntu, and Microsoft Windows.
+#. Select a platform, and then a package. (chef-docs uses the Mac OS X setup within the documentation.)
+#. Click the download button.
+#. Follow the steps in the installer and install the Chef development kit to your machine. The Chef development kit is installed to ``/opt/chefdk/`` on UNIX and Linux systems. 
+#. When finished, open a command window and enter the following:
+
+   .. code-block:: bash
+
+      $ chef verify
+
+   This will verify the main components of the Chef development kit: the chef-client, the Chef development kit library, and the tools that are built into the Chef development kit. The output should be similar to:
+
+   .. code-block:: bash
+
+      Running verification for component '...'
+      ..........
+      ---------------------------------------------
+      Verification of component '...' succeeded.
+
+#. Optional. Set the default shell. On Microsoft Windows it is strongly recommended to use Windows PowerShell and cmd.exe.
+
+.. end_tag
 
 .. 
-.. What's in the |chef dk_title|?
+.. What's in the Chef DK?
 .. -----------------------------------------------------
 .. .. include:: ../../includes_chef_dk/includes_chef_dk_tools.rst
 .. 
 .. .. include:: ../../includes_chef_dk/includes_chef_dk_tools_main.rst
-.. 
+..
 
-Set the System |ruby|
+Set the System Ruby
 =====================================================
-.. include:: ../../step_ruby/step_ruby_set_system_ruby_as_chefdk_ruby.rst
+.. tag ruby_set_system_ruby_as_chefdk_ruby
+
+For many users of Chef, the Chef development kit version of Ruby that is included in the Chef development kit should be configured as the default version of Ruby.
+
+#. Open a command window and enter the following:
+
+   .. code-block:: bash
+
+      $ which ruby
+
+   which will return something like ``/usr/bin/ruby``.
+#. To use the Chef development kit version of Ruby as the default Ruby, edit the ``$PATH`` and ``GEM`` environment variables to include paths to the Chef development kit. For example, on a machine that runs Bash, run:
+
+   .. code-block:: bash
+
+      echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile
+
+   where ``bash`` and ``~/.bash_profile`` represents the name of the shell.
+
+   If zsh is your preferred shell then run the following:
+
+   .. code-block:: bash
+
+    echo 'eval "$(chef shell-init zsh)"' >> ~/.zshrc
+
+#. Run ``which ruby`` again. It should return ``/opt/chefdk/embedded/bin/ruby``.
+
+.. note:: Using the Chef development kit-provided Ruby as your system Ruby is optional. This just depends on how you are using Ruby on your system. For many users, Ruby is primarily used for authoring Chef cookbooks and recipes. If that's true for you, then using the Chef development kit-provided Ruby as your system Ruby is recommended. But for other users who are already using tools like rbenv to manage Ruby versions, then that's OK too.
+
+.. end_tag
 
 .. note:: You may need to restart your shell for this change to be visible.
 
 Your First Cookbook
 =====================================================
-We have already used the |chef ctl| ``verify`` subcommand to verify the installation of the |chef dk|. Now let's use the |chef ctl| ``generate`` subcommand to create the |chef repo|, which is the main folder in which your |chef| code will be stored. Run the following command:
+We have already used the chef ``verify`` subcommand to verify the installation of the Chef development kit. Now let's use the chef ``generate`` subcommand to create the chef-repo, which is the main folder in which your Chef code will be stored. Run the following command:
 
 .. code-block:: bash
 
    $ chef generate app name
-   
-where ``name`` is a name that you have chosen for the both the |chef repo| and the default cookbook. We are calling ours ``chef-repo``; you can call yours whatever you want. You should have a directory structure at ``/Users/your_username/cookbook_name/`` similar to::
+
+where ``name`` is a name that you have chosen for the both the chef-repo and the default cookbook. We are calling ours ``chef-repo``; you can call yours whatever you want. You should have a directory structure at ``/Users/your_username/cookbook_name/`` similar to::
 
    /chef-repo
      /.git
@@ -45,7 +99,6 @@ where ``name`` is a name that you have chosen for the both the |chef repo| and t
            default.rb
      README.md
 
-
 Update Default Recipe
 =====================================================
 Open the ``default.rb`` recipe in the cookbook you just created. Add the following resource to that recipe:
@@ -58,14 +111,14 @@ Open the ``default.rb`` recipe in the cookbook you just created. Add the followi
 
 This recipe creates a file called ``test.txt`` at the path defined by the ``HOME`` environment variable. (To view that path, run ``echo "$HOME"`` in the command shell.)
 
-Run the |chef client_title|
+Run the chef-client
 =====================================================
-Next, we'll run the |chef client|. This is done via the command line and the command must be run from within the |chef repo|. 
+Next, we'll run the chef-client. This is done via the command line and the command must be run from within the chef-repo.
 
-* Use the ``--local-mode`` flag to run the |chef client| locally on your machine exactly the same as if the |chef client| were able to communicate with a |chef server|. Local mode does not require a connection to a |chef server|, public or private keys, or configuring of nodes. Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
-* Use the ``--override-runlist`` flag to run only the recipe we have just created. (More about the run-list later.) 
+* Use the ``--local-mode`` flag to run the chef-client locally on your machine exactly the same as if the chef-client were able to communicate with a Chef server. Local mode does not require a connection to a Chef server, public or private keys, or configuring of nodes. Many people use local mode for simple, local testing of recipes and cookbooks, often as a pre-cursor to running unit and integration tests against the same recipes and cookbooks.
+* Use the ``--override-runlist`` flag to run only the recipe we have just created. (More about the run-list later.)
 
-To run a cookbook's default recipe, only the name of the cookbook needs to be specified because the name of the cookbook is directly associated with the default recipe. 
+To run a cookbook's default recipe, only the name of the cookbook needs to be specified because the name of the cookbook is directly associated with the default recipe.
 
 The following command will create the file ``test.txt``:
 
@@ -75,7 +128,7 @@ The following command will create the file ``test.txt``:
 
 where ``chef-repo`` is the name of your cookbook.
 
-As the |chef client| adds the file to your system, output similar to the following is shown:
+As the chef-client adds the file to your system, output similar to the following is shown:
 
 .. code-block:: bash
 
@@ -98,23 +151,33 @@ As the |chef client| adds the file to your system, output similar to the followi
            +++ /var/folders/l0/6xjyqtvn60zdt7jk6n07wz2m0000gp/T/.test.txt20140613-9526-179gcje	2014-06-13 16:13:13.000000000 -0700
            @@ -1 +1,2 @@
            +This file created by Chef!
-   
+
    [2014-06-13T16:13:13-07:00] WARN: Skipping final node save because override_runlist was given
-   
+
    Running handlers:
    Running handlers complete
-   
+
    Chef Client finished, 1/1 resources updated in 2.418878 seconds
 
-That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``. Open that file, edit the string, and then save that file. Re-run the |chef client|. Or delete the file. In both cases, re-run the |chef client|. |chef| will return the system to the state that is defined by the recipe.
+That's it. The warnings, for the moment, can be ignored. Check the root of the path defined by the ``HOME`` environment variable and find the file named ``test.txt``. The file should contain ``This file created by Chef!``. Open that file, edit the string, and then save that file. Re-run the chef-client. Or delete the file. In both cases, re-run the chef-client. Chef will return the system to the state that is defined by the recipe.
 
-We'll come back to working with |chef| later on. Let's set up |kitchen| so that we can use it to build a virtual machine against which we can run |chef|.
+We'll come back to working with Chef later on. Let's set up Kitchen so that we can use it to build a virtual machine against which we can run Chef.
 
-|kitchen_title| Setup
+Kitchen Setup
 =====================================================
-.. include:: ../../includes_test_kitchen/includes_test_kitchen.rst
+.. tag test_kitchen
 
-You will need some type of virtualization software for |kitchen|. |vagrant| is the default driver for |kitchen|. Install |vagrant|. |vagrant| requires |virtualbox|, so install |virtualbox|. Once you're ready, we'll keep using the same cookbook created earlier.
+Use `Kitchen <http://kitchen.ci>`_  to automatically test cookbook data across any combination of platforms and test suites:
+
+* Defined in a .kitchen.yml file
+* Uses a driver plugin architecture
+* Supports cookbook testing across many cloud providers and virtualization technologies
+* Supports all common testing frameworks that are used by the Ruby community
+* Uses a comprehensive set of base images provided by `Bento <https://github.com/chef/bento>`_
+
+.. end_tag
+
+You will need some type of virtualization software for Kitchen. Vagrant is the default driver for Kitchen. Install Vagrant. Vagrant requires VirtualBox, so install VirtualBox. Once you're ready, we'll keep using the same cookbook created earlier.
 
 Update Metadata
 -----------------------------------------------------
@@ -142,38 +205,38 @@ for now, let's just update the name and version settings, like this:
    long_description 'This is an example metadata.rb file used in docs.chef.io.'
    version '0.1.0'
 
-Verify |kitchen yml|
+Verify .kitchen.yml
 -----------------------------------------------------
-Because |kitchen| is installed as part of the |chef dk|, the |kitchen yml| file is already created:
+Because Kitchen is installed as part of the Chef development kit, the .kitchen.yml file is already created:
 
 .. code-block:: yaml
 
    ---
    driver:
      name: vagrant
-   
+
    provisioner:
      name: chef_zero
-   
+
    platforms:
      - name: ubuntu-14.04
      - name: centos-7.1
-   
+
    suites:
      - name: default
        run_list:
          - recipe[chef-repo::default]
        attributes:
 
-Verify that the default provisioner is |chef zero|:
+Verify that the default provisioner is chef-zero:
 
 .. code-block:: yaml
 
    ...
-   
+
    provisioner:
      name: chef_zero
-   
+
    ...
 
 Verify that the default recipe contains the name of the cookbook that was generated earlier:
@@ -188,47 +251,300 @@ Verify that the default recipe contains the name of the cookbook that was genera
 
 where ``chef-repo`` is the name of your cookbook.
 
-This is all of the configuration |kitchen| needs at this time. Let's set up some |kitchen| instances, and then build virtual machines that can run |chef|.
+This is all of the configuration Kitchen needs at this time. Let's set up some Kitchen instances, and then build virtual machines that can run Chef.
 
 View Instance List
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_none.rst
+From the chef-repo, run the following command to verify the list of Kitchen instances:
 
-Create |centos| Instance
+.. code-block:: bash
+
+   $ kitchen list
+
+to return a list similar to:
+
+.. code-block:: bash
+
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        <Not Created>
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        <Not Created>
+
+There are two available default platforms---Ubuntu 12.04 and CentOS 6.5---that are pre-configured to use the Vagrant driver that is included with the Chef development kit.
+
+Create CentOS Instance
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_centos_default.rst
+.. tag ctl_kitchen_create_centos_default
 
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_one.rst
+To create the default CentOS instance, run the following:
 
-Create |ubuntu| Instance
+.. code-block:: bash
+
+   $ kitchen create default-centos-71
+
+CentOS is downloaded the first time this command is run, after which Vagrant is started. (This may take a few minutes.)
+
+The output of the command is similar to:
+
+.. code-block:: bash
+
+   -----> Starting Kitchen (v1.4.2)
+   -----> Creating <default-centos-71>...
+          Bringing machine 'default' up with 'virtualbox' provider...
+          ==> default: Box 'opscode-centos-6.5' could not be found. Attempting to find and install...
+              default: Box Provider: virtualbox
+              default: Box Version: >= 0
+          ==> default: Adding box 'opscode-centos-6.5' (v0) for provider: virtualbox
+              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.5_chef-provisionerless.box
+          ==> default: Successfully added box 'opscode-centos-6.5' (v0) for 'virtualbox'!
+          ==> default: Importing base box 'opscode-centos-6.5'...
+          ==> default: Matching MAC address for NAT networking...
+          ==> default: Setting the name of the VM: default-centos-71_default_1403650129063_53517
+          ==> default: Clearing any previously set network interfaces...
+          ==> default: Preparing network interfaces based on configuration...
+              default: Adapter 1: nat
+          ==> default: Forwarding ports...
+              default: 22 => 2222 (adapter 1)
+          ==> default: Booting VM...
+          ==> default: Waiting for machine to boot. This may take a few minutes...
+              default: SSH address: 127.0.0.1:2222
+              default: SSH username: vagrant
+              default: SSH auth method: private key
+              default: Warning: Connection timeout. Retrying...
+          ==> default: Machine booted and ready!
+          ==> default: Checking for guest additions in VM...
+          ==> default: Setting hostname...
+          ==> default: Machine not provisioning because `--no-provision` is specified.
+          Vagrant instance <default-centos-71> created.
+          Finished creating <default-centos-71> (4m0.59s).
+   -----> Kitchen is finished. (11m29.76s)
+
+.. end_tag
+
+From the chef-repo, run the following command to verify the list of Kitchen instances:
+
+.. code-block:: bash
+
+   $ kitchen list
+
+to return a list similar to:
+
+.. code-block:: bash
+
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        <Not Created>
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        Created
+
+Create Ubuntu Instance
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_create_ubuntu_default.rst
+.. tag ctl_kitchen_create_ubuntu_default
 
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_created_both.rst
+To create the default Ubuntu instance, run the following:
+
+.. code-block:: bash
+
+   $ kitchen create default-ubuntu-1404
+
+Ubuntu is downloaded the first time this command is run, after which Vagrant is started. (This may take a few minutes.)
+
+The output of the command is similar to:
+
+.. code-block:: bash
+
+   -----> Starting Kitchen (v1.4.2)
+   -----> Creating <default-ubuntu-1404>...
+          Bringing machine 'default' up with 'virtualbox' provider...
+          ==> default: Box 'opscode-ubuntu-12.04' could not be found. Attempting to find and install...
+              default: Box Provider: virtualbox
+              default: Box Version: >= 0
+          ==> default: Adding box 'opscode-ubuntu-12.04' (v0) for provider: virtualbox
+              default: Downloading: https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_ubuntu-12.04_chef-provisionerless.box
+          ==> default: Successfully added box 'opscode-ubuntu-12.04' (v0) for 'virtualbox'!
+          ==> default: Importing base box 'opscode-ubuntu-12.04'...
+          ==> default: Matching MAC address for NAT networking...
+          ==> default: Setting the name of the VM: default-ubuntu-1404_default_1403651715173_54200
+          ==> default: Fixed port collision for 22 => 2222. Now on port 2200.
+          ==> default: Clearing any previously set network interfaces...
+          ==> default: Preparing network interfaces based on configuration...
+              default: Adapter 1: nat
+          ==> default: Forwarding ports...
+              default: 22 => 2200 (adapter 1)
+          ==> default: Booting VM...
+   ==> default: Waiting for machine to boot. This may take a few minutes...
+              default: SSH username: vagrant
+              default: SSH auth method: private key
+              default: Warning: Connection timeout. Retrying...
+          ==> default: Machine booted and ready!
+          ==> default: Checking for guest additions in VM...
+          ==> default: Setting hostname...
+          ==> default: Machine not provisioning because `--no-provision` is specified.
+          Vagrant instance <default-ubuntu-1404> created.
+          Finished creating <default-ubuntu-1404> (4m1.59s).
+   -----> Kitchen is finished. (10m58.24s)
+
+.. end_tag
+
+From the chef-repo, run the following command to verify the list of Kitchen instances:
+
+.. code-block:: bash
+
+   $ kitchen list
+
+to return a list similar to:
+
+.. code-block:: bash
+
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        Created
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        Created
 
 Now we're all set up! We're going to use the same recipe and cookbook that we already created.
 
-Converge |centos|
+Converge CentOS
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_centos_default.rst
+.. tag ctl_kitchen_converge_centos_default
 
-Converge |ubuntu|
+To converge the default CentOS instance, run the following:
+
+.. code-block:: bash
+
+   $ kitchen converge default-centos-71
+
+The chef-client is downloaded the first time this command is run. The output of the command is similar to:
+
+.. code-block:: bash
+
+   -----> Starting Kitchen (v1.4.2)
+   -----> Converging <default-centos-71>...
+          Preparing files for transfer
+          Preparing cookbooks from project directory
+          Removing non-cookbook files before transfer
+          Preparing nodes
+   -----> Installing Chef Omnibus (true)
+          downloading https://www.chef.io/chef/install.sh
+            to file /tmp/install.sh
+          ...
+          Downloading Chef ...
+          Installing Chef ...
+          Thank you for installing Chef!
+          Transferring files to <default-centos-71>
+          [2014-06-27T18:41:04+00:00] INFO: Forking chef instance to converge...
+          Starting Chef Client, version 12.4.1
+          [2014-06-27T18:45:18+00:00] INFO: *** Chef 12.4.1 ***
+          [2014-06-27T18:45:18+00:00] INFO: Chef-client pid: 3226
+          [2014-06-27T18:45:25+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options
+          [2014-06-27T18:45:25+00:00] INFO: Run List is [recipe[chef-repo::default]]
+          [2014-06-27T18:45:25+00:00] INFO: Run List expands to [chef-repo::default]
+          [2014-06-27T18:45:25+00:00] INFO: Starting Chef Run for default-centos-71
+          [2014-06-27T18:45:25+00:00] INFO: Running start handlers
+          [2014-06-27T18:42:40+00:00] INFO: Start handlers complete.
+          Compiling Cookbooks...
+          Converging 1 resources
+          Recipe: chef-repo::default
+            * file[/root/test.txt] action create... INFO: Processing file[/root/test.txt] 
+              action create (chef-repo::default line 10)
+          [2014-06-27T18:42:40+00:00] INFO: file[/root/test.txt] created file /root/test.txt
+            - create new file /root/test.txt... INFO: file[/root/test.txt] updated file contents /root/test.txt
+            - update content in file /root/test.txt from none to d9c88f
+          --- /root/test.txt	2014-06-27 18:42:40.695889276 +0000
+          +++ /tmp/.test.txt20140627-2810-1xdx98p	2014-06-27 18:42:40.695889276 +0000
+          @@ -1 +1,2 @@
+          +This file created by Chef!
+            - restore selinux security context
+          [2014-06-27T18:42:40+00:00] INFO: Chef Run complete in 0.168252291 seconds
+          Running handlers:
+          [2014-06-27T18:42:40+00:00] INFO: Running report handlers
+          Running handlers complete
+          [2014-06-27T18:42:40+00:00] INFO: Report handlers complete
+          Chef Client finished, 1/1 resources updated in 7.152725504 seconds
+          Finished converging <default-centos-71> (0m8.43s).
+   -----> Kitchen is finished. (0m15.96s)
+
+.. end_tag
+
+Converge Ubuntu
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_converge_ubuntu_default.rst
+.. tag ctl_kitchen_converge_ubuntu_default
+
+To converge the default Ubuntu instance, run the following:
+
+.. code-block:: bash
+
+   $ kitchen converge default-ubuntu-1404
+
+The chef-client is downloaded the first time this command is run. The output of the command is similar to:
+
+.. code-block:: bash
+
+   -----> Starting Kitchen (v1.4.2)
+   -----> Converging <default-ubuntu-1404>...
+          Preparing files for transfer
+          Preparing cookbooks from project directory
+          Removing non-cookbook files before transfer
+          Preparing nodes
+   -----> Installing Chef Omnibus (true)
+          downloading https://www.chef.io/chef/install.sh
+            to file /tmp/install.sh
+          ...
+          Downloading Chef ...
+          Installing Chef ...    
+          Thank you for installing Chef!       
+          Transferring files to <default-ubuntu-1404>
+          [2014-06-27T18:48:01+00:00] INFO: Forking chef instance to converge...       
+          Starting Chef Client, version 12.4.1       
+          [2014-06-27T18:48:01+00:00] INFO: *** Chef 12.4.1 ***       
+          [2014-06-27T18:48:01+00:00] INFO: Chef-client pid: 1246       
+          [2014-06-27T18:48:03+00:00] INFO: Setting the run_list to ["recipe[chef-repo::default]"] from CLI options       
+          [2014-06-27T18:48:03+00:00] INFO: Run List is [recipe[chef-repo::default]]       
+          [2014-06-27T18:48:03+00:00] INFO: Run List expands to [chef-repo::default]       
+          [2014-06-27T18:48:03+00:00] INFO: Starting Chef Run for default-ubuntu-1404       
+          [2014-06-27T18:48:03+00:00] INFO: Running start handlers       
+          [2014-06-27T18:48:03+00:00] INFO: Start handlers complete.       
+          Compiling Cookbooks...       
+          Converging 1 resources       
+          Recipe: chef-repo::default       
+            * file[/home/vagrant/test.txt] action create... INFO: Processing file[/home/vagrant/test.txt] 
+              action create (chef-repo::default line 10)       
+          [2014-06-27T18:48:03+00:00] INFO: file[/home/vagrant/test.txt] created file /home/vagrant/test.txt       
+            - create new file /home/vagrant/test.txt... INFO: file[/home/vagrant/test.txt] updated file contents /home/vagrant/test.txt       
+            - update content in file /home/vagrant/test.txt from none to d9c88f       
+          --- /home/vagrant/test.txt	2014-06-27 18:48:03.233096345 +0000       
+           +++ /tmp/.test.txt20140627-1246-178u9dg	2014-06-27 18:48:03.233096345 +0000       
+          @@ -1 +1,2 @@       
+          +This file created by Chef!       
+          [2014-06-27T18:48:03+00:00] INFO: Chef Run complete in 0.015439954 seconds       
+          Running handlers:       
+          [2014-06-27T18:48:03+00:00] INFO: Running report handlers       
+          Running handlers complete       
+          [2014-06-27T18:48:03+00:00] INFO: Report handlers complete       
+          Chef Client finished, 1/1 resources updated in 1.955915841 seconds       
+          Finished converging <default-ubuntu-1404> (0m15.67s).
+   -----> Kitchen is finished. (0m15.96s)
+
+.. end_tag
 
 Verify Instance List
 -----------------------------------------------------
-.. include:: ../../step_ctl_kitchen/step_ctl_kitchen_list_converged_both.rst
+To verify if both instances have been converged, run the following command:
 
-Now you can run your cookbooks in a virtual instance managed by |kitchen| on multiple platforms (|ubuntu| and |centos|).
+.. code-block:: bash
+
+   $ kitchen list
+
+.. code-block:: bash
+
+   Instance             Driver   Provisioner  Verifier  Transport  Last Action
+   default-ubuntu-1404  Vagrant  ChefZero     Busser    Ssh        Converged
+   default-centos-71    Vagrant  ChefZero     Busser    Ssh        Converged
+
+Now you can run your cookbooks in a virtual instance managed by Kitchen on multiple platforms (Ubuntu and CentOS).
 
 Configure NTP
 =====================================================
-Instead of putting a text file on these |kitchen| instances, let's try something more useful and install |ntp|. Within the cookbook we're already using, let's update the default recipe to install and configure |ntp| using the |resource package|, |resource template|, and |resource service| resources, a template file, and an attributes file.
+Instead of putting a text file on these Kitchen instances, let's try something more useful and install Network Time Protocol (NTP). Within the cookbook we're already using, let's update the default recipe to install and configure Network Time Protocol (NTP) using the **package**, **template**, and **service** resources, a template file, and an attributes file.
 
 Add Template
 -----------------------------------------------------
-The |resource template| resource looks for templates in a cookbook's ``/templates`` directory. Template files in this directory must be |erb| files. The |chef ctl| has an argument that will handle most of this process for you. Let's create that directory and the template file we'll use to configure |ntp| using this command. Let's use the same cookbook we've been using. From within that cookbook repo, run the following command:
+The **template** resource looks for templates in a cookbook's ``/templates`` directory. Template files in this directory must be Embedded Ruby (ERB) files. The chef has an argument that will handle most of this process for you. Let's create that directory and the template file we'll use to configure Network Time Protocol (NTP) using this command. Let's use the same cookbook we've been using. From within that cookbook repo, run the following command:
 
 .. code-block:: bash
 
@@ -279,7 +595,7 @@ and an empty ``ntp.conf.erb`` file. Let's edit this file and define its contents
 
 Add Attributes
 -----------------------------------------------------
-The name of the init script that is used to run |ntp| is ``ntp`` on |debian|-based platforms (such as |ubuntu|) and is ``ntpd`` on |redhat enterprise linux|-based platforms. Let's use an attribute in our cookbook to tell the |chef client| what to do on both platforms using a single cookbook attribute. Like for templates, the |chef ctl| has an argument that will handle most of this process for you. Let's create that directory and the default attribute file we'll use to tell the |chef client| how to handle the attribute. Let's use the same cookbook we've been using. From within that cookbook repo, run the following command:
+The name of the init script that is used to run Network Time Protocol (NTP) is ``ntp`` on Debian-based platforms (such as Ubuntu) and is ``ntpd`` on Red Hat Enterprise Linux-based platforms. Let's use an attribute in our cookbook to tell the chef-client what to do on both platforms using a single cookbook attribute. Like for templates, the chef has an argument that will handle most of this process for you. Let's create that directory and the default attribute file we'll use to tell the chef-client how to handle the attribute. Let's use the same cookbook we've been using. From within that cookbook repo, run the following command:
 
 .. code-block:: bash
 
@@ -331,13 +647,13 @@ and an empty ``default.rb`` file under ``/attributes``. Let's edit this file and
          'ntpd'
      end
 
-This attribute uses conditions to tell the |chef client| the correct name of the init script that will be used to start |ntp|, by platform. The attribute that is being set by this code block is ``node[:ntp][:service]`` and the |chef client| can use this attribute to identify the correct init script for |ntp| on any node and for any platform. If |debian|, use ``ntp`` and for everything else use ``ntpd``.
+This attribute uses conditions to tell the chef-client the correct name of the init script that will be used to start Network Time Protocol (NTP), by platform. The attribute that is being set by this code block is ``node[:ntp][:service]`` and the chef-client can use this attribute to identify the correct init script for Network Time Protocol (NTP) on any node and for any platform. If Debian, use ``ntp`` and for everything else use ``ntpd``.
 
 Edit Recipe
 -----------------------------------------------------
-To install |ntp|, a recipe needs to do three things:
+To install Network Time Protocol (NTP), a recipe needs to do three things:
 
-# Install |ntp|
+# Install Network Time Protocol (NTP)
 # Create a configuration file; this will be done using the ``ntp.conf.erb`` template file
 # Start the ``ntp`` or ``ntpd`` service, depending on the platform; this will be done using the ``node[:ntp][:service]`` attribute
 
@@ -348,29 +664,29 @@ Open the ``default.rb`` recipe file and replace the contents of that file with t
    package 'ntp' do
      action :install
    end
-   
+
    template '/etc/ntp.conf' do
      source 'ntp.conf.erb'
      variables( :ntp_server => 'time.nist.gov' )
      notifies :restart, 'service[ntp_service]'
    end
-   
+
    service 'ntp_service' do
      service_name node[:ntp][:service]
      action [:enable, :start]
    end
 
-The |resource package| resource installs the |ntp| package. The |resource template| resource gets the template file from the cookbook, and then uses it to create a ``ntp.conf`` file in the ``/etc/ntp.conf`` directory on the node, after which it notifies the |resource service| resource to restart the ``ntp`` or ``ntpd`` service. The |resource service| resource ensures that the ``ntp`` or ``ntpd`` service is started and enabled.
+The **package** resource installs the Network Time Protocol (NTP) package. The **template** resource gets the template file from the cookbook, and then uses it to create a ``ntp.conf`` file in the ``/etc/ntp.conf`` directory on the node, after which it notifies the **service** resource to restart the ``ntp`` or ``ntpd`` service. The **service** resource ensures that the ``ntp`` or ``ntpd`` service is started and enabled.
 
-Install NTP on |centos|
+Install NTP on CentOS
 -----------------------------------------------------
-Now let's install |ntp| in |centos|. From the |chef repo|, run:
+Now let's install Network Time Protocol (NTP) in CentOS. From the chef-repo, run:
 
 .. code-block:: bash
 
    $ kitchen converge default-centos-71
 
-As it installs, the |chef client| will report back something similar to the following: 
+As it installs, the chef-client will report back something similar to the following:
 
 .. code-block:: bash
 
@@ -423,15 +739,15 @@ As it installs, the |chef client| will report back something similar to the foll
           Finished converging <default-centos-71> (0m30.97s).
    -----> Kitchen is finished. (0m31.28s)
 
-Install NTP on |ubuntu|
+Install NTP on Ubuntu
 -----------------------------------------------------
-And finally, install |ntp| in |ubuntu|. From the |chef repo|, run:
+And finally, install Network Time Protocol (NTP) in Ubuntu. From the chef-repo, run:
 
 .. code-block:: bash
 
    $ kitchen converge default-ubuntu-1404
 
-As it installs, the |chef client| will report back something similar to the following: 
+As it installs, the chef-client will report back something similar to the following:
 
 .. code-block:: bash
 
@@ -485,7 +801,7 @@ As it installs, the |chef client| will report back something similar to the foll
           Finished converging <default-ubuntu-1404> (0m6.49s).
    -----> Kitchen is finished. (0m6.79s)
 
-.. note:: Did it work? Sometimes on the |ubuntu| platform the |apt| cache gets out of date and the |chef client| is unable to download the correct package. This will result in an exception and the |chef client| run will fail. Add this to the default recipe to run the ``apt-get-update`` command at the start of the |chef client| run:
+.. note:: Did it work? Sometimes on the Ubuntu platform the Apt cache gets out of date and the chef-client is unable to download the correct package. This will result in an exception and the chef-client run will fail. Add this to the default recipe to run the ``apt-get-update`` command at the start of the chef-client run:
 
    .. code-block:: ruby
 
@@ -494,14 +810,13 @@ As it installs, the |chef client| will report back something similar to the foll
         ignore_failure true
       end
 
-   The |resource execute| resource block won't run on |centos| because the |centos| platform uses the |yum| package manager, and not the |apt| package manager.
+   The **execute** resource block won't run on CentOS because the CentOS platform uses the Yum package manager, and not the Apt package manager.
 
    Re-run the following command:
 
    .. code-block:: bash
 
       $ kitchen converge default-ubuntu-1404
-
 
 Verify Instance List
 -----------------------------------------------------
@@ -518,9 +833,9 @@ To verify if both instances have been converged, run the following command:
    default-centos-71    Vagrant  ChefZero     Busser    Ssh        Converged
 
 .. 
-.. Add |debian|
+.. Add Debian
 .. -----------------------------------------------------
-.. It's simple to add additional platforms for testing. For example, let's add support in |kitchen| for |debian|. First, update the |kitchen yml| file:
+.. It's simple to add additional platforms for testing. For example, let's add support in Kitchen for Debian. First, update the .kitchen.yml file:
 .. 
 .. .. code-block:: javascript
 .. 
@@ -556,30 +871,29 @@ To verify if both instances have been converged, run the following command:
 .. 
 ..    $ kitchen create default-debian-81
 .. 
-.. and the recipe will converge on the node just like it did for the |ubuntu| and |centos| instances and the last action is updated to ``Converged``.
+.. and the recipe will converge on the node just like it did for the Ubuntu and CentOS instances and the last action is updated to ``Converged``.
 .. 
-.. Compare the results of all three converge processes to see how |chef| behaves on all three platforms. While there are some differences between the platforms, the results are identical.
-.. 
-
+.. Compare the results of all three converge processes to see how Chef behaves on all three platforms. While there are some differences between the platforms, the results are identical.
+..
 
 .. 
 .. More About Resources
 .. =====================================================
-.. The |chef client| includes many built-in resources: |resource execute|, |resource directory|, |resource package|, |resource service|, |resource file|, |resource template|, |resource user|, |resource script|, and |resource scm_git|.
+.. The chef-client includes many built-in resources: **execute**, **directory**, **package**, **service**, **file**, **template**, **user**, **script**, and **git**.
 .. 
-.. The sections below quickly describe the most popular resources. For the full list of built-in |chef| resources, see `Resources <https://docs.chef.io/resource.html#resources>`_. You can also `create your own resources <https://docs.chef.io/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
+.. The sections below quickly describe the most popular resources. For the full list of built-in Chef resources, see `Resources <https://docs.chef.io/resource.html#resources>`_. You can also `create your own resources <https://docs.chef.io/lwrp_custom.html>`_ or `use the resources built into the community cookbooks <http://supermarket.chef.io>`_.
 .. 
 .. Execute Commands
 .. -----------------------------------------------------
-.. Commands are executed using the |resource execute| resource using an attribute to specify the actual command to run. See `execute <https://docs.chef.io/resource_execute.html>`_ for more information about executing commands.
+.. Commands are executed using the **execute** resource using an attribute to specify the actual command to run. See `execute <https://docs.chef.io/resource_execute.html>`_ for more information about executing commands.
 .. 
 .. Manage Directories
 .. -----------------------------------------------------
-.. Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the |resource directory| resource, which manages directories starting from the root directory. And the second is the |resource remote_directory|, which transfers directory structures defined in cookbooks to nodes. See `directory <https://docs.chef.io/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <https://docs.chef.io/resource_remote_directory.html>`_ instead.
+.. Directories are hierarchies of folders that comprise all the information stored on a computer. There are two ways to manage directories. The first is via the **directory** resource, which manages directories starting from the root directory. And the second is the **remote_directory**, which transfers directory structures defined in cookbooks to nodes. See `directory <https://docs.chef.io/resource_directory.html>`_ for more information about managing directories. If the directory is defined in a cookbook, use `remote_directory <https://docs.chef.io/resource_remote_directory.html>`_ instead.
 .. 
 .. Manage Packages
 .. -----------------------------------------------------
-.. Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via |rubygems| and installed directly from within recipes or are sourced from a cookbook. See `package <https://docs.chef.io/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the |resource package| is all that's necessary. For packages that are located in cookobooks, use `chef_gem <https://docs.chef.io/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <https://docs.chef.io/resource_gem_package.html>`_.
+.. Packages are collections of files that comprise software applications or some part of an operating system. Use the package resource to manage these packages, unless they are sourced via RubyGems and installed directly from within recipes or are sourced from a cookbook. See `package <https://docs.chef.io/resource_package.html>`_ for more information about managing packages. There are quite a few platform-specific package resources as well, though most of the time simply using the **package** is all that's necessary. For packages that are located in cookobooks, use `chef_gem <https://docs.chef.io/resource_chef_gem.html>`_. And for packages that are only included via recipes, use `gem_package <https://docs.chef.io/resource_gem_package.html>`_.
 .. 
 .. Manage Services
 .. -----------------------------------------------------
@@ -587,11 +901,11 @@ To verify if both instances have been converged, run the following command:
 .. 
 .. Manage Files
 .. -----------------------------------------------------
-.. Files are managed in several ways. The |resource file| resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the |resource cookbook_file| resource and are transferred to nodes from remote locations using the |resource remote_file| resource. See `file <https://docs.chef.io/resource_file.html>`_ for more information about managing files, `remote_file <https://docs.chef.io/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <https://docs.chef.io/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
+.. Files are managed in several ways. The **file** resource manages files that are already present on a node. Files are transferred to nodes from cookbooks using the **cookbook_file** resource and are transferred to nodes from remote locations using the **remote_file** resource. See `file <https://docs.chef.io/resource_file.html>`_ for more information about managing files, `remote_file <https://docs.chef.io/resource_remote_file.html>`_ for transferring files from remote locations, and `cookbook_file <https://docs.chef.io/resource_cookbook_file.html>`_ for transferring files that are located in cookbooks.
 .. 
 .. Manage Templates
 .. -----------------------------------------------------
-.. Templates are used to generate files based on variables and logic contained within the template file. |chef| uses |erb| templates and |ruby| expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <https://docs.chef.io/resource_template.html>`_ for more information about managing files using |erb| templates.
+.. Templates are used to generate files based on variables and logic contained within the template file. Chef uses Embedded Ruby (ERB) templates and Ruby expressions and statements to define the template file. Template source files must be located within cookbooks. See `template <https://docs.chef.io/resource_template.html>`_ for more information about managing files using Embedded Ruby (ERB) templates.
 .. 
 .. Manage Users, Groups
 .. -----------------------------------------------------
@@ -599,11 +913,11 @@ To verify if both instances have been converged, run the following command:
 .. 
 .. Use Script Interpreters
 .. -----------------------------------------------------
-.. Script interpreters execute scripts on a node, similar to the |resource execute| resource, and with the ability to specify the interpreter that the |chef client| should use. See `script <https://docs.chef.io/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <https://docs.chef.io/resource_bash.html>`_ being the most popular. Also available: `csh <https://docs.chef.io/resource_csh.html>`_, `perl <https://docs.chef.io/resource_perl.html>`_, `powershell_script <https://docs.chef.io/resource_powershell_script.html>`__, `python <https://docs.chef.io/resource_python.html>`_, and `ruby <https://docs.chef.io/resource_ruby.html>`_. Two |windows|-specific resources are also available: `batch <https://docs.chef.io/resource_batch.html>`_ and `powershell_script <https://docs.chef.io/resource_powershell_script.html>`__.
+.. Script interpreters execute scripts on a node, similar to the **execute** resource, and with the ability to specify the interpreter that the chef-client should use. See `script <https://docs.chef.io/resource_script.html>`_ for more (general) information about using scripts in recipes. Interpreter-specific resources are available, with `bash <https://docs.chef.io/resource_bash.html>`_ being the most popular. Also available: `csh <https://docs.chef.io/resource_csh.html>`_, `perl <https://docs.chef.io/resource_perl.html>`_, `powershell_script <https://docs.chef.io/resource_powershell_script.html>`__, `python <https://docs.chef.io/resource_python.html>`_, and `ruby <https://docs.chef.io/resource_ruby.html>`_. Two Microsoft Windows-specific resources are also available: `batch <https://docs.chef.io/resource_batch.html>`_ and `powershell_script <https://docs.chef.io/resource_powershell_script.html>`__.
 .. 
 .. Use Source Control
 .. -----------------------------------------------------
-.. Most users of |chef| keep their code in some type of version source control. |chef| can interact with this code from recipes. |git| is a very popular choice. The `git <https://docs.chef.io/resource_git.html>`_ resource is used to manage files that exist in a |git| repository. There is also a resource for `subversion <https://docs.chef.io/resource_subversion.html>`_, another popular version source control tool.
+.. Most users of Chef keep their code in some type of version source control. Chef can interact with this code from recipes. git is a very popular choice. The `git <https://docs.chef.io/resource_git.html>`_ resource is used to manage files that exist in a git repository. There is also a resource for `subversion <https://docs.chef.io/resource_subversion.html>`_, another popular version source control tool.
 .. 
 .. 
 .. About Cookbooks
@@ -612,7 +926,7 @@ To verify if both instances have been converged, run the following command:
 .. 
 .. Every cookbook follows a defined structure, but individiaul cookbooks can take on many different styles depending on how your organization wants to manage its code, who authored them, and how they are intended to be used. Some cookbooks contain only a single, default recipe. Others may contain only a library file. Some may contain only a few attributes. And other cookbooks may contain several custom resources along with many attributes and templates, and so on.
 .. 
-.. Some cookbooks you will build yourself. Some cookbooks will be provided by the community. Most community cookbooks will be managed using |berkshelf|, which is a dependency manager included in the |chef dk|. Occasionally, a community cookbook will be forked, but more often a wrapper cookbook is created to handle your organization-specific requirements while still allowing use of the community cookbook.
+.. Some cookbooks you will build yourself. Some cookbooks will be provided by the community. Most community cookbooks will be managed using Berkshelf, which is a dependency manager included in the Chef development kit. Occasionally, a community cookbook will be forked, but more often a wrapper cookbook is created to handle your organization-specific requirements while still allowing use of the community cookbook.
 .. 
 .. The most important thing to know about cookbooks is that there are lots of ways to build good ones. There are patterns to follow, there are guidelines. There are recomended ways of dealing with attributes. There are recommended ways of creating custom resources. But ultimately, a good cookbook is the one that works for your organization. Ideally, this cookbook works across your infrastructure. Most organizations have a mix of private (internal) and public (community) cookbooks in use in their organization.
 .. 
@@ -622,11 +936,16 @@ To verify if both instances have been converged, run the following command:
 .. .. include:: ../../includes_cookbook/includes_cookbook_pattern.rst
 .. 
 .. 
-.. About |ruby|
+.. About Ruby
 .. =====================================================
 .. .. include:: ../../includes_ruby/includes_ruby.rst
-.. 
+..
 
 Conclusion
 =====================================================
-.. include:: ../../includes_chef/includes_chef_about.rst
+.. tag chef_about
+
+Chef is a thin DSL (domain-specific language) built on top of Ruby. This approach allows Chef to provide just enough abstraction to make reasoning about your infrastructure easy. Chef includes a built-in taxonomy of all the basic resources one might configure on a system, plus a defined mechanism to extend that taxonomy using the full power of the Ruby language. Ruby was chosen because it provides the flexibility to use both the simple built-in taxonomy, as well as being able to handle any customization path your organization requires.
+
+.. end_tag
+
